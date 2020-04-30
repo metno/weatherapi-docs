@@ -27,7 +27,7 @@ like Dublin Core.
 
 Since we have not found any suitable ontology for some metadata, we are
 forced to roll our own. These will be using the
-`https://api.met.no/weatherapi/doc/RSS` namespace.
+`https://api.met.no/doc/RSS` namespace.
 
 ## `category`
 

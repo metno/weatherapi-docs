@@ -23,4 +23,4 @@ The migration is scheduled to take place some time during the first half of Janu
 
 [documentation]: /weatherapi/documentation
 [terms of use]: /conditions_service.html
-[release notes]: /weatherapi/doc/v3relnotes
+[release notes]: /doc/v3relnotes
