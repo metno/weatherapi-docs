@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- schema for root available xml -->
+
+<xs:element name="available" >
+    <xs:complexType>
+        <xs:sequence>
+	     <xs:element name="product" type="productType" maxOccurs="unbounded" minOccurs="0" />
+	</xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="productType">
+    <xs:sequence>
+        <xs:element name="name"             type="xs:string" />
+        <xs:element name="version"          type="xs:string" />
+        <xs:element name="description"      type="xs:string" />
+        <xs:element name="documentation"    type="xs:string" />
+        <xs:element name="changelog"        type="xs:string" />
+        <xs:element name="available"        type="productType" maxOccurs="1" minOccurs="0" />
+        <xs:element name="schema"           type="productType" maxOccurs="1" minOccurs="0" />
+        <xs:element name="swagger"          type="productType" maxOccurs="1" minOccurs="0" />
+        <xs:element name="healthz"          type="productType" maxOccurs="1" minOccurs="0" />
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

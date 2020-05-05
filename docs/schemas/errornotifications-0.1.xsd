@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="errornotifications" >
+    <xs:complexType>
+         <xs:sequence>
+		<xs:element name="errornotification" 
+		type="errorType" minOccurs="0" maxOccurs="unbounded" />
+         </xs:sequence>
+	 <xs:attribute name="created" type="xs:dateTime" />
+
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="errorType">
+    <xs:sequence>
+        <xs:element name="time" type="timeType" />
+	<xs:element name="product" type="productType" maxOccurs="unbounded"/>
+	<xs:element name="subject" type="textType" />
+	<xs:element name="description" type="textType" />
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="timeType">
+ 
+   <xs:attribute name="from" type="xs:dateTime" use="required" />
+   <xs:attribute name="to"   type="xs:dateTime" />
+
+</xs:complexType>
+
+<xs:complexType name="productType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+	    <xs:attribute name="param" type="xs:string" />
+	    <xs:attribute name="value" type="xs:string" />
+	</xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="textType">
+<xs:simpleContent>
+        <xs:extension base="xs:string">
+	    <xs:attribute name="language" type="xs:string" />
+	</xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+
+</xs:schema>

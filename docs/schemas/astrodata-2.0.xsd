@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      This schema is for representing astronomical data.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="astrodata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="metaType" name="meta"/>
+        <xs:element type="locationType" name="location"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="metaType">
+    <xs:attribute name="licenseurl" type="xs:anyURI" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="locationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        The location the data is wanted for.  Latitude(lat) and
+        longitude(lon) are both given in decimal degrees.  East and
+        North are positive values, West and South negative.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element type="timeType" name="time" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute type="xs:float" name="latitude" use="required"/>
+    <xs:attribute type="xs:float" name="longitude" use="required"/>
+    <xs:attribute type="xs:int" name="height" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="timeType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element type="moonphaseType" name="moonphase"/>
+      <xs:element type="moonshadowType" name="moonshadow"/>
+      <xs:element type="moonpositionType" name="moonposition"/>
+      <xs:element type="eventtimeType" name="moonset"/>
+      <xs:element type="eventtimeType" name="sunrise"/>
+      <xs:element type="elevationtimeType" name="low_moon"/>
+      <xs:element type="elevationtimeType" name="solarnoon"/>
+      <xs:element type="eventtimeType" name="moonrise"/>
+      <xs:element type="eventtimeType" name="sunset"/>
+      <xs:element type="elevationtimeType" name="high_moon"/>
+      <xs:element type="elevationtimeType" name="solarmidnight"/>
+      <xs:element type="eventtimeType" name="polarnightstart"/>
+    </xs:choice>
+    <xs:attribute type="xs:date" name="date"/>
+  </xs:complexType>
+
+  <xs:complexType name="eventtimeType">
+    <xs:attribute type="xs:dateTime" name="time" use="required"/>
+    <xs:attribute type="xs:string" name="desc" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="elevationtimeType">
+    <xs:attribute type="xs:dateTime" name="time" use="required"/>
+    <xs:attribute type="xs:float" name="elevation" use="required"/>
+    <xs:attribute type="xs:string" name="desc" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="moonphaseType">
+    <xs:attribute type="xs:dateTime" name="time" use="required"/>
+    <xs:attribute type="xs:float" name="value" use="required"/>
+    <xs:attribute type="xs:string" name="desc" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="moonshadowType">
+    <xs:attribute type="xs:dateTime" name="time" use="required"/>
+    <xs:attribute type="xs:float" name="elevation" use="required"/>
+    <xs:attribute type="xs:float" name="azimuth" use="required"/>
+    <xs:attribute type="xs:string" name="desc" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="moonpositionType">
+      <xs:attribute type="xs:dateTime" name="time" use="required"/>
+      <xs:attribute type="xs:string" name="elevation" use="required"/>
+      <xs:attribute type="xs:float" name="azimuth" use="required"/>
+      <xs:attribute type="xs:float" name="range" use="required"/>
+      <xs:attribute type="xs:float" name="phase" use="required"/>
+      <xs:attribute type="xs:string" name="desc" use="required"/>
+  </xs:complexType>
+
+</xs:schema>

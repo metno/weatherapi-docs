@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="volcano" >
+    <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="meta" type="metaType"
+		      maxOccurs="1" minOccurs="1" />
+	  <xs:element name="disclaimer" type="xs:string" />
+	</xs:sequence>
+    </xs:complexType>
+</xs:element>	
+
+<xs:complexType name="metaType">
+  <xs:attribute name="last_updated" type="xs:string"/>
+  <xs:attribute name="valid_to" type="xs:dateTime"/>
+</xs:complexType>
+
+</xs:schema>

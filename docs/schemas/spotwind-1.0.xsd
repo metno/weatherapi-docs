@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      This schema is for representing spotwind data
+    </xs:documentation>
+  </xs:annotation>
+  
+  <xs:element name="weatherdata" >
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="product" type="product_type" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="product_type">
+      <xs:sequence>
+	<xs:element name="time" type="time_type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    <xs:attribute name="class" type="xs:string" use="required" />
+    <xs:attribute name="observation" type="xs:dateTime" use="required"/>
+  </xs:complexType>
+
+
+  <!-- time_type -->
+  <xs:complexType name="time_type">
+    <xs:sequence>
+      <xs:element name="location" type="location_type" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="valid" type="xs:dateTime" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="location_type">
+    <xs:sequence>
+      <xs:element name="spotWind" type="spotwind_type" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+    <xs:annotation>
+    <xs:documentation xml:lang="en">
+      WindSpeed is given in knots.  Temperature is given in celsius
+      degrees.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:complexType name="spotwind_type">
+    <xs:attribute name="flightlevel" type="flightlevel_type" use="required"/>
+    <xs:attribute name="windDirection" type="xs:integer" use="required"/>
+    <xs:attribute name="windSpeed" type="xs:integer" use="required"/>
+    <xs:attribute name="temperature" type="xs:integer" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="flightlevel_type">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="30"/>
+      <xs:enumeration value="50"/>
+      <xs:enumeration value="100"/>
+      <xs:enumeration value="180"/>
+      <xs:enumeration value="240"/>
+      <xs:enumeration value="300"/>
+      <xs:enumeration value="340"/>
+      <xs:enumeration value="390"/>
+      <xs:enumeration value="450"/>
+      <xs:enumeration value="530"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      This schema is for representing our textual forecasts and warnings.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="weather">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="meta" type="meta_type" />
+	<xs:element name="productdescription" type="proddesc_type" />
+        <xs:element name="time" type="time_type" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="meta_type">
+    <xs:attribute name="licenseurl" type="xs:anyURI" use="required" />
+    <xs:attribute name="area" type="xs:string"/>
+  </xs:complexType>
+
+  <!-- proddesc_type -->
+  <xs:complexType name="proddesc_type">
+    <xs:attribute name="prodname" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <!-- time_type -->
+  <xs:complexType name="time_type">
+    <xs:sequence>
+      <xs:element name="location" type="location_type" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="from" type="time_type_attr_value" use="required"/>
+    <xs:attribute name="to" type="time_type_attr_value" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="time_type_attr_value">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- forecast type -->
+  <xs:complexType name="forecast_type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="title" type="xs:string" />
+        <xs:attribute name="phase" type="xs:string" />
+        <xs:attribute name="name" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- location_type -->
+  <xs:complexType name="location_type">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        The location the data is wanted for.  Latitude(lat) and
+        longitude(lon) are both given in decimal degrees.  East and
+        North are positive values, West and South negative.
+	The name is name of area.
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+      <xs:element name="header" type="xs:string" minOccurs="0"/>
+      <xs:element name="forecast" type="forecast_type" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="phase" type="xs:string"/>
+    <xs:attribute name="exname" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="issuer" type="xs:string" use="required"/>
+    <xs:attribute name="id" type="xs:string"/>
+    <xs:attribute name="url" type="xs:anyURI" />
+  </xs:complexType>
+
+</xs:schema>

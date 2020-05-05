@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:metno="http://api.met.no" 
+	targetNamespace="http://api.met.no" version="0.1">
+
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+
+
+	<xs:element name="aviationProduct">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metno:meteorologicalAerodromeReport" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metno:terminalAerodromeForecast" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="terminalAerodromeForecast">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metno:icaoAirportIdentifier" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:issuedTime" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:validPeriod" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:naisHeader" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:tafText" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="meteorologicalAerodromeReport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metno:icaoAirportIdentifier" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:validTime" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:metarType" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="metno:metarText" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="icaoAirportIdentifier" type="xs:string" />
+	<xs:element name="issuedTime" type="gml:TimeInstantPropertyType" />
+	<xs:element name="validPeriod" type="gml:TimePeriodType" />
+	<xs:element name="validTime" type="gml:TimeInstantPropertyType" />
+	<xs:element name="naisHeader" type="xs:string" />
+	<xs:element name="metarType" type="xs:string" />
+	<xs:element name="tafText" type="xs:string" />
+	<xs:element name="metarText" type="xs:string" />
+
+</xs:schema>

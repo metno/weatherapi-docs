@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="textforecast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="meta" minOccurs="0"/>
+        <xs:element ref="messages" minOccurs="0"/>
+        <xs:element ref="time" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="meta">
+    <xs:complexType>
+      <xs:attribute name="licenseurl" use="required" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="messages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="message" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="time">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="forecasttype"/>
+      </xs:sequence>
+      <xs:attribute name="from" type="xs:dateTime" use="required"/>
+      <xs:attribute name="to" type="xs:dateTime" use="required"/>
+      <xs:attribute name="termin" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="forecasttype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="location"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="forecastName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="forecastName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="normal"/>
+      <xs:enumeration value="gales"/>
+      <xs:enumeration value="synoptic"/>
+      <xs:enumeration value="wave"/>
+      <xs:enumeration value="icing"/>
+      <xs:enumeration value="polarlow"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="name" type="xs:string" use="required"/>
+          <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
