@@ -64,7 +64,9 @@ The values are predicted for a height of 3 m above ground. (??? FIXME)
 
 ## Wind
 
-The values are predicted for a height of 10 m above ground.
+Ja wind speed er gjennomsnitt over 10min. Vindkast er midlet over 3s og vi
+oppgir maks vindkast i løpet av en time.
 
+The values are predicted for a height of 10 m above ground.
 Wind direction denote where the wind is coming from, where 0° is north, 90° east, etc.
 
