@@ -1,6 +1,6 @@
 ---
 title: Fetching forecast data from THREDDS
-date: 2020-04-15
+date: 2020-05-19
 author: Geir Aalberg
 layout: post
 state: draft
@@ -8,8 +8,37 @@ state: draft
 
 # THREDDS
 
-https://thredds.met.no/thredds/catalog/metpplatest/catalog.html?dataset=metpplatest/met_forecast_1_0km_nordic_latest.nc
+## General documentation
 
+- [https://thredds.met.no/thredds/metno.html](https://thredds.met.no/thredds/metno.html)
+
+## Models
+
+### CMEPS
+
+General information:
+
+- [https://github.com/metno/NWPdocs/wiki](https://github.com/metno/NWPdocs/wiki)
+- [https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view](https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view)
+
+About changes from MEPS to CMEPS, Feb 2020:
+
+- [https://thredds.met.no/thredds/metno.html](https://thredds.met.no/thredds/metno.html)
+
+### AROME-Arctic
+
+- [https://www.met.no/en/projects/The-weather-model-AROME-Arctic/data_access](https://www.met.no/en/projects/The-weather-model-AROME-Arctic/data_access)
+
+### Other models
+
+- [https://drive.google.com/file/d/0B-SaEtrDE91WWDkzY3dpZlU1V00/view](https://drive.google.com/file/d/0B-SaEtrDE91WWDkzY3dpZlU1V00/view)
+
+
+# Examples
+
+## Extraction of metadata using ncdump
+
+    https://thredds.met.no/thredds/catalog/metpplatest/catalog.html?dataset=metpplatest/met_forecast_1_0km_nordic_latest.nc
 
     $ export CMEPS=https://thredds.met.no/thredds/dodsC/metpplatest/met_forecast_1_0km_nordic_latest.nc
 
@@ -138,5 +167,3 @@ https://thredds.met.no/thredds/catalog/metpplatest/catalog.html?dataset=metpplat
             :meps_forecast_reference_time = "1583744400" ;
             :DODS_EXTRA.Unlimited_Dimension = "time" ;
     }
-
-# fimex
