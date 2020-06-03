@@ -9,36 +9,6 @@ state: draft
 
 # Data model
 
-## Variables
-
-|Name|XML tag|Unit|Description|
-|-----|----|------|-----|
-|**symbol_code**|symbol|string|see WeatherIcon service|
-|**air_pressure_at_sea_level**|pressure|hPa| ??? |
-|**air_temperature**|temperature|celsius| predicted for a height of 3 m above ground |
-|air_temperature_max|maxTemperature|celsius| ??? |
-|air_temperature_min|minTemperature|celsius| ??? |
-|**cloud_area_fraction**|cloudiness|%| ??? |
-|cloud_area_fraction_high|highClouds|%| ??? |
-|cloud_area_fraction_low|lowClouds|%| ??? |
-|cloud_area_fraction_medium|mediumClouds|%| ??? |
-|dew_point_temperature|dewpointTemperature|celsius| ??? |
-|fog_area_fraction|fog|%| ??? |
-|**precipitation_amount**|precipitation|mm| ??? |
-|precipitation_amount_max|@maxvalue|mm| ??? |
-|precipitation_amount_min|@minvalue|mm| ??? |
-|probability_of_precipitation||%| ??? |
-|probability_of_thunder||%| see *"Thunder"* below |
-|**relative_humidity**|humidity|%| ??? |
-|ultraviolet_index_clear_sky||1| ??? |
-|**wind_from_direction**|windDirection|degrees| denote where the wind is coming from, where 0° is north, 90° east, etc. |
-|**wind_speed**|windSpeed|m/s| average over 10 mins. predicted for a height of 10 m above ground. |
-|wind_speed_of_gust|windGust|m/s| Vindkast er midlet over 3s og vi oppgir maks vindkast i løpet av en time |
-
-Variables in **bold** are included in `compact.json`, others only in `complete.json`.
-
-
-
 ## Data sources
 
 The source for the global weather forecasts is [the HRES model from
@@ -69,10 +39,38 @@ liten vits å spørre tettere enn 0.125 grader) mens for temperatur brukes
 bilineær interpolasjon og høydejustering (så da får du et bedre varsel om
 man spør for det faktiske stedet).
 
-EC modellen har en egen topografi men den er på veldig grov oppløsning.
+~~EC modellen har en egen topografi men den er på veldig grov oppløsning.~~
 Derfor er det en fordel å sende inn høyde i requesten.
 
-(Er den nye topografien implementert? FIXME)
+**[Vegard kan kanskje skrive noe om den nye topografimodellen?]**
+
+## Variables
+
+|Name|XML tag|Unit|Description|
+|-----|----|------|-----|
+|**symbol_code**|symbol|string|see WeatherIcon service|
+|**air_pressure_at_sea_level**|pressure|hPa| ??? |
+|**air_temperature**|temperature|celsius| predicted for a height of 3 m above ground |
+|air_temperature_max|maxTemperature|celsius| ??? |
+|air_temperature_min|minTemperature|celsius| ??? |
+|**cloud_area_fraction**|cloudiness|%| ??? |
+|cloud_area_fraction_high|highClouds|%| ??? |
+|cloud_area_fraction_low|lowClouds|%| ??? |
+|cloud_area_fraction_medium|mediumClouds|%| ??? |
+|dew_point_temperature|dewpointTemperature|celsius| ??? |
+|fog_area_fraction|fog|%| ??? |
+|**precipitation_amount**|precipitation|mm/period| ??? |
+|precipitation_amount_max|@maxvalue|mm/period| ??? |
+|precipitation_amount_min|@minvalue|mm/period| ??? |
+|probability_of_precipitation||%| ??? |
+|probability_of_thunder||%| see *"Thunder"* below |
+|**relative_humidity**|humidity|%| ??? |
+|ultraviolet_index_clear_sky||1| **[hva betyr "1"???]** |
+|**wind_from_direction**|windDirection|degrees| denote where the wind is coming from, where 0° is north, 90° east, etc. |
+|**wind_speed**|windSpeed|m/s| average over 10 mins. predicted for a height of 10 m above ground. |
+|wind_speed_of_gust|windGust|m/s| Vindkast er midlet over 3s og vi oppgir maks vindkast i løpet av en time |
+
+Variables in **bold** are included in `compact.json`, others only in `complete.json`.
 
 ## Thunder
 
