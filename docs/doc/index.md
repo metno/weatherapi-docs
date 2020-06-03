@@ -9,6 +9,8 @@ layout: page
 ## Introduction
 
 - [API v.3 release notes](./v3relnotes)
+- [Terms of Service](./TermsOfService)
+- [Licensing and Data Policy](./License)
 - [Frequently Asked Questions](./FAQ)
 
 ## HOWTO
