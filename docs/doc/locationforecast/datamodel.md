@@ -9,6 +9,36 @@ state: draft
 
 # Data model
 
+## Variables
+
+|Name|XML tag|Unit|Description|
+|-----|----|------|-----|
+|**symbol_code**|symbol|string|see WeatherIcon service|
+|**air_pressure_at_sea_level**|pressure|hPa| ??? |
+|**air_temperature**|temperature|celsius| predicted for a height of 3 m above ground |
+|air_temperature_max|maxTemperature|celsius| ??? |
+|air_temperature_min|minTemperature|celsius| ??? |
+|**cloud_area_fraction**|cloudiness|%| ??? |
+|cloud_area_fraction_high|highClouds|%| ??? |
+|cloud_area_fraction_low|lowClouds|%| ??? |
+|cloud_area_fraction_medium|mediumClouds|%| ??? |
+|dew_point_temperature|dewpointTemperature|celsius| ??? |
+|fog_area_fraction|fog|%| ??? |
+|**precipitation_amount**|precipitation|mm| ??? |
+|precipitation_amount_max|@maxvalue|mm| ??? |
+|precipitation_amount_min|@minvalue|mm| ??? |
+|probability_of_precipitation||%| ??? |
+|probability_of_thunder||%| see *"Thunder"* below |
+|**relative_humidity**|humidity|%| ??? |
+|ultraviolet_index_clear_sky||1| ??? |
+|**wind_from_direction**|windDirection|degrees| denote where the wind is coming from, where 0° is north, 90° east, etc. |
+|**wind_speed**|windSpeed|m/s| average over 10 mins. predicted for a height of 10 m above ground. |
+|wind_speed_of_gust|windGust|m/s| Vindkast er midlet over 3s og vi oppgir maks vindkast i løpet av en time |
+
+Variables in **bold** are included in `compact.json`, others only in `complete.json`.
+
+
+
 ## Data sources
 
 The source for the global weather forecasts is [the HRES model from
@@ -53,20 +83,14 @@ konvektiv aktivitet. Så hvis sannsynligheten er over en viss terskel og
 det er nedbør i symbolet så blir lyn ikonet valgt. Sannsynligheten for
 lyn er ikke tilgjengelig i locationforecast.
 
-# Parameters
-
-
-All parameters are defined in the OpenAPI (Swagger) spec.
-
 ## Temperature
 
 The values are predicted for a height of 3 m above ground. (??? FIXME)
 
 ## Wind
 
-Ja wind speed er gjennomsnitt over 10min. Vindkast er midlet over 3s og vi
+Wind speed er gjennomsnitt over 10min. Vindkast er midlet over 3s og vi
 oppgir maks vindkast i løpet av en time.
 
 The values are predicted for a height of 10 m above ground.
 Wind direction denote where the wind is coming from, where 0° is north, 90° east, etc.
-
