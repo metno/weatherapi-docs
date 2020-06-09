@@ -92,3 +92,7 @@ oppgir maks vindkast i løpet av en time.
 
 The values are predicted for a height of 10 m above ground.
 Wind direction denote where the wind is coming from, where 0° is north, 90° east, etc.
+
+## Symbols
+
+Ja første symbol er justering pga radar men antar spm gjelder sammenheng  mellom intervall og symbol. Symbolene viser hva det mest sannsynlig  blir. Intervallet viser usikkerheten. Så kl 12 kan det komme 0.5 mm men  mest sannsynlig blir det ikke regn. Hvis det f.eks er en liten sjanse  for noen kraftige byger så kan det fint være ingen dråper i symbolet men 0 - 5 i intervallet

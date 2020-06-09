@@ -84,7 +84,7 @@ information for GDPR and other privacy purposes.
 ### Traffic
 
 Cache data locally and don't generate unnecessary traffic, e.g. by repeated
-requests for data which never change (like CAP warnings).
+requests for data which never change (e.g. MetAlert warnings, images with timestamps).
 
 Do not ask too often, and don't schedule requests every hour on the dot (add a
 random number of minutes to the time of the requests as our data are continously
@@ -139,11 +139,11 @@ proxy (backend for frontend) server where you can cache data and add
 identification/authentication details (this is the canonical way of doing
 authentication in React since you cannot store client secrets in Javascript).
 
-Low-volume websites and mobile apps may use cross-origin Javascript requests and direct image links,
+Low-volume websites and mobile apps may use *simple* cross-origin Javascript requests and direct image links,
 provided the sites identifies itself as described above. If you start generating a lot of traffic against the API,
 you must set up a caching proxy gateway and route all traffic through this.
 
-CORS is explicitly not supported.
+Non-simple javascript requests (i.e. using custom headers) and CORS (whitelisting of domains) is explicitly not supported.
 
 ## Access control
 
@@ -154,13 +154,13 @@ will start getting a 429 HTTP status code instead of any content. Always check r
 and limit traffic immediately if this should happen. If you don't suspect you have excessive amounts
 of traffic, the problem is likely to be a breach of the TOS, usually lack of identification.
 
-If we see that there are situations that threaten the operation of our
-environment, we would consider throttling clients with unnecessary high loads.
-If you set up your service in accordance with our policy it will increase the
-probability that the service is not blocked or throttled. At high total load of
-the service we met.no prioritize critical products such as the location forecast
-and text forecast at the expense of other products such as satellite images,
-radar images and weather maps.
+~~If we see that there are situations that threaten the operation of our~~
+~~environment, we would consider throttling clients with unnecessary high loads.~~
+~~If you set up your service in accordance with our policy it will increase the~~
+~~probability that the service is not blocked or throttled. At high total load of~~
+~~the service we met.no prioritize critical products such as the location forecast~~
+~~and text forecast at the expense of other products such as satellite images,~~
+~~radar images and weather maps.~~
 
 ### Abuse
 
