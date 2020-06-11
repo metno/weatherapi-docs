@@ -14,9 +14,34 @@ to the [Yr Developer Portal](https://developer.yr.no/).
 
 ## Structure
 
-Due to GitHub limitations, all api doc pages must reside in the `doc` directory.
+The files are organized as illustrated:
+
+```
+    weatherapi-docs/
+    ├── docs
+    │   ├── doc
+    │   │   └── locationforecast
+    │   ├── _layouts
+    │   ├── _posts
+    │   ├── schemas
+    │   └── _site
+```
+
+Due to GitHub limitations, all files for GitHub Pages must reside in a `docs` directory.
+Under this is a typical Jekyll structure, with blog articles in `_posts`,
+HTML templates in `_layouts` and so on. The `_site` folder is used by Jekyll
+for auto-generating HTML and is excluded in `.gitignore`.
+
+API documentation shown under [https://api.met.no/doc/](/doc) on api.met.no
+reside in the `doc` directory for historical reasons (yes, this means the directory
+path looks really strange).
+
 Files which are not indented to be processed as Markdown but still included
-in WeatherAPI (e.g. XML schemas) may be stored in other directories.
+in WeatherAPI may be stored in other directories. E.g. `schemas` contain the XML
+schemas used on
+[schema.api.met.no](https://schema.api.met.no/schemas/).
+This may be added to in the future, e.g. for microservice metadata.
+
 
 ## Format
 
