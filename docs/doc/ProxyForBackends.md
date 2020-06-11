@@ -19,8 +19,8 @@ since the destination varies according to each environment (public, internal,
 staging, testing etc). Instead you must read the following HTTP headers which
 are included in all requests from the API:
 
-    - `X-Forwarded-Host`
-    - `X-Forwarded-Proto`
+- `X-Forwarded-Host`
+- `X-Forwarded-Proto`
 
 Here is a typical example of the headers sent by a request from the build server:
 
