@@ -179,8 +179,8 @@ The second piece of metadata is `units`. The unit of all forecast parameters lis
 The forecast timeseries is structured as an array of forecast objects. The array is always sorted with increasing time.
 
 Each forecast object contains a `time` attribute and a number of forecast parameters for that time. We have two main types of forecast parameters:
-- parameters for a time instant.
-- parameters for a time period.
+- parameters for a time instant
+- parameters for a time period
 
 
 ### Parameters for a time instant
@@ -189,4 +189,5 @@ These parameters are found under the `instant` object. These parameters, e.g `ai
 ### Parameters for a time period
 These parameters are found under a number of objects: `next_1_hours`, `next_6_hours`, `next_12_hours`.  These parameters, e.g `precipitation_amount` describe a period of time. E.g `precipitation_amount` under the object `next_1_hours` describe the amount of forecasted precipitation for the period `time` + 1 hour.
 
-The parameters under the object `summary` describes the weather situation based on many of the other parameters. E.g `symbol_code` will describe the weather situation for period of time, and includes information about clouds, precipitation and more.
+The parameters under the object `summary` describes the weather situation based on many of the other parameters. E.g `symbol_code` will describe the weather situation for period of time, and includes information about clouds, precipitation and more. It is also used as the basename of the weathericon filename, by appending the desired extension (`.png`, `.svg` or similar).
+

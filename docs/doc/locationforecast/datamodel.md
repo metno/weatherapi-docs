@@ -72,6 +72,8 @@ Derfor er det en fordel å sende inn høyde i requesten.
 
 Variables in **bold** are included in `compact.json`, others only in `complete.json`.
 
+The variable names are based on the international [CF Standard Name](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html) vocabulary, which is mandatory for all governmental scientific institutions under the EU INSPIRE directive.
+
 ## Thunder
 
 Vi har en statistisk modell for å beregne sannsynligheten for
@@ -93,6 +95,34 @@ oppgir maks vindkast i løpet av en time.
 The values are predicted for a height of 10 m above ground.
 Wind direction denote where the wind is coming from, where 0° is north, 90° east, etc.
 
+### Fog and visibility
+
+Q. Is there a known mapping from the fog value predictions given by the MET public API to  visibility in meters?
+
+A. The only information on visibility from the fog value is to use the definition of fog (visibility less than 1 km)
+
 ## Symbols
 
-Ja første symbol er justering pga radar men antar spm gjelder sammenheng  mellom intervall og symbol. Symbolene viser hva det mest sannsynlig  blir. Intervallet viser usikkerheten. Så kl 12 kan det komme 0.5 mm men  mest sannsynlig blir det ikke regn. Hvis det f.eks er en liten sjanse  for noen kraftige byger så kan det fint være ingen dråper i symbolet men 0 - 5 i intervallet
+Første symbol er justering pga radar men antar spm gjelder sammenheng  mellom intervall og symbol. Symbolene viser hva det mest sannsynlig  blir. Intervallet viser usikkerheten. Så kl 12 kan det komme 0.5 mm men  mest sannsynlig blir det ikke regn. Hvis det f.eks er en liten sjanse  for noen kraftige byger så kan det fint være ingen dråper i symbolet men 0 - 5 i intervallet
+
+## XML Format explanation
+
+**Note: nextrun has been removed in the JSON format.**
+
+Q.  We use the weather prognosis data from the URL “Locationforecast 1.9”.
+In the information that we get, we find some time information as there are
+“nextrun”, “created”, “runended”, “termin”. Can you please provide an
+explanation what these time information elements mean?
+
+A.
+
+- termin: This is the time when the weather prediction model was initialized
+    (when the weather analysis was made)
+- runended: This is when the processing ended for a given run of the weather
+    prediction model
+- nextrun: A new run of the weather prediction model should normally be
+    available by this time
+
+~~For Norway the short term forecasts are updated every 6 hours with the~~
+~~exception of air temperature which is updated every hour. The long term~~
+~~forecasts (day 3 to 10)  are updated every 12 hours.~~

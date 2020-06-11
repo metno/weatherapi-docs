@@ -13,9 +13,10 @@ layout: page
 - [Frequently Asked Questions](./FAQ)
 - [API v.3 release notes](./v3relnotes)
 
-## HOWTO
+## HOWTOs
 
 - [Getting Started](./GettingStarted)
+- [Locationforecast HOWTO](locationforecast/HowTO)
 - [Proxy for backends](./ProxyForBackends)
 - [Using RSS feeds](./RSS)
 - [Third party client libraries](./ClientLibraries)
@@ -28,4 +29,6 @@ layout: page
 
 ## Internal stuff
 
+- [Operational Level Agreement](./OLA)
 - [Medusa index file spec](./indexfiles)
+- [WeatherAPI as proxy for backend microservices](./ProxyForBackends)

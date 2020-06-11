@@ -13,3 +13,13 @@ This is a step-by-step guide to getting a Minimal Value Product (MVP).
 
 - parsing
 
+### Requests
+
+Use max 4 decimals in lat/lon coordinates; anything more than that will return a 400 Bad Request.
+
+### User-Agent
+
+Identification
+
+
+

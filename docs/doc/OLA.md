@@ -4,6 +4,8 @@ date: 2019-12-13
 author: Geir Aalberg
 layout: post
 state:  draft
+tags:
+	- internal
 ---
 
 Følgende vilkår gjelder for alle tjenester som ønskes tilgjengeliggjort via

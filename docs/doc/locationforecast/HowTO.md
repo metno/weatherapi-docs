@@ -40,4 +40,7 @@ parameters in this endpoint and the XML format provided are identical with
 This endpoint will be end-of-lifed in the future **[Why?]**, and clients should
 migrate to one of the other two endpoints.
 
+# Requests
+
+Use max 4 decimals in lat/lon coordinates; anything more than that will return a 400 Bad Request.
 

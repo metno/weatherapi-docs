@@ -25,6 +25,7 @@ The files are organized as illustrated:
     │   ├── _posts
     │   ├── schemas
     │   └── _site
+    └── README.md
 ```
 
 Due to GitHub limitations, all files for GitHub Pages must reside in a `docs` directory.

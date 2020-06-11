@@ -5,7 +5,7 @@ author: Geir Aalberg
 layout: post
 ---
 
-## New features
+## New features in WeatherAPI 3.0
 
 The API framework and technology has been mostly rewritten, while
 preserving most of the 20K lines of code for the existing 48 products.
