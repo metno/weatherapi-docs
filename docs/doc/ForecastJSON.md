@@ -3,7 +3,11 @@ title: General forecast JSON format
 date: 2020-05-03
 author: Håvard Futseter
 layout: page
+status: draft
+todo:
+  - utvidelse for percentiler
 ---
+
 This JSON format is meant for encoding meteorological and oceanographic forecast timeseries data for a specific geographical point on earth.
 
 This documentation has two parts. The first part describes the structure of the JSON format. The second part describes how this format is used in our services to represent forecast data.
@@ -13,8 +17,9 @@ The format has three main parts:
  - Geographical description
  - Forecast metadata
  - Forecast timeseries.
- 
+
 Here is an excerpt of a forecast response:
+
 ```json
 {
   "type": "Feature",
@@ -110,6 +115,7 @@ Here is an excerpt of a forecast response:
       },
     [..]
 ```
+
 You can get a complete forecast respons here: https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10
 
 ## Geographical description
@@ -133,6 +139,7 @@ We only use a small subset of the GeoJSON specification. We only use the GeoJSON
 All other data in our format are defined under the GeoJSON attribute called `properties`.
 
 ## Forecast metadata
+
 ```json
 "meta": {
       "updated_at": "2020-06-10T13:04:26Z",
@@ -161,11 +168,11 @@ All other data in our format are defined under the GeoJSON attribute called `pro
     },
 ```
 
-Currently we have only two pieces of metadata in our forecast data. 
+Currently we have only two pieces of metadata in our forecast data.
 
 The first bit is `updated_at`. This specifies the most recent time when we updated the forecast data.
 
-The second piece of metadata is `units`. The unit of all forecast parameters listed in the forecast data are listed in this block. The units are listed in each forecast document, but the unit for e.g `air_temperature` will be same for all locations. We will notify you about any change in unit values for a parameter. 
+The second piece of metadata is `units`. The unit of all forecast parameters listed in the forecast data are listed in this block. The units are listed in each forecast document, but the unit for e.g `air_temperature` will be same for all locations. We will notify you about any change in unit values for a parameter.
 
 
 ## Forecast timeseries
@@ -176,34 +183,10 @@ Each forecast object contains a `time` attribute and a number of forecast parame
 - parameters for a time period.
 
 
-### Parameters for a time instant 
+### Parameters for a time instant
 These parameters are found under the `instant` object. These parameters, e.g `air_temperature` has a value that describes the state at that exact time instant.
 
 ### Parameters for a time period
 These parameters are found under a number of objects: `next_1_hours`, `next_6_hours`, `next_12_hours`.  These parameters, e.g `precipitation_amount` describe a period of time. E.g `precipitation_amount` under the object `next_1_hours` describe the amount of forecasted precipitation for the period `time` + 1 hour.
 
 The parameters under the object `summary` describes the weather situation based on many of the other parameters. E.g `symbol_code` will describe the weather situation for period of time, and includes information about clouds, precipitation and more.
-
-# Services
-You get short and medium meteorological forecast data from https://api.met.no/weatherapi/locationforecast/2.0. This service has three forecast data endpoints:
- - /compact
- - /complete 
- - /classic 
-
-## /weatherapi/locationforecast/2.0/complete
-This service endpoint will return a response with all available forecast parameters. As we make new forecast parameters available, they will be added to the responses for this service endpoint.
-
-Also, some geographical areas will have more forecast parameters available than others.
-
-## /weatherapi/locationforecast/2.0/compact
-This service endpoint will return a response with only a core set of forecast parameters. All forecast parameters in this endpoint will be available for every location. We will add new parameters to this endpoint as well, but much more rarely, and the response will not increase much.
-
-## /weatherapi/locationforecast/2.0/classic
-This service endpoint exists only for backwards compatibility purposes. The parameters in this endpoint and the xml-format provided are identical with `/locationforecast/1.9`. 
-
-This endpoint will be end-of-lifed in the future, and clients should migrate to one of the other two endpoints.
-
-
-Stikkord:
-
-- utvidelse for percentiler
