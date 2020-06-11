@@ -4,12 +4,12 @@ date: 2020-05-03
 author: Håvard Futseter
 layout: page
 ---
-This json format is meant for encoding meteorological and oceanographic forecast timeseries data for a specific geographical point on earth.
+This JSON format is meant for encoding meteorological and oceanographic forecast timeseries data for a specific geographical point on earth.
 
-This documentation has two parts. The first part describes the structure of the json format. The second part describes how this format is used in our services to represent forecast data.
+This documentation has two parts. The first part describes the structure of the JSON format. The second part describes how this format is used in our services to represent forecast data.
 
 # Format
-The json format has three main parts:
+The format has three main parts:
  - Geographical description
  - Forecast metadata
  - Forecast timeseries.
@@ -126,11 +126,11 @@ You can get a complete forecast respons here: https://api.met.no/weatherapi/loca
   },
 ```
 
-We use the geojson format to structure our json document. If you are unfamiliar with that format, you can read more about it [here](https://geojson.org/).
+We use the GeoJSON standard to structure our format. If you are unfamiliar with that standard, you can read more about it [here](https://geojson.org/).
 
-We only use a small subset of the geojson specification. Our responses are of type `Feature` only, and we only use the geometry type `Point`.
+We only use a small subset of the GeoJSON specification. We only use the GeoJSON type `Feature`, and the geometry type `Point`.
 
-The rest of json document are defined under the geojson attribute called `properties`.
+All other data in our format are defined under the GeoJSON attribute called `properties`.
 
 ## Forecast metadata
 ```json
@@ -190,15 +190,15 @@ You get short and medium meteorological forecast data from https://api.met.no/we
  - /complete 
  - /classic 
 
-## /locationforecast/2.0/complete
-This service endpoint will return a json document will all available forecast parameters. As we make new forecast parameters available, they will be added to the responses for this service endpoint.
+## /weatherapi/locationforecast/2.0/complete
+This service endpoint will return a response with all available forecast parameters. As we make new forecast parameters available, they will be added to the responses for this service endpoint.
 
 Also, some geographical areas will have more forecast parameters available than others.
 
-## /locationforecast/2.0/compact
-This service endpoint will have only a core set of forecast parameters. All forecast parameters in this endpoint will be available for every location. We will add new parameters to this endpoint as well, but much more rarely, and the response will not increase much.
+## /weatherapi/locationforecast/2.0/compact
+This service endpoint will return a response with only a core set of forecast parameters. All forecast parameters in this endpoint will be available for every location. We will add new parameters to this endpoint as well, but much more rarely, and the response will not increase much.
 
-## /locationforecast/2.0/classic
+## /weatherapi/locationforecast/2.0/classic
 This service endpoint exists only for backwards compatibility purposes. The parameters in this endpoint and the xml-format provided are identical with `/locationforecast/1.9`. 
 
 This endpoint will be end-of-lifed in the future, and clients should migrate to one of the other two endpoints.
