@@ -3,7 +3,7 @@ title: Locationforecast HOWTO
 date: 2020-05-11
 author: Håvard Futseter
 layout: page
-status: draft
+state: draft
 ---
 
 # Services
@@ -39,6 +39,5 @@ parameters in this endpoint and the XML format provided are identical with
 
 This endpoint will be end-of-lifed in the future **[Why?]**, and clients should
 migrate to one of the other two endpoints.
-
 
 

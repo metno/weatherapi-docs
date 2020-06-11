@@ -3,7 +3,7 @@ title: General forecast JSON format
 date: 2020-05-03
 author: Håvard Futseter
 layout: page
-status: draft
+state: draft
 todo:
   - utvidelse for percentiler
 ---
