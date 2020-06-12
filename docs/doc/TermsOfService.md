@@ -91,7 +91,10 @@ our [Privacy Policy Statement](https://www.met.no/en/About-us/privacy).
 4. Don't schedule many requests at the same time, e.g. every hour on the dot or when the forecast model runs are finished. 
     Add a random number of minutes to the time of the requests as our data are continously updated. 
     Spread your traffic evenly out over time so it makes a flat curve, not a sawtooth.
-5. Avoid continuous updating of mobile devices. 
+5. When using requests with latitude/longitude, truncate all coordinates to max 4
+    decimals. There is no need to ask for weather forecasts with nanometer precision!
+    For new products, requests with 5+ decimals will return a 403 Forbidden.
+6. Avoid continuous updating of mobile devices. 
     Applications on mobile devices must not retrieve new data as long as the application is not in use.
     If you need push notification (e.g. for MetAlerts), don't make more than one poll every 10 mins.
 
@@ -131,9 +134,6 @@ Use the information found in any cache headers, see RFC 2616. For example, use
 If-Modified-Since requests if the Last-Modified header exists. Note that the
 If-Modified-Since header should be identical to the previous Last-Modified, not
 any random timestamp (and definitely not in the future).
-
-When using requests with latitude/longitude, truncate all coordinates to max 5
-decimals. There is no need to ask for weather forecasts on a subatomic level!
 
 #### Direct client-to-API connections
 
