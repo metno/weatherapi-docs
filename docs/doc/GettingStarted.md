@@ -23,3 +23,7 @@ Identification
 
 
 
+## Setting up a caching proxy
+
+See [Håvard's tutorial](https://github.com/havardf/locationforecast-tutorial)
+

@@ -9,6 +9,8 @@ state: draft
 
 # Conditions for use of the service
 
+**DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT**
+
 In the following you will find guidelines for using the service api.met.no. The
 service has good capacity and can handle relatively large volumes of requests,
 but the capacity is not unlimited. We encourage all users to respect the
@@ -32,9 +34,6 @@ versions will be deprecated. This can be monitored by checking for a 203 status 
 (instead of the usual 200); if so this should be logged and/or shown as a warning.
 Deprecated versions will be terminated after a reasonable time period (usually 1 month).
 
-~~On products marked with "LTS" (longtime support, currently on
-locationforecastlts) we guarantee a phase-out period of three months.~~
-
 There are no guarantees of delivery regarding this service, or possibilities to
 obtain an SLA.
 
@@ -49,7 +48,9 @@ All requests must (if possible) include an identifying User Agent-string (UA) in
 with the application/domain name, optionally version number.
 You should also include a company email address or a link to the company website
 where we can find contact information. If we cannot contact you in case of
-problems, you risk being blocked without warning. Examples:
+problems, you risk being blocked without warning. 
+
+Examples of valid User-Agents:
 
     "acmeweathersite.com support@acmeweathersite.com"
     "AcmeWeatherApp/0.9 github.com/acmeweatherapp"
@@ -77,20 +78,22 @@ are not revealed to us.
 
 All api.met.no access logs are stored in our own data center in Oslo, Norway.
 Company email addresses (used in User-Agent headers) are not considered personal
-information for GDPR and other privacy purposes.
+information for GDPR and other privacy purposes. For more information, see
+our [Privacy Policy Statement](https://www.met.no/en/About-us/privacy).
 
 ## Technical issues
 
 ### Traffic
 
-Cache data locally and don't generate unnecessary traffic, e.g. by repeated
-requests for data which never change (e.g. MetAlert warnings, images with timestamps).
-
-Do not ask too often, and don't schedule requests every hour on the dot (add a
-random number of minutes to the time of the requests as our data are continously
-updated). Avoid continuous updating of mobile devices. Applications on
-mobile devices must not retrieve new data as long as the application is not in
-use.
+1. Do not ask too often, and don't repeat requests until the time indicated in the `Expires` response header.
+2. Cache data locally and and use the `If-Modified-Since` request header to avoid repeatedly downloading the same data.
+3. Don't generate unnecessary traffic, e.g. by repeated requests for data which never change (MetAlerts CAP files, images with timestamps and so on).
+4. Don't schedule many requests at the same time, e.g. every hour on the dot or when the forecast model runs are finished. 
+    Add a random number of minutes to the time of the requests as our data are continously updated. 
+    Spread your traffic evenly out over time so it makes a flat curve, not a sawtooth.
+5. Avoid continuous updating of mobile devices. 
+    Applications on mobile devices must not retrieve new data as long as the application is not in use.
+    If you need push notification (e.g. for MetAlerts), don't make more than one poll every 10 mins.
 
 #### Bandwidth
 
@@ -154,18 +157,11 @@ will start getting a 429 HTTP status code instead of any content. Always check r
 and limit traffic immediately if this should happen. If you don't suspect you have excessive amounts
 of traffic, the problem is likely to be a breach of the TOS, usually lack of identification.
 
-~~If we see that there are situations that threaten the operation of our~~
-~~environment, we would consider throttling clients with unnecessary high loads.~~
-~~If you set up your service in accordance with our policy it will increase the~~
-~~probability that the service is not blocked or throttled. At high total load of~~
-~~the service we met.no prioritize critical products such as the location forecast~~
-~~and text forecast at the expense of other products such as satellite images,~~
-~~radar images and weather maps.~~
-
 ### Abuse
 
 Deliberate breach of our TOS, as well as trying to circumvent traffic rate
 limiting measures and/or impersonating traffic from other clients
-will result in a permanent ban in the use of our services.
+will result in a permanent ban in the use of our services. This includes
+fake or random strings as identification in the User-Agent header.
 
 
