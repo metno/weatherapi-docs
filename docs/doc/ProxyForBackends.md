@@ -4,7 +4,7 @@ date: 2020-01-09
 author: Geir Aalberg
 layout: post
 tags:
-	- internal
+  - internal
 ---
 
 # How to build backend microservices using WeatherAPI as a proxy
@@ -27,14 +27,14 @@ are included in all requests from the API:
 Here is a typical example of the headers sent by a request from the build server:
 
     {
-    
+
         "Accept-Encoding": "gzip",
         "Content-Length": "0",
         "Host": "edge.api.met.no:8080",
         "User-Agent": "WeatherAPI/edge.api.met.no:8080",
         "X-Forwarded-Host": "edge.api.met.no:8080",
         "X-Forwarded-Proto": "https"
-    
+
     }
 
 ## Response

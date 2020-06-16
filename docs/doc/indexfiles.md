@@ -4,7 +4,7 @@ date: 2020-01-09
 author: Geir Aalberg
 layout: post
 tags:
-	- internal
+  - internal
 ---
 
 This documents the use of index files for files delivered via api.met.no.
