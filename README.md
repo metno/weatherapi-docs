@@ -37,7 +37,7 @@ API documentation shown under [https://api.met.no/doc/](/doc) on api.met.no
 reside in the `doc` directory for historical reasons (yes, this means the directory
 path looks really strange).
 
-Files which are not indented to be processed as Markdown but still included
+Files which are not intended to be processed as Markdown but still included
 in WeatherAPI may be stored in other directories. E.g. `schemas` contain the XML
 schemas used on
 [schema.api.met.no](https://schema.api.met.no/schemas/).
@@ -49,7 +49,26 @@ This may be added to in the future, e.g. for microservice metadata.
 Markdown must adhere to the sub/superset supported by
 [Text::MultiMarkdown](https://metacpan.org/pod/Text::MultiMarkdown).
 
-## Links
+### Code blocks
+
+For some reason, grave-defined blocks don't work in the API, use 4-space indents instead.
+Also we have not implemented syntax highlighting, so there is no point in using the former.
+
+    # this works
+
+        {
+            "foo": "bar"
+        }
+
+    # this doesn't
+
+    ```json
+    {
+        "foo": "bar"
+    }
+    ```
+
+### Links
 
 Since text can be displayed under many different subdomains, all links must
 be [root-relative](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2),
