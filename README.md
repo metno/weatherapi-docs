@@ -49,6 +49,10 @@ This may be added to in the future, e.g. for microservice metadata.
 Markdown must adhere to the sub/superset supported by
 [Text::MultiMarkdown](https://metacpan.org/pod/Text::MultiMarkdown).
 
+### Headings
+
+Use only level 2 headings and below, since level 1 is used for the document title.
+
 ### Code blocks
 
 For some reason, grave-defined blocks don't work in the API, use 4-space indents instead.
