@@ -48,6 +48,10 @@ If you choose option 1, it would still be a good idea to later look at the api r
 
 For more information about the meteorological content of the service, please go [here](datamodel.md)
 
+# Important notes for client code
+* Some parameters are not available for every geographic area, so please make sure your client can handle that.
+* In rare cases, a parameter drops out due to an operational issue. Make sure to have error logic to handle missing parameters, for one single time but also for the case when the parameter is missing from the entire timeseries.
+
 # Reminder
 Also, please remember to follow our mailinglist about updates to the service.  Subscribe by sending an email to <api-users-request@lists.met.no> with the word "subscribe" in the subject line.
 
