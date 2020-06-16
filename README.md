@@ -70,6 +70,11 @@ Also we have not implemented syntax highlighting, so there is no point in using 
 
 ### Links
 
+Do not write "click *here* for more information" as it is considered
+[bad](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Link_best_practices)
+[practice](https://www.wordpress-web-designer-raleigh.com/2015/04/4-reasons-to-avoid-using-click-here-in-link-text/).
+
+
 Since text can be displayed under many different subdomains, all links must
 be [root-relative](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2),
 e.g.
