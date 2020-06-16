@@ -186,6 +186,9 @@ parameter.
 The forecast timeseries is structured as an array of forecast objects. The array
 is always sorted with increasing time.
 
+The time resolution for a timeseries can vary. E.g the first half of a timeseries can have time values with one hour intervals,
+while the last half of the timeseries can have time values with six hour intervals.
+
 Each forecast object contains a `time` attribute and a number of forecast
 parameters for that time. We have two main types of forecast parameters:
 
@@ -211,3 +214,8 @@ on many of the other parameters. E.g `symbol_code` will describe the weather
 situation for period of time, and includes information about clouds,
 precipitation and more. It is also used as the basename of the weathericon
 filename, by appending the desired extension (`.png`, `.svg` or similar).
+
+Please note that there will typically be multiple period objects for any given time value, e.g one forecast object
+can have `next_1_hours`, `next_6_hours` and `next_12_hours`. There will never be a period object with shorter period
+than the current time resolution in the timeseries. So, if its 6 hours until the next time value, the current forecast object
+will NOT have a `next_1_hours` period object. 

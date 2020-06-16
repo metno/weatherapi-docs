@@ -24,7 +24,7 @@ Also, some geographical areas will have more forecast parameters available than 
 ## /weatherapi/locationforecast/2.0/compact
 
 This service endpoint will return a response with only a core set of forecast
-parameters. All forecast parameters in this endpoint will be available for every
+parameters. All forecast parameters in this endpoint will normally be available for every
 location. We will add new parameters to this endpoint as well, but much more
 rarely, and the response will not increase much.
 
@@ -34,8 +34,7 @@ This service endpoint exists only for backwards compatibility purposes. The
 parameters in this endpoint and the XML format provided are identical with
 `/locationforecast/1.9`.
 
-This endpoint will be end-of-lifed in the future **[Why?]**, and clients should
-migrate to one of the other two endpoints.
+For most new clients, `compact` or `complete` will be a better fit than this endpoint.
 
 # Start using the service
 First, read about [the structure of the JSON format we use](../ForecastJSON.md).
@@ -46,7 +45,7 @@ Then, create your client in one of two ways:
 
 If you choose option 1, it would still be a good idea to later look at the api reference documentation to make sure you are not missing anything.
 
-For more information about the meteorological content of the service, please go [here](datamodel.md)
+For more information about the meteorological content of the service, please also [read our in-depth description of data sources and forecast parameters](datamodel.md).
 
 # Important notes for client code
 * Some parameters are not available for every geographic area, so please make sure your client can handle that.
