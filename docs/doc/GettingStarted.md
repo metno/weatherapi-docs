@@ -122,3 +122,12 @@ GPS coordinates today.
 
 If you have a large amount of traffic, you should set up a caching proxy server.
 See [Håvard's tutorial](https://github.com/havardf/locationforecast-tutorial) for more detail.
+
+# Reminders
+
+Also, please remember to follow our mailinglist about updates to the service.
+Subscribe by visiting [the list page](http://lists.met.no/mailman/listinfo/api-users),
+or by sending an email to <api-users-request@lists.met.no> with the word "subscribe" in the subject line.
+
+If you run into any difficulties, please let us know by sending an e-mail to
+<weatherapi-adm@met.no>.

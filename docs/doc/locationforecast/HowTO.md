@@ -54,9 +54,3 @@ For more information about the meteorological content of the service, please als
 
 * Some parameters are not available for every geographic area, so please make sure your client can handle that.
 * In rare cases, a parameter drops out due to an operational issue. Make sure to have error logic to handle missing parameters, for one single time but also for the case when the parameter is missing from the entire timeseries.
-
-# Reminder
-
-Also, please remember to follow our mailinglist about updates to the service.  Subscribe by sending an email to <api-users-request@lists.met.no> with the word "subscribe" in the subject line.
-
-If you run into any difficulties, please let us know by sending an e-mail to <weatherapi-adm@met.no>
