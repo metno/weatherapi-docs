@@ -5,17 +5,17 @@ author: Geir Aalberg
 layout: page
 ---
 
-# Introduction
+## Introduction
 
 This is a step-by-step guide to getting a Minimal Value Product (MVP).
 
-## Read the TOS
+### Read the TOS
 
 We strongly recommend that you start by reading the [Terms of Service](./TermsOfService),
 which will save you a lot of problems and head-scratching later. Every week we get emails
 from developers you haven't followed the rules and wonder why their application is not working.
 
-## General info about WeatherAPI
+## General API info
 
 The MET Weather API has several dozen products, which change every month. These typically fall
 into two categories from a user viewpoint:
@@ -26,9 +26,9 @@ into two categories from a user viewpoint:
 In the following guide we will be focusing on our most popular product, Locationforecast 2.0
 which is of the latter category.
 
-# Interacting with the API
+## Interacting with the API
 
-## Using the OpenAPI (Swagger) UI
+### Using the OpenAPI (Swagger) UI
 
 To get aquainted with the API, we suggest trying out the various products in the browser.
 
@@ -36,13 +36,13 @@ To get aquainted with the API, we suggest trying out the various products in the
 ![OpenAPI UI](./assets/swagger.png)
 
 
-## Testing the API from the command line
+### Testing the API from the command line
 
 We assume you are using a UNIX-like shell, and have the `curl` command installed.
 For *Powershell* on Windows, use the `Invoke-WebRequest` command instead (read the
 docs for use).
 
-### A basic request
+#### A basic request
 
 The `-s` option tells curl not to display the progress bar, while the `json_pp` command
 makes the json output readable instead of just one ginormous line.
@@ -69,7 +69,7 @@ request header. In curl this is pretty easy to do:
                 "relative_humidity" : "%",
                 "air_temperature" : "celsius",
 
-### Status headers
+#### Status headers
 
 At this point it would be useful to look at the response headers returned by the API. For this we
 can use either the `-i` option (which displays both headers and body), or `-I` which only returns
@@ -89,7 +89,7 @@ The first thing to notice is the *"203 Non-Authoritative Information"* instead o
 This means either the product is in beta, or it has been deprecated (either by a new version or to be removed).
 In either case you should be careful about using it, and write a warning in your log.
 
-### Caching data
+#### Caching data
 
 The next salient point is the `Expires` header; this tells you how long you should keep the downloaded
 data around before making a new request.
@@ -107,7 +107,7 @@ the `If-Modified-Since` header, using the value of the Last-Modified header
 This will return only the headers and no body, which is much faster than loading the whole document.
 
 
-### Coordinates
+#### Coordinates
 
 Most forecast models are fairly course, e.g. using a 1km resolution grid.
 This means there is no need to send requests with any higher resulotion coordinates,
@@ -118,12 +118,12 @@ For this reason you should never use more than 4 decimals in lat/lon coordinates
 in the API. In the immediate future this will return a 400 Bad Request, so round off your
 GPS coordinates today.
 
-## Setting up a caching proxy
+### Setting up a caching proxy
 
 If you have a large amount of traffic, you should set up a caching proxy server.
 See [Håvard's tutorial](https://github.com/havardf/locationforecast-tutorial) for more detail.
 
-# Reminders
+## Reminders
 
 Also, please remember to follow our mailinglist about updates to the service.
 Subscribe by visiting [the list page](http://lists.met.no/mailman/listinfo/api-users),

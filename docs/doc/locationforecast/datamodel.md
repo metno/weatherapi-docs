@@ -7,8 +7,6 @@ toc: 1
 state: draft
 ---
 
-# Data model
-
 ## Data sources
 
 
