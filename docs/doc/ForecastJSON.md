@@ -4,6 +4,8 @@ date: 2020-05-03
 author: Håvard Futseter
 layout: page
 state: draft
+summary: >
+    Description of the JSON format used in Locationforecast, Nowcast and others
 todo:
   - extension for percentiles
 ---
@@ -218,4 +220,4 @@ filename, by appending the desired extension (`.png`, `.svg` or similar).
 Please note that there will typically be multiple period objects for any given time value, e.g one forecast object
 can have `next_1_hours`, `next_6_hours` and `next_12_hours`. There will never be a period object with shorter period
 than the current time resolution in the timeseries. So, if its 6 hours until the next time value, the current forecast object
-will NOT have a `next_1_hours` period object. 
+will NOT have a `next_1_hours` period object.

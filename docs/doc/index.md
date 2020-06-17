@@ -3,6 +3,8 @@ title: WeatherAPI documentation
 date: 2020-04-27
 author: Geir Aalberg
 layout: page
+summary: >
+    General documentation front page
 ---
 
 

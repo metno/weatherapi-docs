@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 tags:
   - internal
+summary: >
+    How to build backend microservices using WeatherAPI as a proxy
 ---
 
 # How to build backend microservices using WeatherAPI as a proxy

@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 toc: 1
 state: draft
+summary: >
+    Terms for reusing data from MET Norway
 ---
 
 # Licensing and Data Policy

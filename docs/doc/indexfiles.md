@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 tags:
   - internal
+summary: >
+    How to deliver search metadata for static files from upstream
 ---
 
 This documents the use of index files for files delivered via api.met.no.

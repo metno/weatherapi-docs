@@ -3,6 +3,8 @@ title: WeatherAPI 3.0 Release Notes
 date: 2017-06-22
 author: Geir Aalberg
 layout: post
+summary: >
+    Differences from the old Weather API, used 2007-2017
 ---
 
 ## New features in WeatherAPI 3.0

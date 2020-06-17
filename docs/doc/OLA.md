@@ -2,6 +2,8 @@
 title: Organizational Level Agreement for api.met.no
 date: 2019-12-13
 author: Geir Aalberg
+summary: >
+    Vilkår for dataleverandører
 layout: post
 state:  draft
 tags:

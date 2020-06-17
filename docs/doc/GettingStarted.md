@@ -3,6 +3,8 @@ title: Getting Started
 date: 2020-04-27
 author: Geir Aalberg
 layout: page
+summary: >
+    Where to start using the Weather API from scratch
 ---
 
 ## Introduction
@@ -105,6 +107,8 @@ the `If-Modified-Since` header, using the value of the Last-Modified header
     ...
 
 This will return only the headers and no body, which is much faster than loading the whole document.
+
+**Note: If-Modified-Since does not work with beta or deprecated products.** Products returning a 203 status code will always include body.
 
 
 #### Coordinates
