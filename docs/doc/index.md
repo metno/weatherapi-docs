@@ -23,10 +23,15 @@ Step-by-step guides to implementing a client application
 - [MetAlerts HOWTO]() (Under construction)
 - [Setting up your own caching proxy server using Nginx](https://github.com/havardf/locationforecast-tutorial)
 
+## Frequently Asked Questions
+
+Helpdesk's greatest hits
+
+- [General FAQ about the API](./FAQ)
+- [Locationforecast FAQ](locationforecast/FAQ)
 
 ## Useful information
 
-- [Frequently Asked Questions](./FAQ)
 - [Third party client libraries](./ClientLibraries)
 - [Fetching gridded forecast data from THREDDS](./thredds)
 
