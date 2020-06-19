@@ -37,7 +37,7 @@ Helpdesk's greatest hits
 
 ## Keeping updated
 
-- [The API-users mailing list]()  (Under construction)
+- [The API-users mailing list](./MailingList)
 - [Using the News and Changelog RSS feeds](./RSS)
 
 ## Reference documentation
