@@ -11,24 +11,6 @@ summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
 
-# Locationforecast
-
-
-
-### Solar energy
-
-Q. Are historic measurements or historic predictions for the solar
-energy that reaches the earth surface and if yes how can we access them.
-
-A: Historic predictions of solar energy are available from the archive of our
-weather prediction model. The radiation parameters are available in NetCDF
-format here:
-http://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html
-
-Choose the files with the following name: meps_mbr0_extracted_2_5km_XXXXX
-
-
-
 # Observational data
 
 > Noen som vet om vi interpolerte observasjonsdata eksternt tilgjengelig noe
