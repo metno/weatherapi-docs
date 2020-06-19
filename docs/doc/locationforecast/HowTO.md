@@ -5,8 +5,8 @@ author: Håvard Futseter
 layout: page
 state: draft
 tags:
-	- reference
-	- locationforecast
+    - reference
+    - locationforecast
 summary: >
     A step-by-step guide to building a Locationforecast client application
 ---

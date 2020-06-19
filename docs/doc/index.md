@@ -30,24 +30,20 @@ Helpdesk's greatest hits
 - [General FAQ about the API](./FAQ)
 - [Locationforecast FAQ](locationforecast/FAQ)
 
-## Useful information
-
-- [Third party client libraries](./ClientLibraries)
-- [Fetching gridded forecast data from THREDDS](./thredds)
-
-## Keeping updated
-
-- [The API-users mailing list](./MailingList)
-- [Using the News and Changelog RSS feeds](./RSS)
-
 ## Reference documentation
 
 Specifications and lookup information
 
-- [HTTP status codes and response headers]()  (Under construction)
+- [HTTP status codes and response headers]() (Under construction)
 - [General forecast JSON format](./ForecastJSON)
 - [Locationforecast data model](./locationforecast/datamodel)
 - [API v.3 release notes](./v3relnotes)
+- [Third party client libraries](./ClientLibraries)
+
+## Other data sources
+
+- [WMS services]()  (Under construction)
+- [Fetching gridded forecast data from THREDDS](./thredds)
 
 ## For backend developers
 
@@ -56,3 +52,10 @@ For MET employees only
 - [Operational Level Agreement](./OLA)
 - [Medusa index file spec](./indexfiles)
 - [WeatherAPI as proxy for backend microservices](./ProxyForBackends)
+
+## Keeping updated
+
+Subscribe to news and changes about the Weather API
+
+- [The API-users mailing list](./MailingList)
+- [Using the News and Changelog RSS feeds](./RSS)

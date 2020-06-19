@@ -5,8 +5,8 @@ author: Geir Aalberg
 layout: page
 state: draft
 tags:
-	- reference
-	- locationforecast
+    - reference
+    - locationforecast
 summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
