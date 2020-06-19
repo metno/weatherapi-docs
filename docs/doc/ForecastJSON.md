@@ -4,10 +4,12 @@ date: 2020-05-03
 author: Håvard Futseter
 layout: page
 state: draft
+tags:
+    - reference
 summary: >
     Description of the JSON format used in Locationforecast, Nowcast and others
 todo:
-  - extension for percentiles
+    - extension for percentiles
 ---
 
 This JSON format is meant for encoding meteorological and oceanographic forecast

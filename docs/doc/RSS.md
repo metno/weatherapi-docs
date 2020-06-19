@@ -3,6 +3,8 @@ title: WeatherAPI RSS Feeds
 date: 2020-04-17
 author: Geir Aalberg
 layout: post
+tags:
+    - guide
 summary: >
     How to use the news feeds for operational changes on api.met.no
 ---

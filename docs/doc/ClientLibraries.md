@@ -3,6 +3,8 @@ title: API client libraries
 date: 2020-04-14
 author: Geir Aalberg
 layout: post
+tags:
+    - reference
 summary: >
     A list of external, third party interfaces for using api.met.no
 ---

@@ -4,6 +4,8 @@ date: 2020-05-19
 author: Geir Aalberg
 layout: post
 state: draft
+tags:
+    - guide
 summary: >
     Guide to finding and extracting data and images from thredds.met.no
 ---

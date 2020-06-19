@@ -7,33 +7,48 @@ summary: >
     General documentation front page
 ---
 
-
 ## Introduction
 
+Things you need to know before you start coding
+
 - [Terms of Service](./TermsOfService) - please read this first
-- [Licensing and Data Policy](./License)
-- [Frequently Asked Questions](./FAQ)
-- [Using the News and Changelog RSS feeds](./RSS)
-- [API v.3 release notes](./v3relnotes)
+- [Getting Started](./GettingStarted) - read this next
+- [Licensing and Data Policy](./License) - what you can use our data for
 
 ## HOWTOs
 
-- [Getting Started with WeatherAPI](./GettingStarted)
+Step-by-step guides to implementing a client application
+
 - [Locationforecast HOWTO](locationforecast/HowTO)
+
 - [MetAlerts HOWTO]() (Under construction)
--  [Setting up your own caching proxy server using Nginx](https://github.com/havardf/locationforecast-tutorial)
+
+- [Setting up your own caching proxy server using Nginx](https://github.com/havardf/locationforecast-tutorial)
+
+
+## Useful information
+
+- [Frequently Asked Questions](./FAQ)
 - [Third party client libraries](./ClientLibraries)
+- [Fetching gridded forecast data from THREDDS](./thredds)
 
-## Product specs
+## Keeping updated
 
+- [The API-users mailing list]()  (Under construction)
+- [Using the News and Changelog RSS feeds](./RSS)
+
+## Reference documentation
+
+Specifications and lookup information
+
+- [HTTP status codes and response headers]()  (Under construction)
 - [General forecast JSON format](./ForecastJSON)
 - [Locationforecast data model](./locationforecast/datamodel)
+- [API v.3 release notes](./v3relnotes)
 
-## Other data sources
+## For backend developers
 
-- [Fetching forecast data from THREDDS](./thredds)
-
-## Internal stuff
+For MET employees only
 
 - [Operational Level Agreement](./OLA)
 - [Medusa index file spec](./indexfiles)

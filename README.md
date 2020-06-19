@@ -12,7 +12,35 @@ but is also visible for debugging purposes at
 It is also possible to add documents intended for export
 to the [Yr Developer Portal](https://developer.yr.no/).
 
-## Structure
+## Organization
+
+Structure the information according to the [Divio Documentation
+System](https://documentation.divio.com/introduction/).
+Documentation should fall into one of the following categories:
+
+Tutorials
+
+- Purpose: learning
+- Aim: allow the newcomer to get started
+
+How-to guides
+
+- Purpose: step-by-step instructions
+- Aim: show how to solve a specific problem
+
+Reference
+
+- Purpose: looking up specific information
+- Aim: describe the machinery
+
+Explanation
+
+- Purpose: deeper understanding
+- Aim: explain complex problems
+
+All articles should be marked with the corresponding tag in the YAML preamble.
+
+## File structure
 
 The files are organized as illustrated:
 

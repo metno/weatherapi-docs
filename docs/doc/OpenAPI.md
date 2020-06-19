@@ -6,6 +6,8 @@ author_bio: >
             Just another Perl hacker...
 layout: post
 state: draft
+tags:
+    - tutorial
 summary: >
     How to read the OpenAPI (Swagger) API specification from the various products
 ---

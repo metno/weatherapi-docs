@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 toc: 1
 state: draft
+tags:
+    - terms
 summary: >
     Terms for reusing data from MET Norway
 ---

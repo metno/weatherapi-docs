@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 toc: 1
 state: draft
+tags:
+    - terms
 summary: >
     What you must agree to before using api.met.no
 ---

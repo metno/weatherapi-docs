@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 summary: >
     Differences from the old Weather API, used 2007-2017
+tags:
+    - reference
 ---
 
 ## New features in WeatherAPI 3.0

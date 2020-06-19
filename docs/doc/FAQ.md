@@ -5,6 +5,8 @@ author: Geir Aalberg
 layout: post
 toc: 1
 state: draft
+tags:
+    - reference
 summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---

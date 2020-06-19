@@ -3,6 +3,8 @@ title: Getting Started
 date: 2020-04-27
 author: Geir Aalberg
 layout: page
+tags:
+    - tutorial
 summary: >
     Where to start using the Weather API from scratch
 ---
