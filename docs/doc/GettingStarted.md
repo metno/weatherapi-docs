@@ -131,9 +131,4 @@ See [Håvard's tutorial](https://github.com/havardf/locationforecast-tutorial) f
 
 ## Reminders
 
-Also, please remember to follow our mailinglist about updates to the service.
-Subscribe by visiting [the list page](http://lists.met.no/mailman/listinfo/api-users),
-or by sending an email to <api-users-request@lists.met.no> with the word "subscribe" in the subject line.
-
-If you run into any difficulties, please let us know by sending an e-mail to
-<weatherapi-adm@met.no>.
+Please follow our [mailing list](./MailingList) or [RSS feed](./RSS) to get important informasjon about upcoming changes.
