@@ -12,7 +12,7 @@ summary: >
 Things you need to know before you start coding
 
 - [Terms of Service](./TermsOfService) - please read this first
-- [Getting Started](./GettingStarted) - read this next
+- [Getting Started](./GettingStarted) - read this tutorial next to understand the basic concepts
 - [Licensing and Data Policy](./License) - what you can use our data for
 
 ## HOWTOs
@@ -20,9 +20,7 @@ Things you need to know before you start coding
 Step-by-step guides to implementing a client application
 
 - [Locationforecast HOWTO](locationforecast/HowTO)
-
 - [MetAlerts HOWTO]() (Under construction)
-
 - [Setting up your own caching proxy server using Nginx](https://github.com/havardf/locationforecast-tutorial)
 
 

@@ -4,6 +4,9 @@ date: 2020-05-11
 author: Håvard Futseter
 layout: page
 state: draft
+tags:
+	- reference
+	- locationforecast
 ---
 
 ## Choose the endpoint for your needs

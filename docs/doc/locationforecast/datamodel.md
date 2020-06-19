@@ -5,6 +5,9 @@ author: Ivar Ambjørn Seierstad
 layout: post
 toc: 1
 state: draft
+tags:
+	- reference
+	- locationforecast
 ---
 
 ## Data sources
