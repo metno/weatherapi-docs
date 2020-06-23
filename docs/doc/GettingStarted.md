@@ -35,7 +35,7 @@ which is of the latter category.
 
 ### Using the OpenAPI (Swagger) UI
 
-To get aquainted with the API, we suggest trying out the various products in the browser.
+To get aquainted with the API, we suggest trying out the various products in the browser. This is the Swagger UI for the `compact` version of Locationforecast:
 
 
 ![OpenAPI UI](./assets/swagger.png)
@@ -47,12 +47,16 @@ We assume you are using a UNIX-like shell, and have the `curl` command installed
 For *Powershell* on Windows, use the `Invoke-WebRequest` command instead (read the
 docs for use).
 
+**Note:** Even though are are using `https://api.met.no/` in the examples below, you may be told to use a different URL. In that case, just replace this in your requests.
+
 #### A basic request
+
+Let's try to fetch the weather forecast for Greenwich, London, UK, using the `Locationforecast` service.
 
 The `-s` option tells curl not to display the progress bar, while the `json_pp` command
 makes the json output readable instead of just one ginormous line.
 
-    $ curl -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50&lon=0'|json_pp
+    $ curl -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'|json_pp
     {
        "properties" : {
           "meta" : {
@@ -66,7 +70,7 @@ because you haven't read the
 yourself. This is done by sending contact information in the `User-Agent`
 request header. In curl this is pretty easy to do:
 
-    $ curl -A "MyTestApp/0.1" -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50&lon=0'|json_pp
+    $ curl -A "MyTestApp/0.1" -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'|json_pp
     {
        "properties" : {
           "meta" : {
@@ -80,7 +84,7 @@ At this point it would be useful to look at the response headers returned by the
 can use either the `-i` option (which displays both headers and body), or `-I` which only returns
 the headers (also known as a HEAD request).
 
-    $ curl -A "MyTestApp/0.1" -I -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50&lon=0'
+    $ curl -A "MyTestApp/0.1" -I -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'
     HTTP/1.1 203 Non-Authoritative Information
     Content-Type: application/json
     Expires: Tue, 16 Jun 2020 12:44:18 GMT
@@ -104,7 +108,7 @@ the same data over and over (generating unneccesary bandwith and latency), you s
 the `If-Modified-Since` header, using the value of the Last-Modified header
 
     $ curl -A "MyTestApp/0.1" -i -H 'If-Modified-Since: Tue, 16 Jun 2020 12:11:59 GMT' \
-      -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50&lon=0'
+      -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'
     HTTP/1.1 304 Not Modified
     Content-Type: application/json
     ...
