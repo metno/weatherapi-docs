@@ -124,11 +124,39 @@ For this reason you should never use more than 4 decimals in lat/lon coordinates
 in the API. In the immediate future this will return a 400 Bad Request, so round off your
 GPS coordinates today.
 
-### Setting up a caching proxy
+Sometimes you might get a `422 Unprocessable Entity` status code back, e.g. from Nowcast. This usually means that your request is for a location which is not covered by the service.
 
-If you have a large amount of traffic, you should set up a caching proxy server.
-See [Håvard's tutorial](https://github.com/havardf/locationforecast-tutorial) for more detail.
+### Using the Available lists
 
-## Reminders
+So far we have been using products which cover a continous range of possible values, like geographic coordinates for the whole globe. For some other products however there is only a distinct set of data which are available for download. To find out which, you need to use the `available`  method. This will return a list in XML (default) or JSON format with links to all available files, which you then can download as previously described.
 
-Please follow our [mailing list](./MailingList) or [RSS feed](./RSS) to get important informasjon about upcoming changes.
+```
+$ curl -A "MyTestApp/0.1" -s 'https://api.met.no/weatherapi/radar/2.0/available.json?type=lx_reflectivity&area=central_norway'|json_pp
+[
+   {
+      "params" : {
+         "time" : "2020-06-23T07:25:00Z",
+         "area" : "central_norway",
+         "type" : "lx_reflectivity",
+         "content" : "image"
+      },
+      "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A25%3A00Z&type=lx_reflectivity"
+   },
+   {
+      "params" : {
+         "content" : "image",
+         "area" : "central_norway",
+         "time" : "2020-06-23T07:30:00Z",
+         "type" : "lx_reflectivity"
+      },
+      "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A30%3A00Z&type=lx_reflectivity"
+   },
+```
+
+As you can see we have limited the results to a specific `area` and `type` to filter out unwanted results. This greatly speeds up download times as the full radar list contains almost 3000 images!
+
+**Note:** While it may seem reduntant that the parameters are repeated in the URL as well as listed separately, this may be different in the future.
+
+## Congratulations!
+
+You have now learned the necessary requirements for writing a client for the Weather API. In addition you must also choose which programming language to implement it in, of which there are several hundreds to choose from. As such it is difficult for us to provide detailed instructions, but we plan to provide some code examples later.

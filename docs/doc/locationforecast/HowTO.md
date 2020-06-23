@@ -59,3 +59,7 @@ For more information about the meteorological content of the service, please als
 
 * Some parameters are not available for every geographic area, so please make sure your client can handle that.
 * In rare cases, a parameter drops out due to an operational issue. Make sure to have error logic to handle missing parameters, for one single time but also for the case when the parameter is missing from the entire timeseries.
+
+## Reminders
+
+Please follow our [mailing list](./MailingList) or [RSS feed](./RSS) to get important informasjon about upcoming changes.
