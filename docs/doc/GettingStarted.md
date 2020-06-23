@@ -11,13 +11,14 @@ summary: >
 
 ## Introduction
 
-This is a step-by-step guide to getting a Minimal Value Product (MVP).
+This is a tutorial on how to use the MET Weather API, using the Locationforecast service as an example. It will present you with many of the most common caveats which you need to understand to use the service correctly, many of which will not be obvious even if you're an experienced programmer. We therefore recommend reading this thoroughly regardless of experience level.
 
-### Read the TOS
+### Read the Terms of Service
 
-We strongly recommend that you start by reading the [Terms of Service](./TermsOfService),
+First we strongly recommend that you start by reading the [Terms of Service](./TermsOfService),
 which will save you a lot of problems and head-scratching later. Every week we get emails
 from developers you haven't followed the rules and wonder why their application is not working.
+Pay special attention to the sections on User Identification, traffic rate limiting and licensing/attribution.
 
 ## General API info
 

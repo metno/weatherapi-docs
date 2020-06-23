@@ -11,6 +11,12 @@ summary: >
     A step-by-step guide to building a Locationforecast client application
 ---
 
+-----------------------------------------------------
+
+**Note: This document is to be moved to the Yr developer portal. As such it may contain absolute URLs to api.met.no, unlike other documentation in weatherapi-docs.**
+
+--------------------------
+
 ## Choose the endpoint for your needs
 
 [Locationforecast/2.0](https://api.met.no/weatherapi/locationforecast/2.0) gives you a short -and medium weather forecast in a GeoJSON format.
