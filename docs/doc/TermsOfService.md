@@ -148,7 +148,8 @@ Low-volume websites and mobile apps may use *simple* cross-origin Javascript req
 provided the sites identifies itself as described above. If you start generating a lot of traffic against the API,
 you must set up a caching proxy gateway and route all traffic through this.
 
-Non-simple javascript requests (i.e. using custom headers) and CORS (whitelisting of domains) is explicitly not supported.
+Non-simple javascript requests (i.e. using authentication or other custom headers) and CORS preflights 
+(whitelisting of your domain in the ``Access-Control-Allow-Origin` header) is explicitly not supported.
 
 ## Access control
 

@@ -95,8 +95,15 @@ When responding to a credentialed request, the server **must** specify an origin
 
 Since it is impossible for api.met.no to list all the thousands of different sites using the Weather API, we cannot include your website in the `Access-Control-Allow-Origin` header (the list would simply be too long). Because of this, you cannot use the Frost API with authentication either.
 
+### Conclusion
 
+The only fully supported solution is for you to set up a local CORS proxy which adds the necessary identification (`User-Agent`) or authentication header. At this point is you might as well implement local caching at the same time, which will save you time later if your application starts to generate significant traffic.
+
+https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/
 
 ## See also
 
 https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work
+
+
+
