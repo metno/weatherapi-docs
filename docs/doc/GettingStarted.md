@@ -35,7 +35,7 @@ which is of the latter category.
 
 ### Using the OpenAPI (Swagger) UI
 
-To get aquainted with the API, we suggest trying out the various products in the browser. This is the Swagger UI for the `compact` version of Locationforecast:
+To get aquainted with the API, we suggest trying out the various product features in the browser. This is the Swagger UI for the `compact` version of Locationforecast, which can be found at <https://api.met.no/weatherapi/locationforecast/2.0/>.
 
 
 ![OpenAPI UI](./assets/swagger.png)

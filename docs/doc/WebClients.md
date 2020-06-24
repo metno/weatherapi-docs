@@ -62,7 +62,7 @@ Some requests don’t trigger a [CORS preflight](https://developer.mozilla.org/e
 
 - No [`ReadableStream`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) object is used in the request.
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Examples_of_access_control_scenarios
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Examples_of_access_control_scenarios>
 
 #### Caveats
 
@@ -99,11 +99,11 @@ Since it is impossible for api.met.no to list all the thousands of different sit
 
 The only fully supported solution is for you to set up a local CORS proxy which adds the necessary identification (`User-Agent`) or authentication header. At this point is you might as well implement local caching at the same time, which will save you time later if your application starts to generate significant traffic.
 
-https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/
+<https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/>
 
 ## See also
 
-https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work
+<https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work>
 
 
 
