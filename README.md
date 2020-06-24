@@ -46,24 +46,22 @@ The files are organized as illustrated:
 
 ```
     weatherapi-docs/
-    ├── docs
-    │   ├── doc
-    │   │   └── locationforecast
-    │   ├── _layouts
-    │   ├── _posts
-    │   ├── schemas
-    │   └── _site
+    ├── doc
+    │   └── locationforecast
+    ├── _layouts
+    ├── _posts
+    ├── schemas
+    ├── _site
     └── README.md
 ```
 
-Due to GitHub limitations, all files for GitHub Pages must reside in a `docs` directory.
-Under this is a typical Jekyll structure, with blog articles in `_posts`,
+This is a typical Jekyll structure, with blog articles in `_posts`,
 HTML templates in `_layouts` and so on. The `_site` folder is used by Jekyll
 for auto-generating HTML and is excluded in `.gitignore`.
 
-API documentation shown under [https://api.met.no/doc/](/doc) on api.met.no
-reside in the `doc` directory for historical reasons (yes, this means the directory
-path looks really strange).
+API static documentation pages shown under [https://api.met.no/doc/](/doc) on
+api.met.no reside in the `doc` directory for historical reasons (yes, this means
+the directory path looks somewhat strange).
 
 Files which are not intended to be processed as Markdown but still included
 in WeatherAPI may be stored in other directories. E.g. `schemas` contain the XML
