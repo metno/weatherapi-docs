@@ -44,6 +44,7 @@ If you prefer snail mail, the address is:
     The Norwegian Meteorological Institute
     Postboks 43 Blindern
     0371 OSLO
+    NORWAY
 
 Carrier pidgeon is currently not supported as we are awaiting the
 [spec](https://tools.ietf.org/html/rfc2549) to be finalized.

@@ -50,7 +50,7 @@ For most new clients, `compact` or `complete` will be a better fit than this end
 
 ## Start using the service
 
-First, read about [the structure of the JSON format we use](../ForecastJSON.md).
+First, read about [the structure of the JSON format we use](../ForecastJSON).
 
 Then, create your client in one of two ways:
 
@@ -59,7 +59,7 @@ Then, create your client in one of two ways:
 
 If you choose option 1, it would still be a good idea to later look at the api reference documentation to make sure you are not missing anything.
 
-For more information about the meteorological content of the service, please also [read our in-depth description of data sources and forecast parameters](datamodel.md).
+For more information about the meteorological content of the service, please also [read our in-depth description of data sources and forecast parameters](datamodel).
 
 ## Important notes for client code
 
