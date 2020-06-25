@@ -2,15 +2,13 @@
 title: Writing web clients
 date: 2020-06-23
 author: Geir Aalberg
-layout: post
+layout: page
 state: draft
 tags:
     - howto
 summary: >
     How to write a web client for MET Weather API, using various technologies
 ---
-
-**DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT**
 
 ## Static links
 
@@ -30,13 +28,13 @@ This sometimes works, e.g. for images which does not contain time information:
 
 Some requests don’t trigger a [CORS preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests). Those are called *“simple requests”* in this article, though the [Fetch](https://fetch.spec.whatwg.org/) spec (which defines CORS) doesn’t use that term. A “simple request” is one that **meets all the following conditions**:
 
-- One of the allowed methods:  
+- One of the allowed methods:
 
     - [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
     - [`HEAD`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
     - [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST)
 
-- Apart from the headers automatically set by the user agent (for example, `Connection`, `User-Agent`, or the other headers defined in the Fetch spec as a “forbidden header name”), the only headers which are allowed to be manually set are those which the Fetch spec defines as a “CORS-safelisted request-header”, which are:  
+- Apart from the headers automatically set by the user agent (for example, `Connection`, `User-Agent`, or the other headers defined in the Fetch spec as a “forbidden header name”), the only headers which are allowed to be manually set are those which the Fetch spec defines as a “CORS-safelisted request-header”, which are:
 
     - [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept)
     - [`Accept-Language`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
@@ -48,11 +46,11 @@ Some requests don’t trigger a [CORS preflight](https://developer.mozilla.org/e
     - `Viewport-Width`
     - `Width`
 
-- The only allowed values for the 
+- The only allowed values for the
 
     `Content-Type`
 
-     header are:  
+     header are:
 
     - `application/x-www-form-urlencoded`
     - `multipart/form-data`
@@ -66,7 +64,7 @@ Some requests don’t trigger a [CORS preflight](https://developer.mozilla.org/e
 
 #### Caveats
 
-The problem with CORS is that you normally cannot identify yourself with a `User-Agent` header and risk being blocked. Normally the request will include an `Origin` header, which may be enough to get you out of trouble if it contains a reachable domain name with contact info. 
+The problem with CORS is that you normally cannot identify yourself with a `User-Agent` header and risk being blocked. Normally the request will include an `Origin` header, which may be enough to get you out of trouble if it contains a reachable domain name with contact info.
 
 But it is also incompatible with any form of HTTP authentication (Basic Auth, OAUTH2, static bearer tokens etc). This means that you cannot use the Frost API with simple requests, and in the future possibly not Weather API either if we decide to implement authentication.
 
@@ -82,7 +80,7 @@ xhr.open('POST', 'https://bar.other/resources/post-here/');
 xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
 xhr.setRequestHeader('Content-Type', 'application/xml');
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>'); 
+xhr.send('<person><name>Arun</name></person>');
 ```
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are  generally useful to web applications. Since the request uses a  Content-Type of `text/xml`, and since a custom header is set, this request is preflighted.
@@ -104,6 +102,3 @@ The only fully supported solution is for you to set up a local CORS proxy which 
 ## See also
 
 <https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work>
-
-
-

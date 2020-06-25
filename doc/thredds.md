@@ -2,7 +2,7 @@
 title: Fetching forecast data from THREDDS
 date: 2020-05-19
 author: Geir Aalberg
-layout: post
+layout: page
 state: draft
 tags:
     - guide

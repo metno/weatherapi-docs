@@ -2,7 +2,7 @@
 title: API client libraries
 date: 2020-04-14
 author: Geir Aalberg
-layout: post
+layout: page
 tags:
     - reference
 summary: >
@@ -11,61 +11,62 @@ summary: >
 
 Several independent developers have made third-party client libraries for
 the various met.no APIs. We take no responsibility for the functionality
-of these (in fact we know some of them are broken), please contact the
-developers directly if you have any issues. The official MET Norway code
-repo can be found at <https://github.com/metno>.
+of these (in fact we know some of them are broken!). Also, at the time of
+writing all of these using Locationforecast depend on the deprecated 1.9 version;
+these must be updated to 2.0 before 2021 to continue working.
+Please contact the developers directly if you have any issues.
+
+The official MET Norway code repo can be found at <https://github.com/metno>.
 
 Also note that the use of the YR brand is not allowed in third party software
 as per the Terms of Use.
 
+## WeatherAPI third-part client libraries
 
-
-# WeatherAPI third-part client libraries
-
-## Perl
+### Perl
 
 - <https://metacpan.org/pod/Weather::YR> (broken)
-- <https://metacpan.org/pod/Mojo::YR> (Mojolicious)
-- <https://github.com/jhthorsen/mojo-yr> (Mojolicious)
+- <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete)
+- <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete)
 
-## Python
+### Python
 
 - <https://github.com/andehen/MetNoPy>
 - <https://github.com/toringer/home-assistant-metnowcast> (HomeAssistant Nowcast plugin)
 
-## PHP
+### PHP
 
 - <https://github.com/pionl/METno>
 
-## Javascript/Node
+### Javascript/Node
 
 - <https://github.com/evanshortiss/yr.no-forecast>
 - <https://github.com/evanshortiss/yr.no-interface>
 - <https://github.com/mitica/metno-client-js>
 - <https://github.com/mitica/metno-symbols>
 
-## Go
+### Go
 
 - <https://github.com/jackdoe/go-metno>
 
-## C#
+### C#
 
 - <https://github.com/mr-raw/metno>
 
-## Haskell
+### Haskell
 
 - <https://gitlab.com/spisemisu/>
 
-## EMACS Lisp
+### EMACS Lisp
 
 - <https://github.com/ruediger/weather-metno-el>
 
-# Frost API
+## Frost API (observations)
 
-## Python
+### Python
 
 - <https://github.com/ArcticPuffin/frost_api_metno> (Jupyter Notebook)
 
-## R
+### R
 
 - <https://cran.r-project.org/package=frostr>

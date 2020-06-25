@@ -68,4 +68,4 @@ For more information about the meteorological content of the service, please als
 
 ## Reminders
 
-Please follow our [mailing list](./MailingList) or [RSS feed](./RSS) to get important informasjon about upcoming changes.
+Please follow our [mailing list or RSS feed](./support) to get important informasjon about upcoming changes.

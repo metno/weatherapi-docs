@@ -4,7 +4,7 @@ date: 2018-04-05
 author: Geir Aalberg
 author_bio: >
             Just another Perl hacker...
-layout: post
+layout: page
 state: draft
 tags:
     - tutorial

@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 date: 2020-04-15
 author: Geir Aalberg
-layout: post
+layout: page
 toc: 1
 state: draft
 tags:

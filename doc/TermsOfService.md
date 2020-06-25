@@ -2,7 +2,7 @@
 title: Terms of Service
 date: 2020-06-05
 author: Geir Aalberg
-layout: post
+layout: page
 toc: 1
 state: draft
 tags:
@@ -10,8 +10,6 @@ tags:
 summary: >
     What you must agree to before using api.met.no
 ---
-
-**DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT - DRAFT**
 
 In the following you will find guidelines for using the service api.met.no. The
 service has good capacity and can handle relatively large volumes of requests,
@@ -148,7 +146,7 @@ Low-volume websites and mobile apps may use *simple* cross-origin Javascript req
 provided the sites identifies itself as described above. If you start generating a lot of traffic against the API,
 you must set up a caching proxy gateway and route all traffic through this.
 
-Non-simple javascript requests (i.e. using authentication or other custom headers) and CORS preflights 
+Non-simple javascript requests (i.e. using authentication or other custom headers) and CORS preflights
 (whitelisting of your domain in the ``Access-Control-Allow-Origin` header) is explicitly not supported.
 
 ## Access control

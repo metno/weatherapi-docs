@@ -2,7 +2,7 @@
 title: GeoJSON
 date: 2020-06-23
 author: Geir Aalberg
-layout: post
+layout: page
 state: draft
 tags:
     - reference
@@ -16,4 +16,3 @@ tags:
 See
 
 https://geojson.org/
-

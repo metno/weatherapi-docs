@@ -1,7 +1,5 @@
 ---
 title: WeatherAPI documentation
-date: 2020-04-27
-author: Geir Aalberg
 layout: page
 summary: >
     General documentation front page
@@ -39,6 +37,7 @@ Specifications and lookup information
 - [Locationforecast data model](./locationforecast/datamodel)
 - [API v.3 release notes](./v3relnotes)
 - [Third party client libraries](./ClientLibraries)
+- [Understanding RSS feeds](./RSS)
 
 ## Other data sources
 
@@ -55,7 +54,6 @@ For MET employees only
 
 ## Keeping updated
 
-Subscribe to news and changes about the Weather API
+Support
 
-- [The API-users mailing list](./MailingList)
-- [Using the News and Changelog RSS feeds](./RSS)
+- [News and contact information](./support)

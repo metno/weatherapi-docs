@@ -40,10 +40,13 @@
 
       </section>
       <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
+        <p>
+          {% if site.github.is_project_page %}
+            This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
+          {% endif %}
+          Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/pages-themes/minimal">Minimal</a> theme
+          by <a href="https://github.com/orderedlist">orderedlist</a>.
         </p>
-        {% endif %}
       </footer>
     </div>
     <script src="{{ site.baseurl | append: "/assets/js/scale.fix.js" | relative_url }}"></script>

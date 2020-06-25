@@ -2,7 +2,7 @@
 title: Licensing and Data Policy
 date: 2020-05-29
 author: Geir Aalberg
-layout: post
+layout: page
 toc: 1
 state: draft
 tags:
@@ -14,7 +14,7 @@ summary: >
 # Licensing and Data Policy
 
 Unless specified otherwise, all data and products are licensed under the
-[Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0/) 
+[Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0/)
 and [Creative Commons 4.0 BY International](http://creativecommons.org/licenses/by/4.0) licences.
 
 Credit should be given to The Norwegian Meteorological Institute, shortened *MET

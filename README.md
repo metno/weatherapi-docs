@@ -75,6 +75,20 @@ This may be added to in the future, e.g. for microservice metadata.
 Markdown must adhere to the sub/superset supported by
 [Text::MultiMarkdown](https://metacpan.org/pod/Text::MultiMarkdown).
 
+### YAML preamble
+
+All documentation must start with metadata in YAML format, like this:
+
+    ---
+    title: Heading of document (do not write this in the body text)
+    date: when you wrote it
+    author: your name
+    layout: page (for docs) or post (for blog)
+    summary: >
+        A short description of the subject matter (used on developer.yr.no)
+    ---
+
+
 ### Headings
 
 Use only level 2 headings and below, since level 1 is used for the document title.

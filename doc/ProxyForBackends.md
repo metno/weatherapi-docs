@@ -2,7 +2,7 @@
 title: API proxy for backend services
 date: 2020-01-09
 author: Geir Aalberg
-layout: post
+layout: page
 tags:
   - internal
 summary: >
