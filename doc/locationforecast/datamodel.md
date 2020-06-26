@@ -36,7 +36,7 @@ Historical forecasts short term forecasts for the Nordic region are available fo
 
 #### Arctic area 
 
-![arcticregion](/home/ivaras/Pictures/arcticregion.png)
+![img](https://lh3.googleusercontent.com/VnrIG0H90dh7ms58MFaVYmNEuk1P--Z7Xm-rPg1WJ6fs7cVb3Mr3Z-XtqyI-kxUedhJJOOaLdz3vZubX_hCVZ9mB_fFDW-qBxs6ffTN0mnIlZFvQHhTHdk-5pJuVIHFVIhBRRrIb)
 
 
 
