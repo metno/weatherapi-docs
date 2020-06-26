@@ -1,20 +1,21 @@
 ---
 title: Terms of Service
-date: 2020-06-05
+date: 2020-06-26
 author: Geir Aalberg
 layout: page
 toc: 1
-state: draft
 tags:
     - terms
 summary: >
     What you must agree to before using api.met.no
 ---
 
-In the following you will find guidelines for using the service api.met.no. The
-service has good capacity and can handle relatively large volumes of requests,
-but the capacity is not unlimited. We encourage all users to respect the
-guidelines so that the service will be stable.
+This document describes the terms for using the MET Weather API.
+Changes to the terms will be announced on the [mailing list](./support).
+
+The service has good capacity and can handle relatively large volumes of
+requests, but the capacity is not unlimited. We ask all users to respect
+the guidelines so that the service will be stable.
 
 Most important rules:
 
@@ -141,6 +142,8 @@ Browsers and mobile apps should not contact the API directly, but instead use a 
 proxy (backend for frontend) server where you can cache data and add
 identification/authentication details (this is the canonical way of doing
 authentication in React since you cannot store client secrets in Javascript).
+
+***Note: The conditions for using CORS are still under review and will be finalized later.***
 
 Low-volume websites and mobile apps may use *simple* cross-origin Javascript requests and direct image links,
 provided the sites identifies itself as described above. If you start generating a lot of traffic against the API,

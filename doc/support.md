@@ -10,6 +10,7 @@ summary: >
 ## Mailing list
 
 Please follow our mailinglist to get important news updates about the service.
+This is a low-traffic list, used only by MET Norway to contact users of the API.
 This is this is the *only channel* on which we will communicate planned changes
 outside the API itself (see the [archives](http://lists.met.no/pipermail/api-users/)
 for past notifications).

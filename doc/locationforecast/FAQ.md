@@ -11,11 +11,39 @@ summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
 
+## Data format
+
+### Q. Why are symbols and precipitation in other time elements than the other weather parameters?
+
+The JSON (and XML) contains two different types of data, most data are valid for a exact
+time and place. Temperature, cloudiness, pressure, wind are all examples of this
+kind of data, and are listed in JSON under `instance` (in XML, the from and to attributes are equal).
+
+Precipitation and weather symbols are computed for a period of time. It doesn't
+make sense to talk about how much it rains at 12:00, but how much it will be
+raining between 12:00 and 13:00. In JSON this is indicated typically as
+`next_1_hours` or `next_6_hours`. Precipitation is given for set intervals (one,
+six or twelve hours), if you need precipitation for other periods, you must
+compute it by yourselves.
+
+Weather symbols are just calculated using the other parameters (cloud,
+temperature and precipitation) and is mainly a way of showing many parameters in
+one symbol. These must be computed for the interval the symbol is going to
+represent, you can't just add them. This is the reason why you find some periods
+with only symbols and no precipitation.
+
+## Symbol codes
+
+### Q. What do the symbol codes mean? Where can I find the corresponding icons?
+
+A. See the Weathericon 2.0 product for a list of meanings in various languages,
+plus a set of icon files you can download and use in your applications.
+
 ## Data format and parameters
 
 ### Visibility
 
-Q. Is there a known mapping from the fog value predictions given by
+### Q. Is there a known mapping from the fog value predictions given by
 the MET public API to  visibility in meters?
 
 A. The only information on visibility from the fog value is to use the
@@ -24,7 +52,7 @@ definition of fog (visibility less than 1 km)
 
 ## Data sources
 
-*Q: Where do you get your forecast model data from?*
+### Q: Where do you get your forecast model data from?
 
 A: The source for the global weather forecasts is the HRES model from ECMWF:
 
@@ -53,14 +81,3 @@ Other parameters:
 Arctic region:
 
 <http://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc>
-
-### Solar energy
-
-*Q. Are historic measurements or historic predictions for the solar
-energy that reaches the earth surface and if yes how can we access them?*
-
-A: Historic predictions of solar energy are available from the archive of our
-weather prediction model. The radiation parameters are available in NetCDF
-format on [THREDDS](http://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html).
-
-Choose the files with the following name: `meps_mbr0_extracted_2_5km_XXXXX`.

@@ -4,14 +4,11 @@ date: 2020-05-29
 author: Geir Aalberg
 layout: page
 toc: 1
-state: draft
 tags:
     - terms
 summary: >
     Terms for reusing data from MET Norway
 ---
-
-# Licensing and Data Policy
 
 Unless specified otherwise, all data and products are licensed under the
 [Norwegian Licence for Open Government Data (NLOD) 2.0](https://data.norge.no/nlod/en/2.0/)
