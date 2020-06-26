@@ -51,14 +51,26 @@ see our [Licensing and Data Policy](.License).
 
 ### Do you support gzip compression of HTTP data?
 
-Yes. We will serve gzip compressed data of the following MIME types if the
-client requests this in the HTTP request headers:
+Yes. We will serve gzip compressed data of appropriate MIME types.
+See [General Usage](./usage) for more information.
 
-- text/html
-- text/plain
-- text/xml
-- application/xml
-- application/json
+### Earlier you used semicolons as parameter separators in the query string, now you're using ampersands. What's the deal?
+
+Semicolons were introduced as an optional alternative to ampersands
+after requests from developers using badly designed tools for parsing
+and generating XML. Since the semicolon did not need to be escaped in
+XML (unlike the ampersand which had to be coded as `&amp;`), this made
+generating URLs easier, completely ignoring that they should instead
+be url-encoded as `%3B` instead (and thus opening another kind of worms
+when these two cases had to be handled differently).
+
+According to the new [HTML5 specification](https://www.w3.org/TR/2014/REC-html5-20141028/forms.html#url-encoded-form-data),
+semicolon is no longer accepted as a valid parameter separator.
+This actually means that a request using unescaped semicolons
+in the query string must be processed differently for a HTML5
+server than for HTML 4.x. For this reason we have reverted to
+the standard usage.
+
 
 ## Solar energy
 

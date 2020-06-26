@@ -32,6 +32,7 @@ Specifications and information for looking up as needed
 
 **General**
 
+- [General usage](./usage) - how to use the API
 - [HTTP status codes and response headers](./StatusCodes)
 - [API v.3 release notes](./v3relnotes)
 - [Third party client libraries](./ClientLibraries)
