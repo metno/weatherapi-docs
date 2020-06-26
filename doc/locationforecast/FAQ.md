@@ -1,7 +1,7 @@
 ---
 title: Locationforecast FAQ
 date: 2020-06-19
-author: Geir Aalberg
+author: Ivar Ambjørn Seierstad
 layout: page
 state: draft
 tags:
@@ -27,7 +27,8 @@ definition of fog (visibility less than 1 km)
 *Q: Where do you get your forecast model data from?*
 
 A: The source for the global weather forecasts is the HRES model from ECMWF:
-https://www.ecmwf.int/en/forecasts/datasets/set-i
+
+<https://www.ecmwf.int/en/forecasts/datasets/set-i>
 
 The only adjustment is interpolation from model grid points to the specific
 location and an adiabatic height adjustment of air temperature. We use local
@@ -42,14 +43,16 @@ distribute freely the global gridded files from ECMWF.
 Source for the Nordic countries:
 
 Temperature forecasts :
-http://thredds.met.no/thredds/dodsC/metpplatest/met_forecast_1_0km_nordic_latest.nc
+
+<http://thredds.met.no/thredds/dodsC/metpplatest/met_forecast_1_0km_nordic_latest.nc>
 
 Other parameters:
-http://thredds.met.no/thredds/dodsC/meps25files/meps_det_pp_2_5km_latest.nc
+
+<http://thredds.met.no/thredds/dodsC/meps25files/meps_det_pp_2_5km_latest.nc>
 
 Arctic region:
 
-http://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc
+<http://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc>
 
 ### Solar energy
 
@@ -61,5 +64,3 @@ weather prediction model. The radiation parameters are available in NetCDF
 format on [THREDDS](http://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html).
 
 Choose the files with the following name: `meps_mbr0_extracted_2_5km_XXXXX`.
-
-
