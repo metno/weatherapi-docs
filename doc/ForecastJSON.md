@@ -123,8 +123,9 @@ Here is an excerpt of a forecast response:
           },
         [..]
 
-You can get a complete forecast response using
-[/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10](/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10).
+You can get a complete forecast response using the `/complete` method, e.g.
+
+ https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10
 
 ## Geographical description
 
@@ -138,13 +139,10 @@ You can get a complete forecast response using
       ]
     },
 
-We use the GeoJSON standard to structure our format. If you are unfamiliar with
-that standard, you can read more about it [here](https://geojson.org/).
+We use the [GeoJSON](https://geojson.org/) standard to structure our format,
+see our [documentation](./GeoJSON) for more details.
 
-We only use a small subset of the GeoJSON specification. We only use the GeoJSON
-type `Feature`, and the geometry type `Point`.
-
-All other data in our format are defined under the GeoJSON attribute called `properties`.
+All forecast data are listed under the GeoJSON attribute called `properties`.
 
 ## Forecast metadata
 
