@@ -12,39 +12,36 @@ tags:
 
 ## Data sources
 
-The data sources for locationforecast are divided into three separate regions. Although the forecasts cover the whole globe, the Nordic and Arctic regions are our main priority. In these regions you will find the most frequently updated and accurate forecasts. All forecasts are automatic. There is no manual editing by meteorologists. 
+The data sources for locationforecast are divided into three separate regions. Although the forecasts cover the whole globe, the Nordic and Arctic regions are our main priority. In these regions you will find the most frequently updated and accurate forecasts. All forecasts are automatic. There is no manual editing by meteorologists.
 
 
 
-#### Nordic area 
+#### Nordic area
 
-![img](https://lh5.googleusercontent.com/Q-73G6NULR8Rf0fdSrKegpiQAzb5EzD-Q1Ix7imrwb_mz5s69Ny66dK_sBtV-36vAwX7TFnRxumYky1Mrt3ltIF3DTD51GdO37Hwsr4pqZsvrCnQbKERkuKCoVFTHQ2x05P-AXHz)
-
+![Nordic region](../assets/nordic.png)
 
 
 The weather forecasting model for the Nordic area is the MetCoOp Ensemble Prediction System (**MEPS**). MetCoOp is the Meteorological Cooperation on Operational Numeric  Weather Prediction (NWP) between Finnish Meteorological Institute (FMI), MET Norway, Swedish Meteorological and Hydrological Institute (SMHI) and Estonian Weather Service. It provides short term forecasts (0 - 60 hours) and has a horizontal resolution of 2.5 kilometers. More scientific details about this forecasting system can be found here: [MEPS article](https://doi.org/10.1002/qj.3525)
 
-We also use extensive post-processing to correct for errors in the weather model output caused by  unresolved features such as cold pools, inversions, urban heat islands,  and an intricate coastline. This is  one of the reasons why our forecasts may differ from other forecast providers using MEPS. 
+We also use extensive post-processing to correct for errors in the weather model output caused by  unresolved features such as cold pools, inversions, urban heat islands,  and an intricate coastline. This is  one of the reasons why our forecasts may differ from other forecast providers using MEPS.
 
-Our Nordic forecasts are updated once every hour. 
+Our Nordic forecasts are updated once every hour.
 
-For medium range forecasts (2 - 10 days) the 51 member ensemble forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii) is used. It it updated twice pr day. Horizontal resolution is approximately 18 km. Air temperature, precipitation and wind speed are further post-processed to better represent local geographical features. 
+For medium range forecasts (2 - 10 days) the 51 member ensemble forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii) is used. It it updated twice pr day. Horizontal resolution is approximately 18 km. Air temperature, precipitation and wind speed are further post-processed to better represent local geographical features.
 
 Historical forecasts short term forecasts for the Nordic region are available for download from our [thredds server](https://thredds.met.no/thredds/metno.html)
 
 
 
-#### Arctic area 
+#### Arctic area
 
-![img](https://lh3.googleusercontent.com/VnrIG0H90dh7ms58MFaVYmNEuk1P--Z7Xm-rPg1WJ6fs7cVb3Mr3Z-XtqyI-kxUedhJJOOaLdz3vZubX_hCVZ9mB_fFDW-qBxs6ffTN0mnIlZFvQHhTHdk-5pJuVIHFVIhBRRrIb)
-
-
+![Arctic region](../assets/arcticregion.png)
 
 The weather forecasting model used for the Arctic region is the [AROME-Arctic](https://www.met.no/en/projects/The-weather-model-AROME-Arctic) weather model. It provides short term forecasts (0 - 60 hours) and the horizontal geographic resolution is 2.5 kilometres. The development of AROME-Arctic is done by MET Norway in collaboration with several national and international projects and institutions. The model system is built on HARMONIE-Arome, a configuration of the ALADIN-HIRLAM NWP  system.
 
-Our Arctic forecasts are updated 4 times pr day. 
+Our Arctic forecasts are updated 4 times pr day.
 
-Historical forecasts short term forecasts for the Arctic region are available for download from our [thredds server](https://thredds.met.no/thredds/metno.html) 
+Historical forecasts short term forecasts for the Arctic region are available for download from our [thredds server](https://thredds.met.no/thredds/metno.html)
 
 For medium range forecasts (2 - 10 days) the 51 member ensemble forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii) is used. It it updated twice pr day. Horizontal resolution is approximately 18 km.
 
@@ -52,15 +49,15 @@ For medium range forecasts (2 - 10 days) the 51 member ensemble forecast from [E
 
 #### Rest of the world
 
-The source for our global weather forecasts is the high-resolution weather forecasting model from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-i) It is used for forecasts from 0 to 10 days. The horizontal geographic resolution is approximately 9 km. Since the resolution is relatively coarse, care should be taken when using particularly the wind speed forecasts in areas with complex topography. It is also recommended to always include elevation information in the query for a location specific forecast. If elevation is not provided, the 1 kilometer resolution global topography [GMTED2010](https://www.usgs.gov/land-resources/eros/coastal-changes-and-impacts/gmted2010?qt-science_support_page_related_con=0#qt-science_support_page_related_con) is used instead to adjust the air temperature forecasts. Adjustments are made using a standard adiabatic lapse rate. 
+The source for our global weather forecasts is the high-resolution weather forecasting model from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-i) It is used for forecasts from 0 to 10 days. The horizontal geographic resolution is approximately 9 km. Since the resolution is relatively coarse, care should be taken when using particularly the wind speed forecasts in areas with complex topography. It is also recommended to always include elevation information in the query for a location specific forecast. If elevation is not provided, the 1 kilometer resolution global topography [GMTED2010](https://www.usgs.gov/land-resources/eros/coastal-changes-and-impacts/gmted2010?qt-science_support_page_related_con=0#qt-science_support_page_related_con) is used instead to adjust the air temperature forecasts. Adjustments are made using a standard adiabatic lapse rate.
 
 Our global forecasts are updated 4 times pr day
 
-Historical forecasts are not available from our API. 
+Historical forecasts are not available from our API.
 
 #### Global UV forecasts
 
-Global UV forecasts are provided by [Copernicuc Atmosphere Monitoring Service](https://atmosphere.copernicus.eu/) . 
+Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](https://atmosphere.copernicus.eu/) .
 
 
 
@@ -94,5 +91,3 @@ Global UV forecasts are provided by [Copernicuc Atmosphere Monitoring Service](h
 Variables in **bold** are included in `compact.json`, others only in `complete.json`.
 
 The variable names are based on the international [CF Standard Name](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html) vocabulary, which is mandatory for all governmental scientific institutions under the EU INSPIRE directive.
-
-
