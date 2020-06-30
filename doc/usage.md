@@ -68,6 +68,8 @@ take any parameters, but has an available product.
 
 ### Schema
 
+JSON schemas are normally included in the OpenAPI (Swagger) feed where available.
+
 For XML data you can download an XSD or DTD using the following action:
 
     https://api.met.no/weatherapi/dummy/0.3/schema
@@ -76,16 +78,6 @@ Note that the SchemaLocation URL in the XML is usually different,
 referring instead directly to the authorative MET API schema source:
 
 <https://schema.api.met.no/schemas/>
-
-## Changelog RSS feed
-
-You can subscribe to notifications of changes to each product in the RSS format:
-
-    https://api.met.no/weatherapi/dummy/0.3/changelog
-
-The same information for all products is also present in the general API changelog feed:
-
-<https://api.met.no/feed/changelog>
 
 ## Parameters
 
@@ -152,6 +144,10 @@ Which media types are supported by which product handler should be documented by
 *Note: We are gradually phasing out the `content_type` parameter in favour of
 specifying the format as a file extension (e.g. `/available.json`).*
 
+## Response status codes
+
+Every call to the API returns an HTTP status code, like `200 OK` or `404 Not Found`. **It is important that your client checks these codes and take action accordingly.** There is a long list of possible values and their explanation on the [Status Code page](./StatusCodes). In addition you can check the `Errorclass` response header for a more detailed explanation.
+
 ## Data compression
 
 Response body data of the following MIME types are gzip encoded, if the client requests this in the HTTP headers.
@@ -161,3 +157,14 @@ Response body data of the following MIME types are gzip encoded, if the client r
 - text/xml
 - application/xml
 - application/json
+
+## Changelog RSS feed
+
+You can subscribe to notifications of changes to each product in the RSS format:
+
+    https://api.met.no/weatherapi/dummy/0.3/changelog
+
+The same information for all products is also present in the general API changelog feed:
+
+<https://api.met.no/feed/changelog>
+

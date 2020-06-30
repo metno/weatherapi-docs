@@ -23,20 +23,16 @@ as per the Terms of Use.
 
 ## WeatherAPI third-part client libraries
 
-### Perl
+Note that most of these use the deprecated Locationforecast/1.9 which will be removed
+by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
-- <https://metacpan.org/pod/Weather::YR> (broken)
-- <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete)
-- <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete)
+### Go
 
-### Python
+- <https://github.com/jackdoe/go-metno>
 
-- <https://github.com/andehen/MetNoPy>
-- <https://github.com/toringer/home-assistant-metnowcast> (HomeAssistant Nowcast plugin)
+### C# (C-Sharp)
 
-### PHP
-
-- <https://github.com/pionl/METno>
+- <https://github.com/mr-raw/metno>
 
 ### Javascript/Node
 
@@ -45,13 +41,19 @@ as per the Terms of Use.
 - <https://github.com/mitica/metno-client-js>
 - <https://github.com/mitica/metno-symbols>
 
-### Go
+### Python
 
-- <https://github.com/jackdoe/go-metno>
+- <https://github.com/toringer/home-assistant-metnowcast> (HomeAssistant Nowcast plugin)
 
-### C#
+### Perl
 
-- <https://github.com/mr-raw/metno>
+- <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete)
+- <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete)
+- <https://metacpan.org/pod/Weather::YR> (broken)
+
+### PHP
+
+- <https://github.com/pionl/METno>
 
 ### Haskell
 
@@ -66,6 +68,7 @@ as per the Terms of Use.
 ### Python
 
 - <https://github.com/ArcticPuffin/frost_api_metno> (Jupyter Notebook)
+- <https://github.com/andehen/MetNoPy> (deprecated, uses eklima.met.no which has been replaced by Frost)
 
 ### R
 

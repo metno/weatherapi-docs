@@ -87,6 +87,6 @@ Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](h
 
 
 
-Variables in **bold** are included in `compact.json`, others only in `complete.json`.
+Variables in **bold** are included in `compact.json`, others only in `complete.json`. Some variables are not available for every geographic area, so make sure your client can handle that.
 
 The variable names are based on the international [CF Standard Name](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html) vocabulary, which is mandatory for all governmental scientific institutions under the EU INSPIRE directive.
