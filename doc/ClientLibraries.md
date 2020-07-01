@@ -40,6 +40,7 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 - <https://github.com/evanshortiss/yr.no-interface>
 - <https://github.com/mitica/metno-client-js>
 - <https://github.com/mitica/metno-symbols>
+- <https://wiki.gnome.org/Projects/LibGWeather> - The GNOME Weather library (currently the largest user after Yr)
 
 ### Python
 

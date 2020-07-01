@@ -3,7 +3,6 @@ title: General forecast JSON format
 date: 2020-05-03
 author: Håvard Futseter
 layout: page
-state: draft
 tags:
     - reference
 summary: >
