@@ -38,7 +38,7 @@ minor changes which is not announced on the mailing list.
 
 ## Contact information
 
-If you have any questions, please contact us at <weatherapi-adm@met.no>.
+If you have any questions about the MET Weather API, please contact us at <weatherapi-adm@met.no>. For Frost and THREDDS, please contact <servicedesk@met.no>.
 
 If you prefer snail mail, the address is:
 
@@ -47,5 +47,9 @@ If you prefer snail mail, the address is:
     0371 OSLO
     NORWAY
 
-Carrier pidgeon is currently not supported as we are awaiting the
-[spec](https://tools.ietf.org/html/rfc2549) to be finalized.
+Carrier pidgeon is currently not supported as we are awaiting the [spec](https://tools.ietf.org/html/rfc2549) to be finalized.
+
+### Yr.no
+
+The Yr website and mobile apps are developed by [NRK](https://nrk.no/). For questions regarding Yr, including the discontinued `forecast.xml` and `varsel.xml` data feeds, please contact <support@yr.no>.
+

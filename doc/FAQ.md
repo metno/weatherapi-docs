@@ -21,7 +21,7 @@ instead, like your domain name, company email or name/version of app in the
 store. Also, please read the Terms of Use where this is described explicitly.
 
 If you're still getting 429s, you are probably hitting us with too much traffic
-and have been blacklisted. Please contact us for advice on how to enhance your
+and have been blacklisted. Please [contact us](./support) for advice on how to enhance your
 calm.
 
 ### Now I'm suddenly getting "403 Forbidden"! Why am I blocked?

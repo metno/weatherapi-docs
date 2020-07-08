@@ -13,9 +13,13 @@ summary: >
 
 ## Data format
 
+### Q. The `nextrun` parameter seems to have gone in locationforecast 2.0?!
+
+A. The forecast is now updated at different times depending on location. You should instead use the common caching headers in the HTTP response and use an `If-Modified-Since`  header in your request. For more information, see the [Locationforecast HowTo Guide](./HowTO).
+
 ### Q. Why are symbols and precipitation in other time elements than the other weather parameters?
 
-The JSON (and XML) contains two different types of data, most data are valid for a exact
+A. The JSON (and XML) contains two different types of data, most data are valid for a exact
 time and place. Temperature, cloudiness, pressure, wind are all examples of this
 kind of data, and are listed in JSON under `instance` (in XML, the from and to attributes are equal).
 
@@ -32,6 +36,12 @@ one symbol. These must be computed for the interval the symbol is going to
 represent, you can't just add them. This is the reason why you find some periods
 with only symbols and no precipitation.
 
+### Q. What happened to the Beaufort scale attributes from 1.9? 
+
+A. The Beaufort scale data has been removed to make the output language independent. It's trivial to translate from windspeed to Beaufort in your own language by using the standard table, e.g. from Wikipedia:
+
+<https://en.wikipedia.org/wiki/Beaufort_scale>
+
 ## Symbol codes
 
 ### Q. What do the symbol codes mean? Where can I find the corresponding icons?
@@ -39,13 +49,9 @@ with only symbols and no precipitation.
 A. See the Weathericon 2.0 product for a list of meanings in various languages,
 plus a set of icon files you can download and use in your applications.
 
-## Data format and parameters
+## Visibility
 
-### Visibility
-
-### Q. Is there a known mapping from the fog value predictions given by
-the MET public API to  visibility in meters?
-
+### Q. Is there a known mapping from the fog value predictions given by the MET public API to  visibility in meters?
 A. The only information on visibility from the fog value is to use the
 definition of fog (visibility less than 1 km)
 
