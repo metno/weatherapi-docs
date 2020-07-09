@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+<pre id="jekyll-debug">{{ page.meta }}</pre>
+
+<script>
+var obj = JSON.parse(decodeURIComponent("{{ page.meta | jsonify | uri_escape }}"));
+var pretty_json = JSON.stringify(obj, null, 2);  // Pretty-printed JSON (indented 4 spaces).
+document.getElementById("jekyll-debug").textContent = pretty_json;
+</script>
+
+{{content}}
