@@ -44,7 +44,8 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 ### Python
 
-- <https://github.com/toringer/home-assistant-metnowcast> (HomeAssistant Nowcast plugin)
+- <https://github.com/Rory-Sullivan/metno-locationforecast> - Python library for locationforecast/2.0
+- <https://github.com/toringer/home-assistant-metnowcast> - HomeAssistant Nowcast plugin
 
 ### Perl
 
