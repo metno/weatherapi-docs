@@ -31,13 +31,14 @@ map, or position the map.
 
 |Map API | GeoCoding service | Altitude data | License |
 |----------|------------------|---------|
-| OpenStreetMap | Nominatim | No | Open Data |
+| OpenStreetMap | Nominatim | No | Open |
 | Google Maps | [Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) | ? | ? |
 | [Apple MapKit](https://developer.apple.com/documentation/mapkit) | | | |
 | MapBox | | | |
 | ArcGIS | | | |
 | QGIS | plugins | ? | FOSS |
 | Kartverket | | | |
+| - | GeoNames | | Open |
 
 
 
