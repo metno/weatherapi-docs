@@ -20,6 +20,19 @@ summary: >
 - KML
 
 
+### Recommended providers
+
+|Name | License | Protocols |
+| OpenStreetMap | Open | WMS |
+| QGIS | Open | WMS |
+| Kartverket | Partly open | WMS |
+| Google Maps | Closed | KML |
+| [Apple MapKit](https://developer.apple.com/documentation/mapkit) | Closed | ? |
+| MapBox | Closed | WMS |
+| ArcGIS | Closed | WMS |
+
+
+
 ## GeoCoding services
 
 Geocoding is the process of converting addresses (like "1600 Amphitheatre
@@ -27,18 +40,26 @@ Parkway, Mountain View, CA") into geographic coordinates (like latitude
 37.423021 and longitude -122.083739), which you can use to place markers on a
 map, or position the map.
 
-## Recommended providers
 
-|Map API | GeoCoding service | Altitude data | License |
-|----------|------------------|---------|
-| OpenStreetMap | Nominatim | No | Open |
-| Google Maps | [Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) | ? | ? |
-| [Apple MapKit](https://developer.apple.com/documentation/mapkit) | | | |
-| MapBox | | | |
-| ArcGIS | | | |
-| QGIS | plugins | ? | FOSS |
-| Kartverket | | | |
-| - | GeoNames | | Open |
+### Recommended providers
+
+|Name | License |
+| GeoNames | Open |
+| OSM Nominatim | Open |
+| [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) | Closed |
+| MapBox | Closed |
+| ArcGIS | Closed |
+| QGIS plugins | Open |
+| Kartverket? | Partly open |
+
+## Altitude databases
+
+### Recommended providers
+
+|Name | License |
+| OpenCycleMap | Open |
+| [Open-Elevation](https://open-elevation.com/) | Open |
+
 
 
 
