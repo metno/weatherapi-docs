@@ -117,12 +117,12 @@ Source for the Nordic countries:
 
 Temperature forecasts :
 
-<http://thredds.met.no/thredds/dodsC/metpplatest/met_forecast_1_0km_nordic_latest.nc>
+<https://thredds.met.no/thredds/dodsC/metpplatest/met_forecast_1_0km_nordic_latest.nc>
 
 Other parameters:
 
-<http://thredds.met.no/thredds/dodsC/meps25files/meps_det_pp_2_5km_latest.nc>
+<https://thredds.met.no/thredds/dodsC/meps25files/meps_det_pp_2_5km_latest.nc>
 
 Arctic region:
 
-<http://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc>
+<https://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc>

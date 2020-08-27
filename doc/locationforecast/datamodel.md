@@ -77,7 +77,7 @@ Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](h
 |fog_area_fraction|fog|%| amount of surrounding area covered in fog (horizontal view under a 1000 meters) |
 |**precipitation_amount**|precipitation|mm| expected precipitation amount for period |
 |precipitation_amount_max|@maxvalue|mm| maximum likely precipitation for period |
-|precipitation_amount_min|@minvalue|mm| maximum likely precipitation for period |
+|precipitation_amount_min|@minvalue|mm| minimum likely precipitation for period |
 |probability_of_precipitation||%| chance of precipitation during period |
 |**relative_humidity**|humidity|%| relative humidity at 2m above the ground |
 |ultraviolet_index_clear_sky||1| ultraviolet index for cloud free conditions, 0 (low) to 11+ (extreme) |

@@ -79,7 +79,7 @@ reaches the earth surface and if yes how can we access them?
 
 A: Historic predictions of solar energy are available from the archive of our
 weather prediction model. The radiation parameters are available in NetCDF
-format on [THREDDS](http://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html).
+format on [THREDDS](https://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html).
 
 Choose the files with the following name: `meps_mbr0_extracted_2_5km_XXXXX`.
 
@@ -102,13 +102,13 @@ Hi,
 real-time data are available here (PREC1d=daily precipitation; TEMP1d=daily
 averaged temperature; data for day D encompass the time interval from day
 D-1 0600 UTC to day D 0600 UTC):
-http://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/provisional_archive/catalog.html
+https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/provisional_archive/catalog.html
 
 Here you find the archives :
-http://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/archive/catalog.html
+https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/archive/catalog.html
 
 Here archives of seNorge2 based on MET Norway data + ECA&D data:
-http://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2_download_datasets/release_17.08/catalog.html
+https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2_download_datasets/release_17.08/catalog.html
 
 xgeo.no and senorge.no are also possible options.
 
