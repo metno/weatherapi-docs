@@ -13,6 +13,25 @@ summary: >
 
 Please also see the [API FAQ](../FAQ) for answers to general API questions.
 
+## Location data
+
+### Q. How do I map place names to geocoordinates?
+
+A. You need a geocoding service. If you are already using a map service this is
+usually already built in, e.g. for [Google
+Maps](https://developers.google.com/maps/documentation/geocoding/overview).
+Otherwise use a separate service like [GeoNames](https://www.geonames.org/)
+or [Nominatim](https://nominatim.org/).
+
+Remember to truncate the results to max 4 decimals to facilitate caching.
+
+### Q. What is the altitute parameter for?
+
+A. This is used to adjust temperature according to elevation (and nothing else).
+While we have a built-in topographical model in locationforecast this is rather
+course, so to get the most precise answer you should add the surface altitude
+(meters above sea level) of the location for the forecast.
+
 ## Data format
 
 ### Q. The `nextrun` parameter seems to have gone in locationforecast 2.0?!

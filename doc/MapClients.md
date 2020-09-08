@@ -44,8 +44,8 @@ map, or position the map.
 ### Recommended providers
 
 |Name | License |
-| GeoNames | Open |
-| OSM Nominatim | Open |
+| [GeoNames](https://www.geonames.org/) | Open |
+| [Nominatim](https://nominatim.org/) | Open |
 | [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) | Closed |
 | MapBox | Closed |
 | ArcGIS | Closed |
@@ -59,8 +59,3 @@ map, or position the map.
 |Name | License |
 | OpenCycleMap | Open |
 | [Open-Elevation](https://open-elevation.com/) | Open |
-
-
-
-
-

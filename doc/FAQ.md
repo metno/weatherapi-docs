@@ -71,6 +71,38 @@ in the query string must be processed differently for a HTML5
 server than for HTML 4.x. For this reason we have reverted to
 the standard usage.
 
+## Ocean forecasts (FIXME)
+
+### Q. Wind direction
+
+> Lurte på om dere kan svare på et spørsmål angående bølgeretning og
+> havstrømsretning som kan leses ut fra Oceanforecast 0.9 (gjelder også Gribfiles).
+> Vi lurer på hvordan retningene skal tolkes da vi ser et ganske stort avvik
+> fra egne sensorer og meldingene fra Oceanforecast.
+>
+> Den normale konvensjonen for bølge- og strømretning er at bølgeretning
+> tolkes «kommer fra» (på samme måte som vind) og strømretning skal tolkes
+> «setter til».
+>
+> Eksempel på datarespons fra Oceanforecast:
+>
+>     <mox:meanTotalWaveDirection uom="deg">45.2</mox:meanTotalWaveDirection>
+>
+>     <mox:seaCurrentDirection uom="deg">131.4</mox:seaCurrentDirection>
+>
+> Om vi bruker den normale konvensjonen for bølge- og strømretning tolker vi
+> dette til følgende:
+>
+> - Bølgeretning (45,2 grader kommer fra nord-øst og er på vei mot sør-vest.
+> - Strømretning (131,4 grader) kommer fra nord-vest og er på vei mot sør-øst.
+>
+> Har vi da tolket retningene korrekt?
+
+Jeg kan bekrefte at deres forståelse av retning for strøm er korrekt. Når det
+gjelder bølgeretning bruker oseanografisk konvensjon som er samme som strøm,
+dvs. at retningen er motsatt av det du beskriver (45 grader går mot nordøst). De
+fleste (?) andre, ihvertfall mye software, bruker meteorologisk konvensjon, som
+altså er omvendt.
 
 ## Solar energy
 
