@@ -73,7 +73,7 @@ the standard usage.
 
 ## Ocean forecasts (FIXME)
 
-### Q. Wind direction
+### Q. Wave direction
 
 > Lurte på om dere kan svare på et spørsmål angående bølgeretning og
 > havstrømsretning som kan leses ut fra Oceanforecast 0.9 (gjelder også Gribfiles).
