@@ -26,19 +26,22 @@ You can also get news updates via RSS feeds.
 
 ### News
 
-News (blog) articles are listed on [/weatherapi/news]. These are more or less the
+News (blog) articles are listed in the [news archive](https://api.met.no/blog) and the
+[News RSS feed](https://api.met.no//feed/news). These are more or less the
 same as the mailing list messages, but are published later (usually after the change
 has been implemented).
 
 ### Changelog
 
-Change logs for all products are found in [/weatherapi/changelog]. Here you will
-get a list of all the changes for each product. These are usually non-breaking
-minor changes which is not announced on the mailing list.
+Change logs for all products are found in the [Changelog RSS feed](https://api.met.no/feed/changelog).
+Here you will get a list of all the changes for each product.
+These are usually non-breaking minor changes which is not announced on the mailing list.
 
 ## Contact information
 
-If you have any questions about the MET Weather API, please contact us at <weatherapi-adm@met.no>. For Frost and THREDDS, please contact <servicedesk@met.no>.
+If you have any questions about the MET Weather API, please contact us at
+<weatherapi-adm@met.no>. For Frost and THREDDS, please contact
+<servicedesk@met.no>.
 
 If you prefer snail mail, the address is:
 
@@ -52,4 +55,3 @@ Carrier pidgeon is currently not supported as we are awaiting the [spec](https:/
 ### Yr.no
 
 The Yr website and mobile apps are developed by [NRK](https://nrk.no/). For questions regarding Yr, including the discontinued `forecast.xml` and `varsel.xml` data feeds, please contact <support@yr.no>.
-
