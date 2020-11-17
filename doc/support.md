@@ -20,6 +20,11 @@ or by sending an email to <api-users-request@lists.met.no> with the word "subscr
 Subscription implies consent to store your email address (and optionally name) for GDPR purposes.
 You can unsubscribe at any time, in which case your personal data will be deleted.
 
+As from Nov 2020 we have outsourced the mailing list service to a third party.
+The servers are located in the EU and covered by EU privacy laws. We have
+secured a data processing agreement which secures that your personal data will
+not be sold to third parties.
+
 ## RSS feeds
 
 You can also get news updates via RSS feeds.
