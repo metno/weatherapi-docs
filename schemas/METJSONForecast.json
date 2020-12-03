@@ -1,0 +1,300 @@
+{
+  "METJSONForecast": {
+    "title": "GeoJSON Forecast Timeseries",
+    "type": "object",
+    "properties": {
+      "type": {
+        "enum": [
+          "Feature"
+        ],
+        "example": "Feature",
+        "type": "string"
+      },
+      "geometry": {
+        "$ref": "#/components/schemas/PointGeometry"
+      },
+      "properties": {
+        "$ref": "#/components/schemas/Forecast"
+      }
+    },
+    "required": [
+      "type",
+      "geometry",
+      "properties"
+    ]
+  },
+  "PointGeometry": {
+    "title": "GeoJSON point type",
+    "type": "object",
+    "properties": {
+      "type": {
+        "enum": [
+          "Point"
+        ],
+        "type": "string"
+      },
+      "coordinates": {
+        "description": "[longitude, latitude, altitude]. All numbers in decimal.",
+        "example": [
+          60.5,
+          11.59,
+          1001
+        ],
+        "items": {
+          "type": "number"
+        },
+        "minItems": 2,
+        "type": "array"
+      }
+    },
+    "required": [
+      "type",
+      "coordinates"
+    ]
+  },
+  "Forecast": {
+    "properties": {
+      "meta": {
+        "type": "object",
+        "properties": {
+          "updated_at": {
+            "description": "Update time for this forecast",
+            "example": "2019-12-03T13:52:13Z",
+            "type": "string"
+          },
+          "units": {
+            "$ref": "#/components/schemas/ForecastUnits"
+          },
+          "radar_coverage": {
+            "$ref": "#/components/schemas/RadarCoverage"
+          }
+        },
+        "required": [
+          "updated_at",
+          "units"
+        ]
+      },
+      "timeseries": {
+        "items": {
+          "$ref": "#/components/schemas/ForecastTimeStep"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "meta",
+      "timeseries"
+    ],
+    "title": "Forecast timeseries",
+    "type": "object"
+  },
+  "ForecastUnits": {
+    "type": "object",
+    "description": "a string -> string mapping of units for all parameters in document"
+  },
+  "RadarCoverage": {
+    "description": "Describes radar coverage of the area. This will affect what parameters are available. Only on radar based products.",
+    "enum": [
+      "ok",
+      "temporarily unavailable",
+      "no coverage"
+    ]
+  },
+  "ForecastTimeStep": {
+    "title": "Forecast for a specific time step",
+    "type": "object",
+    "properties": {
+      "time": {
+        "description": "The time these forecast values are valid for. Timestamp in format YYYY-MM-DDThh:mm:ssZ (ISO 8601)",
+        "example": "2019-12-03T14:00:00Z",
+        "type": "string"
+      },
+      "data": {
+        "description": "Forecast for a specific time",
+        "type": "object",
+        "properties": {
+          "instant": {
+            "type": "object",
+            "description": "Parameters which applies to this exact point in time",
+            "properties": {
+              "details": {
+                "$ref": "#/components/schemas/ForecastData"
+              }
+            }
+          },
+          "next_1_hours": {
+            "description": "Parameters with validity times over one hour. Will not exist for all time steps.",
+            "type": "object",
+            "properties": {
+              "summary": {
+                "$ref": "#/components/schemas/ForecastSummary"
+              },
+              "details": {
+                "$ref": "#/components/schemas/ForecastData"
+              }
+            },
+            "required": [
+              "summary",
+              "details"
+            ]
+          },
+          "next_6_hours": {
+            "description": "Parameters with validity times over six hours. Will not exist for all time steps.",
+            "type": "object",
+            "properties": {
+              "summary": {
+                "$ref": "#/components/schemas/ForecastSummary"
+              },
+              "details": {
+                "$ref": "#/components/schemas/ForecastData"
+              }
+            },
+            "required": [
+              "summary",
+              "details"
+            ]
+          },
+          "next_12_hours": {
+            "description": "Parameters with validity times over twelve hours. Will not exist for all time steps.",
+            "type": "object",
+            "properties": {
+              "summary": {
+                "$ref": "#/components/schemas/ForecastSummary"
+              },
+              "details": {
+                "$ref": "#/components/schemas/ForecastData"
+              }
+            },
+            "required": [
+              "summary",
+              "details"
+            ]
+          }
+        },
+        "required": [
+          "instant"
+        ]
+      }
+    },
+    "required": [
+      "time",
+      "data"
+    ]
+  },
+  "ForecastData": {
+    "description": "Weather parameters, such as air_temperature. A string to float map.",
+    "type": "object"
+  },
+  "ForecastSummary": {
+    "description": "Summary of weather conditions.",
+    "type": "object",
+    "properties": {
+      "symbol_code": {
+        "$ref": "#/components/schemas/WeatherSymbol"
+      },
+      "SymbolConfidence": {
+        "$ref": "#/components/schemas/SymbolConfidence"
+      }
+    },
+    "required": [
+      "symbol_code"
+    ]
+  },
+  "WeatherSymbol": {
+    "description": "A identifier that sums up the weather condition for this time period. May be used with https://api.met.no/weatherapi/weathericon/2.0/.",
+    "enum": [
+      "clearsky_day",
+      "clearsky_night",
+      "clearsky_polartwilight",
+      "fair_day",
+      "fair_night",
+      "fair_polartwilight",
+      "lightssnowshowersandthunder_day",
+      "lightssnowshowersandthunder_night",
+      "lightssnowshowersandthunder_polartwilight",
+      "lightsnowshowers_day",
+      "lightsnowshowers_night",
+      "lightsnowshowers_polartwilight",
+      "heavyrainandthunder",
+      "heavysnowandthunder",
+      "rainandthunder",
+      "heavysleetshowersandthunder_day",
+      "heavysleetshowersandthunder_night",
+      "heavysleetshowersandthunder_polartwilight",
+      "heavysnow",
+      "heavyrainshowers_day",
+      "heavyrainshowers_night",
+      "heavyrainshowers_polartwilight",
+      "lightsleet",
+      "heavyrain",
+      "lightrainshowers_day",
+      "lightrainshowers_night",
+      "lightrainshowers_polartwilight",
+      "heavysleetshowers_day",
+      "heavysleetshowers_night",
+      "heavysleetshowers_polartwilight",
+      "lightsleetshowers_day",
+      "lightsleetshowers_night",
+      "lightsleetshowers_polartwilight",
+      "snow",
+      "heavyrainshowersandthunder_day",
+      "heavyrainshowersandthunder_night",
+      "heavyrainshowersandthunder_polartwilight",
+      "snowshowers_day",
+      "snowshowers_night",
+      "snowshowers_polartwilight",
+      "fog",
+      "snowshowersandthunder_day",
+      "snowshowersandthunder_night",
+      "snowshowersandthunder_polartwilight",
+      "lightsnowandthunder",
+      "heavysleetandthunder",
+      "lightrain",
+      "rainshowersandthunder_day",
+      "rainshowersandthunder_night",
+      "rainshowersandthunder_polartwilight",
+      "rain",
+      "lightsnow",
+      "lightrainshowersandthunder_day",
+      "lightrainshowersandthunder_night",
+      "lightrainshowersandthunder_polartwilight",
+      "heavysleet",
+      "sleetandthunder",
+      "lightrainandthunder",
+      "sleet",
+      "lightssleetshowersandthunder_day",
+      "lightssleetshowersandthunder_night",
+      "lightssleetshowersandthunder_polartwilight",
+      "lightsleetandthunder",
+      "partlycloudy_day",
+      "partlycloudy_night",
+      "partlycloudy_polartwilight",
+      "sleetshowersandthunder_day",
+      "sleetshowersandthunder_night",
+      "sleetshowersandthunder_polartwilight",
+      "rainshowers_day",
+      "rainshowers_night",
+      "rainshowers_polartwilight",
+      "snowandthunder",
+      "sleetshowers_day",
+      "sleetshowers_night",
+      "sleetshowers_polartwilight",
+      "cloudy",
+      "heavysnowshowersandthunder_day",
+      "heavysnowshowersandthunder_night",
+      "heavysnowshowersandthunder_polartwilight",
+      "heavysnowshowers_day",
+      "heavysnowshowers_night",
+      "heavysnowshowers_polartwilight"
+    ],
+    "example": "clearsky_day"
+  },
+  "SymbolConfidence": {
+    "description": "An estimate of the certainty of a weather symbol",
+    "enum": [
+      "certain",
+      "somewhat certain",
+      "uncertain"
+    ]
+  }
+}
