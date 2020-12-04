@@ -58,7 +58,9 @@ sometimes it is more important to be consistent than correct.)
 **429 Too Many Requests**: The 429 status code indicates that the user has sent
 too many requests in a given amount of time ("rate limiting"). Our Terms of
 Service state that over 20 requests/second is defined as heavy traffic, which is
-not allowed without permission.
+not allowed without permission. They also state that you must identify yourself
+with a User-Agent request header; failure to do this will result in heavy throttling
+or a 403 Forbidden.
 
 **499 Client Closed Request**: The HTTP status code "499 Client Closed Request"
 is actually a client error, indicating that the client terminated the connection
