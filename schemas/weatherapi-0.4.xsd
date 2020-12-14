@@ -378,9 +378,11 @@
 			</xs:element>
 			<xs:element name="symbol" minOccurs="0">
 				<xs:complexType>
+					<!-- id and code are deprecated, do not us in clients -->
 					<xs:attribute name="id" type="xs:string" use="optional"/>
 					<xs:attribute name="name" type="xs:string" use="optional"/>
 					<xs:attribute name="number" type="xs:integer" use="required"/>
+					<xs:attribute name="code" type="xs:string" use="required"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="forest-fire" minOccurs="0">
