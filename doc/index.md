@@ -25,10 +25,11 @@ Step-by-step guides to implementing a client application
 
 Specifications and information for looking up as needed
 
-**Locationforecast**
+**Forecasts**
 
 - [General forecast JSON format](./ForecastJSON)
 - [Locationforecast data model](./locationforecast/datamodel)
+- [Nowcast data model](./nowcast/datamodel)
 
 **General**
 
