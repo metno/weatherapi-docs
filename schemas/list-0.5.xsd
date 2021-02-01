@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="available">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="query" type="queryType" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="queryType">
+    <xs:sequence>
+      <xs:element name="endpoint" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="parameter" type="parameterType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="uri" type="xs:anyURI"/>
+      <xs:element name="restricted" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="valid" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parameterType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="value" type="xs:string"/>
+      <xs:element name="label" type="xs:string" maxOccurs="1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>human-readable equivalent of the value parameter</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
