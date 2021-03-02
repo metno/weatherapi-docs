@@ -48,6 +48,7 @@ Helpdesk's greatest hits
 
 ## Other data sources
 
+- [Map client and geolocation libraries](./MapClients)
 - [WMS services]()  (Under construction)
 - [Fetching gridded forecast data from THREDDS](./thredds)
 

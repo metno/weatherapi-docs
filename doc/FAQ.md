@@ -16,22 +16,28 @@ summary: >
 ### Help! I am getting *429 Too Many Requests*! What am I doing wrong?
 
 You are probably using a blank User-Agent header, or a generic one like
-"wget/1.12" or (for apps) "Dalvik/2.1.0". Use something unique and identifying
-instead, like your domain name, company email or name/version of app in the
-store. Also, please read the Terms of Use where this is described explicitly.
+"wget/1.12" or (for apps) "Dalvik/2.1.0".
+The [Terms of Service](./TermsOfService) clearly states that you **must
+identify yourself** in the User-Agent header. If this is generic or missing
+you will be throttled (for old products) or blocked (for new products from 2020
+onwards).
 
 If you're still getting 429s, you are probably hitting us with too much traffic
-and have been blacklisted. Please [contact us](./support) for advice on how to enhance your
-calm.
+and have been permanently throttled. Please [contact us](./support) for advice
+on how to enhance your calm. Make sure to include your IP address and User-Agent
+in your message.
 
 ### Now I'm suddenly getting "403 Forbidden"! Why am I blocked?
 
 Newer services like Locationforecast/2.0 have stricter rules and will
 block instead of throttle if the User-Agent is missing or generic.
+Again, read the [Terms of Service](./TermsOfService) before contacting us.
 
 On the other hand it can also mean you have been found to break the
 [TOS](./TermsOfService) in other ways and have been blacklisted, e.g.
-by pretending to be another website or client.
+by pretending to be another website or client, or slamming us with too
+much traffic. In some cases this might be reversed when the problem is fixed,
+but deliberate breaches of the TOS will result in a permanent ban.
 
 ### Do you support unencrypted HTTP requests?
 
