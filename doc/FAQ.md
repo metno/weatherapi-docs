@@ -77,38 +77,21 @@ in the query string must be processed differently for a HTML5
 server than for HTML 4.x. For this reason we have reverted to
 the standard usage.
 
-## Ocean forecasts (FIXME)
+## Ocean forecasts
 
-### Q. Wave direction
+### Q. What does the wave direction mean? Is it "coming from" or "going to"?
 
-> Lurte på om dere kan svare på et spørsmål angående bølgeretning og
-> havstrømsretning som kan leses ut fra Oceanforecast 0.9 (gjelder også Gribfiles).
-> Vi lurer på hvordan retningene skal tolkes da vi ser et ganske stort avvik
-> fra egne sensorer og meldingene fra Oceanforecast.
->
-> Den normale konvensjonen for bølge- og strømretning er at bølgeretning
-> tolkes «kommer fra» (på samme måte som vind) og strømretning skal tolkes
-> «setter til».
->
-> Eksempel på datarespons fra Oceanforecast:
->
->     <mox:meanTotalWaveDirection uom="deg">45.2</mox:meanTotalWaveDirection>
->
->     <mox:seaCurrentDirection uom="deg">131.4</mox:seaCurrentDirection>
->
-> Om vi bruker den normale konvensjonen for bølge- og strømretning tolker vi
-> dette til følgende:
->
-> - Bølgeretning (45,2 grader kommer fra nord-øst og er på vei mot sør-vest.
-> - Strømretning (131,4 grader) kommer fra nord-vest og er på vei mot sør-øst.
->
-> Har vi da tolket retningene korrekt?
+For Oceanforecast/0.9 and Gribfiles/1.1 we have used oceanographic convention
+for waves (i.e. where they are "going to"), just as we do for currents. Example:
 
-Jeg kan bekrefte at deres forståelse av retning for strøm er korrekt. Når det
-gjelder bølgeretning bruker oseanografisk konvensjon som er samme som strøm,
-dvs. at retningen er motsatt av det du beskriver (45 grader går mot nordøst). De
-fleste (?) andre, ihvertfall mye software, bruker meteorologisk konvensjon, som
-altså er omvendt.
+    <mox:meanTotalWaveDirection uom="deg">45.2</mox:meanTotalWaveDirection>
+    <mox:seaCurrentDirection uom="deg">131.4</mox:seaCurrentDirection>
+
+Unfortunately, a lot of software (e.g. navigation systems) expect the opposite,
+so that when reading the GRIB files with a map plotter the wave arrows will be
+shown the wrong way. Therefore, for Oceanforecast/2.0 and newer products (2021
+onwards) we will be using meteorological convention for waves (i.e. where they
+are "coming from"), just as we do for wind.
 
 ## Solar energy
 
@@ -123,32 +106,24 @@ Choose the files with the following name: `meps_mbr0_extracted_2_5km_XXXXX`.
 
 ----------------------------------------
 
-## Observational data (FIXME)
+## Observational data
 
-> Noen som vet om vi interpolerte observasjonsdata eksternt tilgjengelig noe
-> sted, fx på thredds? Kan ikke finne noe der, men mener å ha sett det som
-> WMS. Det finnes også på SeNorge, hvor jeg antar det er vi som leverer data:
->
-> http://www.senorge.no/index.html?p=senorgeny&st=weather
+### Q. Do you have interpolated observational data available for download?
 
-Ja det er vi som leverer som leverer til senorge og dataene finnes på
-thredds. I hvilken sammenheng er dette?
-
-Se svar fra Christian Lussana hos oss om tilgang til interpolerte data:
-
-Hi,
-real-time data are available here (PREC1d=daily precipitation; TEMP1d=daily
+Yes. Real-time data are available here (PREC1d=daily precipitation; TEMP1d=daily
 averaged temperature; data for day D encompass the time interval from day
 D-1 0600 UTC to day D 0600 UTC):
-https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/provisional_archive/catalog.html
 
-Here you find the archives :
-https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/archive/catalog.html
+<https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/provisional_archive/catalog.html>
+
+Here you find the archives:
+
+<https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2/archive/catalog.html>
 
 Here archives of seNorge2 based on MET Norway data + ECA&D data:
-https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2_download_datasets/release_17.08/catalog.html
+
+<https://thredds.met.no/thredds/catalog/metusers/senorge2/seNorge2_download_datasets/release_17.08/catalog.html>
 
 xgeo.no and senorge.no are also possible options.
 
-Cheers,
-Cristian
+Contact [Christian Lussana](mailto:cristian.lussana@met.no) for more information.
