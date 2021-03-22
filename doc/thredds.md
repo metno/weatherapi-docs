@@ -15,7 +15,7 @@ summary: >
 ## General documentation
 
 - Data files: <https://thredds.met.no/thredds/metno.html>
-- Documentation: <ttps://github.com/metno/NWPdocs/wiki>
+- Documentation: <https://github.com/metno/NWPdocs/wiki>
 
 ## Models
 
