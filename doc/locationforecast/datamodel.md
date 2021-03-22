@@ -28,7 +28,7 @@ Our Nordic forecasts are updated once every hour.
 
 For medium range forecasts (2 - 10 days) the 51 member ensemble forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii) is used. It it updated twice pr day. Horizontal resolution is approximately 18 km. Air temperature, precipitation and wind speed are further post-processed to better represent local geographical features.
 
-Historical forecasts short term forecasts for the Nordic region are available for download from our [thredds server](https://thredds.met.no/thredds/metno.html).
+Historical forecasts short term forecasts for the Nordic region are available for download from our [thredds server](https://thredds.met.no/thredds/metno.html). For more information, see the [NPW Wiki](https://github.com/metno/NWPdocs/wiki).
 
 
 

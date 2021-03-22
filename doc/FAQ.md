@@ -95,13 +95,13 @@ are "coming from"), just as we do for wind.
 
 ## Solar energy
 
-### Q. Are historic measurements or historic predictions for the solar energy that
-reaches the earth surface and if yes how can we access them?
+### Q. Are historic solar energy data available?
 
-A: Historic predictions of solar energy are available from the archive of our
-weather prediction model. The radiation parameters are available in NetCDF
+A: Historic predictions of the solar energy that reaches the earth surface is
+available from the archive of our weather prediction model on THREDDS.
+
+The radiation parameters are available in NetCDF
 format on [THREDDS](https://thredds.met.no/thredds/catalog/meps25epsarchive/catalog.html).
-
 Choose the files with the following name: `meps_mbr0_extracted_2_5km_XXXXX`.
 
 ----------------------------------------

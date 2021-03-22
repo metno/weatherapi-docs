@@ -14,7 +14,8 @@ summary: >
 
 ## General documentation
 
-- [https://thredds.met.no/thredds/metno.html](https://thredds.met.no/thredds/metno.html)
+- Data files: <https://thredds.met.no/thredds/metno.html>
+- Documentation: <ttps://github.com/metno/NWPdocs/wiki>
 
 ## Models
 
@@ -22,7 +23,6 @@ summary: >
 
 General information:
 
-- [https://github.com/metno/NWPdocs/wiki](https://github.com/metno/NWPdocs/wiki)
 - [https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view](https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view)
 
 About changes from MEPS to CMEPS, Feb 2020:
