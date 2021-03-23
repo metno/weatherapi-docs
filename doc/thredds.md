@@ -19,6 +19,12 @@ summary: >
 
 ## Models
 
+For a general overview of the different simulation models used in our forecasts, please see the respective data model documentation page:
+
+- [Locationforecast](./locationforecast/datamodel)
+- [Nowcast](./nowcast/datamodel)
+- [Oceanforecast](./oceanforecast/datamodel) [Under construction]
+
 ### CMEPS
 
 General information:
