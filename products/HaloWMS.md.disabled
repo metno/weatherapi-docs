@@ -1,0 +1,162 @@
+---
+title: Halo WMS Service
+date: 2020-07-13
+author: Geir Aalberg
+layout: product
+state: draft
+tags:
+    - reference
+summary: >
+    WMS map tile service for professional user
+meta:
+    name: PublicWMS
+    baseurl: http://halo-wms.met.no/halo/default.map
+    capabilities: http://halo-wms.met.no/halo/default.map?service=WMS&version=1.3.0&REQUEST=getCapabilities&language=eng
+    responsible: trondm
+    category:
+        - weather
+        - maps
+    coverage: Nordic
+    currentversion: 1.0
+    driftsdok: WMS
+---
+
+The Halo WMS service is a map service delivering tiles for use with WMS clients like OpenLayers,
+Leaflet, OpenStreetMap and others.
+
+## Capabilities
+
+To see which data are available, use the `GetCapabilities` method:
+http://halo-wms.met.no/halo/default.map?service=WMS&version=1.3.0&REQUEST=getCapabilities&language=eng
+
+## Layers
+
+- kart
+- proff.bl
+- ice.concentration
+- ice.type
+- ice.edge
+- radar_precipitation_intensity
+- nedb_0m_mm_iso_regional
+- arome.accumprecip.1h
+- arome.precip1h.iso
+- precipitation_mm_palette_regional
+- arome.precip1h.colour
+- nedb-akku-3t_0m_mm_palett_regional
+- nedb-akku-6t_0m_mm_palett_regional
+- nedb-akku-12t_0m_mm_palett_regional
+- nedb-akku-24t_0m_mm_palett_regional
+- nedb_0m_mm_iso_global
+- nedb_0m_mm_palett_global
+- ec.precip_6h
+- ec.precip_12h
+- ec.precip_24h
+- sno-aku-1t_0m_cm_palett_regional
+- sno-aku-3t_0m_cm_palett_regional
+- sno-aku-6t_0m_cm_palett_regional
+- sno-aku-12t_0m_cm_palett_regional
+- sno-aku-24t_0m_cm_palett_regional
+- ec.dz500-1000
+- dz_500-1000_m_palett_global
+- dz_500-1000_m_palett_regional
+- arome.ff.10m.knop
+- ec.vind.10m
+- ec.wms.ff10m.palette
+- ec.wms.ff10m.iso
+- ec.ff.10m.knop
+- ec.ff.10m.ms
+- arome.wind10m.arrow
+- arome.wind10m.knots
+- arome.wind10m.ms
+- arome.wind10m.beaufort.palette
+- arome.wind10m.beaufort.iso
+- arome.mslp
+- ec.mslp
+- ec.t.2m
+- arome.wms.t2m
+- ec.t.2m_3
+- ec.wms.t2m
+- temperature_2m_c_iso_regional
+- arome.t2m
+- fog_colour_regional
+- lowclouds_colour_regional
+- mediumclouds_colour_regional
+- highclouds_colour_regional
+- sea_significant_wave_height
+- significant_wave_height_sea_state_paletteandcontour_regional
+- peakdir_0m_m_symbol_regional
+- peakper_0m_s_iso_regional
+- vindsjodir_0m_deg_symbol_regional
+- vindsjo-h_0m_m_palett_regional
+- sea_significant_swell_wave_height
+- sea_significant_swell_wave_height_Douglas
+- sea_mean_swell_period
+- sea_mean_swell_direction
+- sea_significant_period
+- waveheight_m_iso_regional
+- windseaheight_m_iso_regional
+- swellheight_m_iso_regional
+- swellperiode_s_iso_regional
+- sign_wave_mean_direction
+- swell_peak_period_value_regional
+- swell_peak_period_iso_regional
+- windsea_mean_periode_value_regional
+- windsea_mean_periode_iso_regional
+- sst_3m_degc_palett_regional
+- sst_3m_degc_iso_regional
+- sst_3m_degc_numb_regional
+- sea_current
+- sea_current_speed
+- sea_salinity
+- sea_current_isolines_regional
+- vind_pluss_temp_fl025_global
+- vind_pluss_temp_fl050_global
+- vind_pluss_temp_fl100_global
+- vind_pluss_temp_fl025_regional
+- vind_pluss_temp_fl050_regional
+- vind_pluss_temp_fl100_regional
+- contrails_sum_layer_regional
+- ducting_regional
+- ducting_layer_surface_regional
+- ducting_layer_elevated_regional
+- metar-trend-colorcode
+- colorcode-taf
+- waveheight_m_iso_global
+- waveheight_m_palette_global
+- waveperiode_mean_s_iso_global
+- waveperiode_mean_s_value_global
+- windseaheight_m_palette_global
+- windseaheight_m_iso_global
+- swellheight_m_palette_global
+- swellheight_m_iso_global
+- swellperiode_mean_s_iso_global
+- swellperiode_mean_s_value_global
+- wavedirection_mean_arrows_global
+- waveperiode_peak_s_value_global
+- swelldirection_mean_arrows_global
+- windseadirection_mean_arrows_global
+- windsea_mean_period_value_global
+- windsea_mean_period_isolines_global
+- significant_wave_height_sea_state_paletteandcontour_global
+- waveperiode_peak_s_iso_global
+- sound_profile
+- sonic_depth
+- wind_10m
+- visibility
+- precipitation_1h
+- icing_index_max
+- clouds
+- freezing_level_altitude_feet
+- wind_fl005
+- wind_fl025
+- wind_fl050
+- wind_fl065
+- wind_fl100
+- temperature_2m
+- sea_surface_temperature
+- helicopter_triggered_lightning_index
+- helicopter_lightning_obsvations
+- helicopter_significant_wave_heigt
+- heli_stations
+- heli_routes
+- heli_areas

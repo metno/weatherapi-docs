@@ -19,7 +19,7 @@ meta:
         - observations
         - lightning
     coverage: Global
-    currentversion: 1.0
+    currentversion: 0.9
     driftsdok: frost_api
 ---
 
@@ -28,4 +28,3 @@ and climate data. This data includes quality controlled daily, monthly, and
 yearly measurements of temperature, precipitation, and wind data. Other
 information, like metadata about weather stations, is also available through the
 API.
-

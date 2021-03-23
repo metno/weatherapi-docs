@@ -12,39 +12,7 @@ summary: >
 
 # THREDDS
 
-## General documentation
-
-- Data files: <https://thredds.met.no/thredds/metno.html>
-- Documentation: <https://github.com/metno/NWPdocs/wiki>
-
-## Models
-
-For a general overview of the different simulation models used in our forecasts, please see the respective data model documentation page:
-
-- [Locationforecast](./locationforecast/datamodel)
-- [Nowcast](./nowcast/datamodel)
-- [Oceanforecast](./oceanforecast/datamodel) [Under construction]
-
-### CMEPS
-
-General information:
-
-- [https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view](https://drive.google.com/file/d/0B-SaEtrDE91WWEJoNkJiUm5TNzg/view)
-
-About changes from MEPS to CMEPS, Feb 2020:
-
-- [https://thredds.met.no/thredds/metno.html](https://thredds.met.no/thredds/metno.html)
-
-### AROME-Arctic
-
-- [https://www.met.no/en/projects/The-weather-model-AROME-Arctic/data_access](https://www.met.no/en/projects/The-weather-model-AROME-Arctic/data_access)
-
-### Other models
-
-- [https://drive.google.com/file/d/0B-SaEtrDE91WWDkzY3dpZlU1V00/view](https://drive.google.com/file/d/0B-SaEtrDE91WWDkzY3dpZlU1V00/view)
-
-
-# Examples
+# Examples of use
 
 ## Extraction of metadata using ncdump
 

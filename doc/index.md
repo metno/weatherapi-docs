@@ -30,7 +30,7 @@ Specifications and information for looking up as needed
 - [General forecast JSON format](./ForecastJSON)
 - [Locationforecast data model](./locationforecast/datamodel)
 - [Nowcast data model](./nowcast/datamodel)
-- [Oceanforecast data model](./oceanforecast/datamodel)
+- [Oceanforecast data model](./oceanforecast/datamodel)  (Under construction)
 
 **General**
 
@@ -50,7 +50,7 @@ Helpdesk's greatest hits
 ## Other data sources
 
 - [Map client and geolocation libraries](./MapClients)
-- [WMS services]()  (Under construction)
+- [WMS services](./WMS)  (Under construction)
 - [Fetching gridded forecast data from THREDDS](./thredds)
 
 ## Backend service development
