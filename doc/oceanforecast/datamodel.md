@@ -18,10 +18,9 @@ MET Norway's coastal wave models have a grid resolution of 800 meters and are fo
 
 The regional wave model (WAM4) that covers the Norwegian Sea, the North Sea and the Barents Sea, has a 4 km resolution and it is forced by winds from MEPS with 2.5 km resolution, together with winds from ECMWF, and with ice concentrations from OSISAF satellite observation. Its boundaries come from the ECMWF. WAM4 forecasts are updated 4 times pr day.
 
-The pan-Arctic wave forecast model (WAM3) has 3 km resolution and is forced with winds delivered by ECMWF and with sea ice and surface currents (that do not contain tides) from MET Norway's TOPAZ system. The winds
-from ECMWF come with a horizontal resolution of approximately 10 km (0.1 x 0.1 degrees) while the ocean currents and sea ice fields come at a resolution of 12.5 km. The boundaries of the pan-Arctic wave model come from ECMWF. WAM3 is used for forecasting from 66 to 240 hours and is updated once pr day. 
+The pan-Arctic wave forecast model (WAM3) has 3 km resolution and is forced with winds delivered by ECMWF and with sea ice and surface currents (that do not contain tides) from MET Norway's TOPAZ system. The winds from ECMWF come with a horizontal resolution of approximately 10 km (0.1 x 0.1 degrees) while the ocean currents and sea ice fields come at a resolution of 12.5 km. The boundaries of the pan-Arctic wave model come from ECMWF. WAM3 is used for forecasting from 66 to 240 hours and is updated once pr day. 
 
-Historical forecasts oceanforecasts are available for download from our [thredds server](https://thredds.met.no/thredds/fou-hi/fou-hi.html)
+Historical ocean forecasts are available for download from our [thredds server](https://thredds.met.no/thredds/fou-hi/fou-hi.html)
 
 
 
