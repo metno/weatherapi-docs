@@ -45,12 +45,16 @@ These are usually non-breaking minor changes which is not announced on the maili
 ## Contact information
 
 If you have any questions about the MET Weather API, please contact us at
-<weatherapi-adm@met.no>. For Frost and THREDDS, please contact
-<servicedesk@met.no>.
+<weatherapi-adm@met.no>.
+
+For the Frost and THREDDS services, as well as all questions of type "do you
+have any data for xxx", please contact <servicedesk@met.no>. Please do not send
+such questions to weatherapi-adm, we cannot answer them.
 
 If you prefer snail mail, the address is:
 
     The Norwegian Meteorological Institute
+    Att: IT/GEO, Team Punkt
     Postboks 43 Blindern
     0371 OSLO
     NORWAY
@@ -59,4 +63,6 @@ Carrier pidgeon is currently not supported as we are awaiting the [spec](https:/
 
 ### Yr.no
 
-The Yr website and mobile apps are developed by [NRK](https://nrk.no/). For questions regarding Yr, including the discontinued `forecast.xml` and `varsel.xml` data feeds, please contact <support@yr.no>.
+The Yr website and mobile apps are developed by [NRK](https://nrk.no/). For
+questions regarding Yr, including the discontinued `forecast.xml` and
+`varsel.xml` data feeds, please contact <support@yr.no>.

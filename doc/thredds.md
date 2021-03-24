@@ -10,11 +10,52 @@ summary: >
     Guide to finding and extracting data and images from thredds.met.no
 ---
 
-# THREDDS
+This document is a brief introduction in how to extract and visualize data
+from THREDDS using the OPeNDAP and WMS protocols. For more information,
+please see the section on "Data Access" in the [Numerical Weather Prediction
+wiki](https://github.com/metno/NWPdocs/wiki/Data-access).
 
-# Examples of use
+## OPeNDAP
 
-## Extraction of metadata using ncdump
+OPeNDAP provides a way for researchers to access scientific data anywhere on the
+Internet, from a wide variety of new and existing programs.
+
+It is used widely in earth-science research settings but it is not limited to
+that. Using a flexible data model and a well-defined transmission format, an
+OPeNDAP client can request data from a wide variety of OPeNDAP servers, allowing
+researchers to enjoy flexibility similar to the flexibility of the web.
+
+For more information, see the [OPeNDAP User
+Guide](https://opendap.github.io/documentation/UserGuideComprehensive.html).
+
+### Tools
+
+#### FIMEX
+
+Fimex is a the File Interpolation, Manipulation and eXtraction library for
+gridded geospatial data, written by MET Norway in C/C++. It converts between
+different, extensible dataformats (currently netcdf, NcML, grib1/2 and felt). It
+enables you to change the projection and interpolation of scalar and vector
+grids. It makes it possible to subset the gridded data and to extract only parts
+of the files.
+
+For simple usage, Fimex comes also with the command line program `fimex`.
+
+For information, as well as download links, see the [FIMEX wiki
+page](https://wiki.met.no/fimex/start).
+
+#### ncdump
+
+The ncdump tool generates an ASCII representation of a netCDF file on standard
+output, either with or without an ASCII representation of the variable data in
+the file. The ASCII representation used is the CDL notation that ncgen accepts
+as input. Thus ncdump and ncgen can be used as inverses to transform data
+representation between binary and ASCII representations.
+
+For more information, see the [ncdump man
+page](http://www.bic.mni.mcgill.ca/users/sean/Docs/netcdf/guide.txn_79.html).
+
+Example extraction of metadata:
 
     https://thredds.met.no/thredds/catalog/metpplatest/catalog.html?dataset=metpplatest/met_forecast_1_0km_nordic_latest.nc
 
