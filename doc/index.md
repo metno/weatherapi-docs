@@ -30,7 +30,7 @@ Specifications and information for looking up as needed
 - [General forecast JSON format](./ForecastJSON)
 - [Locationforecast data model](./locationforecast/datamodel)
 - [Nowcast data model](./nowcast/datamodel)
-- [Oceanforecast data model](./oceanforecast/datamodel)  (Under construction)
+- [Oceanforecast data model](./oceanforecast/datamodel)
 
 **General**
 
