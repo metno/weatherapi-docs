@@ -1,19 +1,24 @@
 ---
-title: Fetching forecast data from THREDDS
+title: Fetching data from THREDDS
 date: 2020-05-19
 author: Geir Aalberg
 layout: page
 state: draft
 tags:
     - guide
+    - thredds
 summary: >
-    Guide to finding and extracting data and images from thredds.met.no
+    Guide to finding and extracting data from thredds.met.no
 ---
 
 This document is a brief introduction in how to extract and visualize data
-from THREDDS using the OPeNDAP and WMS protocols. For more information,
-please see the section on "Data Access" in the [Numerical Weather Prediction
-wiki](https://github.com/metno/NWPdocs/wiki/Data-access).
+from THREDDS using the OPeNDAP protocol.
+
+For more information, please see the section on "Data Access" in the [Numerical
+Weather Prediction wiki](https://github.com/metno/NWPdocs/wiki/Data-access).
+
+THREDDS also supports the Web Map Service protocol for interactive raster images.
+For a quick guide, see the [WMS page](./WMS).
 
 ## OPeNDAP
 
@@ -28,9 +33,9 @@ researchers to enjoy flexibility similar to the flexibility of the web.
 For more information, see the [OPeNDAP User
 Guide](https://opendap.github.io/documentation/UserGuideComprehensive.html).
 
-### Tools
+## Tools
 
-#### FIMEX
+### FIMEX
 
 Fimex is a the File Interpolation, Manipulation and eXtraction library for
 gridded geospatial data, written by MET Norway in C/C++. It converts between
@@ -44,7 +49,7 @@ For simple usage, Fimex comes also with the command line program `fimex`.
 For information, as well as download links, see the [FIMEX wiki
 page](https://wiki.met.no/fimex/start).
 
-#### ncdump
+### ncdump
 
 The ncdump tool generates an ASCII representation of a netCDF file on standard
 output, either with or without an ASCII representation of the variable data in

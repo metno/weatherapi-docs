@@ -6,6 +6,7 @@ layout: product
 state: draft
 tags:
     - reference
+    - thredds
 summary: >
     Dataset archive including model runs and observation timeseries
 meta:
