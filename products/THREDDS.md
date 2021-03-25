@@ -57,8 +57,7 @@ These are the models operated by MET Norway for our forecasting services
 forecasts are produced by ECMWF and not available for download due to licensing
 terms.
 
-The NWP datasets can be found in the [Weather
-forecasts](https://thredds.met.no/thredds/metno.html)
+The NWP datasets can be found in the [Weather forecasts](https://thredds.met.no/thredds/metno.html)
 folder on thredds.met.no.
 
 Documentation for the various models can be found on the [Numerical Weather
@@ -67,9 +66,9 @@ Prediction wiki](https://github.com/metno/NWPdocs/wiki).
 For a general overview of the different simulation models used in our forecasts,
 please see the respective data model documentation page:
 
-- [Locationforecast](./locationforecast/datamodel)
-- [Nowcast](./nowcast/datamodel)
-- [Oceanforecast](./oceanforecast/datamodel) [Under construction]
+- [Locationforecast](https://docs.api.met.no/doc/locationforecast/datamodel)
+- [Nowcast](https://docs.api.met.no/doc/nowcast/datamodel)
+- [Oceanforecast](https://docs.api.met.no/doc/oceanforecast/datamodel)
 
 More information:
 
