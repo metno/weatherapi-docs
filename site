@@ -1,0 +1,60 @@
+#!/bin/bash
+
+set -e # exit immediately on any error
+
+action="$1"
+shift
+
+# make sure we are in the right dir if called from somewhere else
+cd "$(dirname "$0")"
+
+missing=""
+
+abort() {
+    echo "$action: $*"
+    exit 1
+}
+
+case "$action" in
+
+    run)
+        bundle exec jekyll serve
+        ;;
+
+    blog)
+        # check for title parameters
+        if [ "$1" ]; then
+            title="$*"
+        else
+            abort "Missing title parameter"
+        fi
+
+        echo $title
+        title=$(echo $title | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+        echo $title
+
+        date=`date -u +"%Y-%m-%d"`
+        filename="_posts/${date}_$title.md"
+        echo $filename
+
+        user=`whoami`
+        author=`getent passwd $user | cut -d : -f 5`
+        cat > $filename <<EOT
+---
+title: Enter text here ...
+date: $date
+author: $author
+layout: post
+tags:
+    - ???
+---
+
+Enter text here in MarkDown format ...
+
+EOT
+    $EDITOR $filename
+    echo "Run 'git add $filename' to save blog post"
+    ;;
+
+
+esac
