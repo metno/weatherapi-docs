@@ -11,7 +11,7 @@ tags:
 
 ## Data sources
 
-![Oceanforecast region](../assets/oceanforecast_area.png)
+![](/home/ivaras/Pictures/wam4.png)
 
 The figure above shows the domain for oceanforecast available at api.met.no.
 
