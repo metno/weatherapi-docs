@@ -10,21 +10,32 @@ summary: >
     the API
 ---
 
+This is a description on how the MET WeatherAPI implements HTTP status codes.
+For the official standard, see [W3C RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+
+## Success
+
 **200 OK**: On success, the appropriate data will be returned with the HTTP
-status code "200 OK". This data may be XML or some other format (like PNG, GIF
-or JPEG), but as long as the status code indicates success, they should be
-there.
+status code "200 OK". This data may be XML, JSON, an image (like PNG, GIF
+or JPEG) or a binary file, but as long as the status code indicates success,
+they should be there.
 
 **203 Non-Authorative Information**: The product version you are attempting to
-use is deprecated. Please consult the product documentation page for information
-on how to use the upgraded product. Deprecated products are EOL's after a
-certain period of time - this date is available in the product documentation
+use is deprecated or in beta, and should not be used in production (yet).
+For deprecated versions, please consult the product documentation page for
+information on how to use the upgraded product. Deprecated products are EOL's
+after a certain period of time - this date should be listed in the product
+change log.
+
+## Redirection
 
 **304 Not Modified**: Client Side Caching is supported on our API servers, and
 requires the use of the if-modified-since directive to be sent in the client
 request header. For more information, please consult the http protocol
 specification at http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more
 information and an example of how to correctly send this request
+
+## Client errors
 
 **400 Bad Request**: On error, the HTTP status code "400 Bad request" is
 returned along with an error message formatted as HTML. Other 4XX-codes may be
@@ -65,6 +76,8 @@ or a 403 Forbidden.
 **499 Client Closed Request**: The HTTP status code "499 Client Closed Request"
 is actually a client error, indicating that the client terminated the connection
 before the response was finished (presumably due to a timeout).
+
+## Server errors
 
 **500 Internal Server Error**: An unspecified error in the API itself. Could
 possibly indicate a bug in the code (horror!), but more likely a deployment or

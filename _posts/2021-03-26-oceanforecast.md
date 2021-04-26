@@ -40,9 +40,8 @@ on api.met.no:
 <https://api.met.no/product/THREDDS>
 
 If you have questions regarding those data, please don't use the weatherapi-adm
-address as this goes directly to us. Instead send an email to
-servicedesk@met.no, marking your question clearly with THREDDS in the subject
-line.
+address as this goes directly to the API admins. Instead send an email to
+thredds@met.no to ensure your questions go to the relevant personnel.
 
 
 Oceanforecast 2.0
