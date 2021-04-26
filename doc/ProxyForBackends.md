@@ -18,7 +18,7 @@ Described in the [Operational Level Agreement](./OLA).
 
 ## Links
 
-Any links to the API generated on the backend must not use hardcoded values,
+Any links to the API generated on the backend must not use hardcoded hostnames,
 since the destination varies according to each environment (public, internal,
 staging, testing etc). Instead you must read the following HTTP headers which
 are included in all requests from the API:
@@ -38,6 +38,25 @@ Here is a typical example of the headers sent by a request from the build server
         "X-Forwarded-Proto": "https"
 
     }
+
+### Kubernetes
+
+The k8s load balancer requires special configuration since it overwrites the
+`X-Forwarded-Host` and `-Proto` before sending the request to the backend.
+To compensate you must store the incoming headers in a custom header, e.g.
+`X-External-Host`. This can be added in `kubeconf.yml` which is generated
+during deployment:
+
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      ...
+      annotations:
+        nginx.ingress.kubernetes.io/configuration-snippet: |
+          proxy_set_header X-External-Host \$http_x_forwarded_host;
+          proxy_set_header X-External-Proto \$http_x_forwarded_proto;
+
+
 
 ## Response
 
