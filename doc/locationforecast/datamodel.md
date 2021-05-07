@@ -69,6 +69,8 @@ Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](h
 |**air_temperature**|temperature|celsius| air temperature at 2m above the ground |
 |air_temperature_max|maxTemperature|celsius| maximum air temperature over period |
 |air_temperature_min|minTemperature|celsius| minimum air temperature over period |
+|air_temperature_percentile_10||celcius| 10th percentile of air temperature (i.e 90% chance it will be above this value) |
+|air_temperature_percentile_90||celcius| 90th percentile of air temperature  (i.e 10% chance it will be above this value) |
 |**cloud_area_fraction**|cloudiness|%| total cloud cover for all heights |
 |cloud_area_fraction_high|highClouds|%| cloud cover higher than 5000m above the ground |
 |cloud_area_fraction_low|lowClouds|%| cloud cover lower than 2000m above the ground |
@@ -83,6 +85,8 @@ Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](h
 |ultraviolet_index_clear_sky||1| ultraviolet index for cloud free conditions, 0 (low) to 11+ (extreme) |
 |**wind_from_direction**|windDirection|degrees| direction the wind is coming from (0° is north, 90° east, etc.) |
 |**wind_speed**|windSpeed|m/s| wind speed at 10m above the ground (10 min average) |
+|wind_speed_percentile_10||m/s| 10th percentile of wind speed at 10m above the ground (10 min average) |
+|wind_speed_percentile_90||m/s| 90th percentile of wind speed at 10m above the ground (10 min average) |
 |wind_speed_of_gust|windGust|m/s| maximum gust for period at 10m above the ground. Gust is wind speed averaged over 3s. |
 
 
