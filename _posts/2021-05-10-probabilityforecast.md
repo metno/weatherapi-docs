@@ -36,8 +36,8 @@ points near the coast will return the nearest point at sea (this means the
 coordinates in the URL and JSON may be different). The new model areas can be
 seen on the maps here:
 
-<https://docs.api.met.no/doc/oceanforecast/datamodel>
-<https://docs.api.met.no/doc/nowcast/datamodel>
+- <https://docs.api.met.no/doc/oceanforecast/datamodel>
+- <https://docs.api.met.no/doc/nowcast/datamodel>
 
 Finally, as you may know we have not supported unencrypted HTTP for several
 years, and all requests to port 80 have been redirected to the corresponding
