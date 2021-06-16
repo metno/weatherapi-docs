@@ -81,6 +81,7 @@ Global UV forecasts are provided by [Copernicus Atmosphere Monitoring Service](h
 |precipitation_amount_max|@maxvalue|mm| maximum likely precipitation for period |
 |precipitation_amount_min|@minvalue|mm| minimum likely precipitation for period |
 |probability_of_precipitation||%| chance of precipitation during period |
+|probability_of_thunder||%| chance of thunder during period |
 |**relative_humidity**|humidity|%| relative humidity at 2m above the ground |
 |ultraviolet_index_clear_sky||1| ultraviolet index for cloud free conditions, 0 (low) to 11+ (extreme) |
 |**wind_from_direction**|windDirection|degrees| direction the wind is coming from (0° is north, 90° east, etc.) |
