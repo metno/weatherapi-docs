@@ -43,6 +43,12 @@ see what is offered in ECOMET catalogue on [ecomet.eu](https://www.ecomet.eu/eco
 
 ## Legal stuff
 
+### Trademarks and naming restrictions (NEW)
+
+You are not allowed to make services/sites that appear to be made by Yr, NRK or
+The Norwegian Meteorological Institute. In other words, you may not use the word
+"Yr" as a part of your service name, or attach the Yr logo to your service.
+
 ### Identification
 
 All requests must (if possible) include an identifying User Agent-string (UA) in the request

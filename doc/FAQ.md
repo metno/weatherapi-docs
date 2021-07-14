@@ -47,6 +47,27 @@ requests from browsers to HTTPS on an experimental basis. However, if we detect
 traffic where every HTTPS call is preceded by a HTTP call, this is likely to be
 blocked.
 
+### Do you support content negotiation (using the `Accept` header)?
+
+We tried to support this experimentally a short time after launching
+version 3.0 of the API, but it generated a lot of problems and had to
+be abandoned. Specifically, it does not work with caching proxies who
+tend to serve XML to requests for JSON unless the Accept header is part
+of the cache key. Since there are literally thousands of different
+permutations of format in the various Accept headers, this would defeat
+the point of having a cache.
+
+Also, setting the Accept header is not allowed in "simple"
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests;
+instead you must for that use a "preflight" and configure the server
+to recognize each client (something which is not possible with the hundreds
+of thousands of users of our API).
+
+Content negotiation was a good ide in principle, but has been an absolute
+failure in practice. Unfortunately it is still part of the Swagger/OpenAPI
+spec, which is why you will see some fields in the API UI where you can
+specify content type; this is ignored by the API.
+
 ### What does restrictions on some data mean?
 
 Some data referred to in the documentation is not freely available, mostly
@@ -92,6 +113,7 @@ so that when reading the GRIB files with a map plotter the wave arrows will be
 shown the wrong way. Therefore, for Oceanforecast/2.0 and newer products (2021
 onwards) we will be using meteorological convention for waves (i.e. where they
 are "coming from"), just as we do for wind.
+Please see the [Oceanforecast Data Model](./oceanforecast/datamodel) documentation.
 
 ## Solar energy
 
