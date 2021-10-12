@@ -31,6 +31,7 @@ Specifications and information for looking up as needed
 - [Locationforecast data model](./locationforecast/datamodel)
 - [Nowcast data model](./nowcast/datamodel)
 - [Oceanforecast data model](./oceanforecast/datamodel)
+- [Sunrise: Approximating the Sun elevation](./assets/PoleSunZenith.pdf)
 
 **General**
 
