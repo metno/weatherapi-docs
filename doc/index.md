@@ -31,7 +31,7 @@ Specifications and information for looking up as needed
 - [Locationforecast data model](./locationforecast/datamodel)
 - [Nowcast data model](./nowcast/datamodel)
 - [Oceanforecast data model](./oceanforecast/datamodel)
-- [Sunrise/astro-api](./sunrise/sunrise.md)
+- [Sunrise/astro-api](./sunrise/sunrise)
 
 **General**
 
