@@ -90,6 +90,25 @@ language by using the standard table, e.g. from Wikipedia:
 
 <https://en.wikipedia.org/wiki/Beaufort_scale>
 
+### Q. How can I calculate the apparent ("feels like") temperature as used on Yr?
+
+A. The "feels like" temperature on Yr is based on the heat index and wind chill
+factor, both of which can be calculated from the existing data in
+locationforecast:
+
+- [Heat index](https://en.m.wikipedia.org/wiki/Heat_index) is only used when the
+temperature is > 26°C and humidity > 40 %, otherwise the real temperature is
+used.
+- [Wind chill factor](https://en.m.wikipedia.org/wiki/Wind_chill) is only used
+when the temperature is < 10°C and the wind speed is > 1.33 m/s, otherwise
+the real temperature is used.
+
+Note however that there is no standard formula for apparent temperature, but
+[varies from website to website](https://en.m.wikipedia.org/wiki/Apparent_temperature).
+Ideally, solar radiation should be part of the calculation, however this is not
+usually included in meteorological observations and will have to be obtained
+elsewhere.
+
 ## Symbol codes
 
 ### Q. What do the symbol codes mean? Where can I find the corresponding icons?
