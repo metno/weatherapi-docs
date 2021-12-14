@@ -47,9 +47,15 @@ The files are organized as illustrated:
 ```
     weatherapi-docs/
     ├── doc
-    │   └── locationforecast
+    │   ├── assets
+    │   ├── locationforecast
+    │   ├── metalerts
+    │   ├── nowcast
+    │   ├── oceanforecast
+    │   └── sunrise
     ├── _layouts
     ├── _posts
+    ├── products
     ├── schemas
     ├── _site
     └── README.md
@@ -60,15 +66,27 @@ HTML templates in `_layouts` and so on. The `_site` folder is used by Jekyll
 for auto-generating HTML and is excluded in `.gitignore`.
 
 API static documentation pages shown under [https://api.met.no/doc/](/doc) on
-api.met.no reside in the `doc` directory for historical reasons (yes, this means
-the directory path looks somewhat strange).
+api.met.no reside in the `doc` directory. All files here must be in Markdown
+format, except for `assets` where you can put PDFs, images etc. (this is a
+limitation of WeatherAPI, not on GitHub/Jekyll).
 
 Files which are not intended to be processed as Markdown but still included
 in WeatherAPI may be stored in other directories. E.g. `schemas` contain the XML
 schemas used on
-[schema.api.met.no](https://schema.api.met.no/schemas/).
-This may be added to in the future, e.g. for microservice metadata.
+[schema.api.met.no](https://schema.api.met.no/schemas/), while `products` is
+used to show non-WeatherAPI products on api.met.no. This may be added to in the
+future, e.g. for microservice metadata.
 
+## Running Jekyll
+
+First you must install Jekyll [as per the
+instructions](https://jekyllrb.com/docs/installation/).
+
+To view the documentation locally, start Jekyll:
+
+    $ ./site run
+
+You can then open your local version on <http://localhost:4000/>.
 
 ## Format
 
@@ -138,4 +156,3 @@ text is included in LICENCE.txt in this repo.
 Copyright 2020 The Norwegian Meteorological Institute
 Henrik Mohns Plass 1, 0371 Oslo
 https://www.met.no/
-

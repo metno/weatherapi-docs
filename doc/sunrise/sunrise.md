@@ -12,15 +12,15 @@ tags:
 ## Sunrise
 
 The `Sunrise` service at `api.met.no` comes with no warranty, but it is still associated with high quality and reliability.
-The `Sunrise` service typically processes about 50.000 requests an hour, 
+The `Sunrise` service typically processes about 50.000 requests an hour,
 and has been operational for about 15 years.
-The `Sunrise` service runs the [`astro-api`](#astro-api) software on a set of internal nodes at met.no. 
-The `astro-api` softare is based on [JPL ephemerides DE405](https://ssd.jpl.nasa.gov/planets/eph_export.html), which is designed for 
+The `Sunrise` service runs the [`astro-api`](#astro-api) software on a set of internal nodes at met.no.
+The `astro-api` softare is based on [JPL ephemerides DE405](https://ssd.jpl.nasa.gov/planets/eph_export.html), which is designed for
 spacecraft navigation and astronomy, and uses the [SOFA](http://www.iausofa.org/) library along with standard and efficient search algorithms.
-If you plan for massive amounts of requests or need full control of the production, 
+If you plan for massive amounts of requests or need full control of the production,
 we recommend that you [download](https://github.com/FrankThomasTveter/astro-api) and run the `astro-api` stand-alone web-service on your own production platforms.
 
-A typical request to `Sunrise` may look like this 
+A typical request to `Sunrise` may look like this
 [https://api.met.no/weatherapi/sunrise/2.0?lat=59.93&lon=10.71&date=2018-05-11&offset=+01:00&days=1](https://api.met.no/weatherapi/sunrise/2.0?lat=59.93&lon=10.71&date=2018-05-11&offset=+01:00&days=1)
 and will yield a result as listed below.
 
@@ -49,7 +49,7 @@ and will yield a result as listed below.
 The met.no policy is to make as few changes to the original format as possible.
 However, changes may sometimes be inevitable in order to add new information for our partners.
 
-The latest version of `Sunrise` which is currently being testet is available at a public [node](http://157.249.72.176/astro/cgi-bin/small.pl?lat=59.93&lon=10.71&date=2018-05-11&offset=+01:00&days=1). 
+The latest version of `Sunrise` which is currently being testet is available at a public [node](http://157.249.72.176/astro/cgi-bin/small.pl?lat=59.93&lon=10.71&date=2018-05-11&offset=+01:00&days=1).
 This version is not intended for production, but is available for development purposes.
 The test-version will currently yield a result as listed below.
 
@@ -75,15 +75,14 @@ The test-version will currently yield a result as listed below.
       </astrodata>
 
 The information in the `Sunrise` product can be used to estimate other astronomical information.
-Below follows a list of suggested algorithms.
+Below follows a list of suggested algorithms:
 
- *   [Refraction](./UpperLimbElevation.pdf),
- *   [Twilight times](./PoleSunZenith.pdf),
- *   [The Moon shadow](./MoonShadow.pdf).
+ *   [Refraction](../assets/UpperLimbElevation.pdf)
+ *   [Twilight times](../assets/PoleSunZenith.pdf)
+ *   [The Moon shadow](../assets/MoonShadow.pdf)
 
 ### astro-api
 
-The stand-alone `astro-api` web-service software is available at [github](https://github.com/FrankThomasTveter/astro-api). 
+The stand-alone `astro-api` web-service software is available at [github](https://github.com/FrankThomasTveter/astro-api).
 The latest version is documented in the [wiki](https://github.com/FrankThomasTveter/astro-api/wiki).
 Changes to the `met.no` production are also [listed there](https://github.com/FrankThomasTveter/astro-api/wiki/notifications).
-
