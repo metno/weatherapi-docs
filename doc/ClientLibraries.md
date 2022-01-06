@@ -55,7 +55,7 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 ### PHP
 
-- <https://github.com/pionl/METno>
+- <https://github.com/pionl/METno> (must be updated to work with locationforecast/2.0)
 
 ### Haskell
 
