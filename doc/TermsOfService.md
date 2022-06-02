@@ -93,7 +93,7 @@ our [Privacy Policy Statement](https://www.met.no/en/About-us/privacy).
 ### Traffic
 
 1. Do not ask too often, and don't repeat requests until the time indicated in the `Expires` response header.
-2. Cache data locally and and use the `If-Modified-Since` request header to avoid repeatedly downloading the same data.
+2. Cache data locally and and use the `If-Modified-Since` request header to avoid repeatedly downloading the same data. Do not use HEAD followed by GET since this doubles the server processing load if it misses the cache.
 3. Don't generate unnecessary traffic, e.g. by repeated requests for data which never change (MetAlerts CAP files, images with timestamps and so on).
 4. Don't schedule many requests at the same time, e.g. every hour on the dot or when the forecast model runs are finished.
     Add a random number of minutes to the time of the requests as our data are continously updated.

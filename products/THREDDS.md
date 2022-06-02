@@ -91,5 +91,4 @@ Prediction wiki](https://github.com/metno/NWPdocs/wiki/Data-access)
 
 thredds.met.no is a separate service from api.met.no. Please do not use the
 weatherapi-adm email for questions regarding THREDDS or what kind of data
-are available, instead send all enquieries to <servicedesk@met.no> with THREDDS
-clearly marked in the subject line.
+are available, instead send all enquieries to <thredds@met.no>.

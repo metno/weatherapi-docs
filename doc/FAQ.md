@@ -47,6 +47,19 @@ requests from browsers to HTTPS on an experimental basis. However, if we detect
 traffic where every HTTPS call is preceded by a HTTP call, this is likely to be
 blocked.
 
+### How can I access WeatherAPI data via QGIS (or any other GDAL-based application)?
+
+GDAL by default does not send a User-Agent header, which causes a 403 Forbidden response.
+You must set this explicitly in an environment variable (we presume you are using a
+UNIX/Linux based platform here). Add the following line to your
+
+    $ export GDAL_HTTP_USERAGENT="QGIS vXXX/YYY (email@example.com)"
+
+The email address is to fulfil the requirement for contact information in case you
+exceed the traffic limits; without you will be blocked without warning. Also note
+that trying to mimic browser User-Agent headers is in violation of the TOS which
+can lead to blocking.
+
 ### Do you support content negotiation (using the `Accept` header)?
 
 We tried to support this experimentally a short time after launching
@@ -75,6 +88,8 @@ because the data is not ours. We have the right to use the data, but not to
 distribute them. This is marked in the documentation for each product in a
 section called Restrictions. For more information regarding this issue, please
 see our [Licensing and Data Policy](.License).
+
+Currently there are no longer any restricted data served via api.met.no.
 
 ### Do you support gzip compression of HTTP data?
 
