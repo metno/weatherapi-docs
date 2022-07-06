@@ -5,6 +5,9 @@ author: Håvard Futseter
 layout: page
 tags:
     - reference
+    - locationforecast
+    - nowcast
+    - oceanforecast
 summary: >
     Description of the JSON format used in Locationforecast, Nowcast and others
 todo:
@@ -124,7 +127,7 @@ Here is an excerpt of a forecast response:
 
 You can get a complete forecast response using the `/complete` method, e.g.
 
- https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10
+- <https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10>
 
 ## Geographical description
 
@@ -140,6 +143,7 @@ You can get a complete forecast response using the `/complete` method, e.g.
 
 We use the [GeoJSON](https://geojson.org/) standard to structure our format,
 see our [documentation](./GeoJSON) for more details.
+Coordinates are in the EPSG:4326 system, on the form "longitude, latitude, altitude".
 
 All forecast data are listed under the GeoJSON attribute called `properties`.
 
@@ -185,7 +189,7 @@ parameter.
 ## Forecast timeseries
 
 The forecast timeseries is structured as an array of forecast objects. The array
-is always sorted with increasing time.
+is always sorted with increasing time. All timestamps are in UTC.
 
 The time resolution for a timeseries can vary. E.g the first half of a timeseries can have time values with one hour intervals,
 while the last half of the timeseries can have time values with six hour intervals.
