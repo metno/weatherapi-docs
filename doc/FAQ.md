@@ -41,17 +41,19 @@ but deliberate breaches of the TOS will result in a permanent ban.
 
 ### Do you support unencrypted HTTP requests?
 
-No, since version 3 we only support HTTPS for security reasons. Since this is
-somewhat inconvenient when using the site we will redirect legitimate HTTP
-requests from browsers to HTTPS on an experimental basis. However, if we detect
-traffic where every HTTPS call is preceded by a HTTP call, this is likely to be
-blocked.
+No, since version 3 we only support HTTPS for security reasons,
+[as required by Norwegian law](https://lovdata.no/dokument/SF/forskrift/2013-04-05-959).
+Since this is somewhat inconvenient when using the site we will redirect
+legitimate HTTP requests from browsers to HTTPS on an experimental basis.
+However, if we detect traffic where every HTTPS call is preceded by a HTTP call,
+this is likely to be blocked.
 
 ### How can I access WeatherAPI data via QGIS (or any other GDAL-based application)?
 
 GDAL by default does not send a User-Agent header, which causes a 403 Forbidden response.
 You must set this explicitly in an environment variable (we presume you are using a
-UNIX/Linux based platform here). Add the following line to your
+UNIX/Linux based platform here). Add the following line to your environment (e.g. `.bashrc`,
+`.profile` or similar):
 
     $ export GDAL_HTTP_USERAGENT="QGIS vXXX/YYY (email@example.com)"
 
