@@ -45,9 +45,10 @@ These are usually non-breaking minor changes which is not announced on the maili
 ## Contact information
 
 If you have any questions about the MET Weather API, please contact us at
-<weatherapi-adm@met.no>.
+<weatherapi-adm@met.no>. Frost and THREDDS have their own support email
+addresses, please see the landing page for each product.
 
-For the Frost and THREDDS services, as well as all questions of type "do you
+For general meteorological questions, as well as all questions of type "do you
 have any data for xxx", please contact <servicedesk@met.no>. Please do not send
 such questions to weatherapi-adm, we cannot answer them.
 

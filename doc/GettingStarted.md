@@ -67,10 +67,10 @@ makes the json output readable instead of just one ginormous line.
 This might work, or you may get a 403 Forbidden response instead. This is
 because you haven't read the
 [Terms of Service](./TermsOfService) as mentioned above, and forgot to identify
-yourself. This is done by sending contact information in the `User-Agent`
-request header. In curl this is pretty easy to do:
+yourself. This is done by sending some form of contact information in the `User-Agent`
+request header, e.g. your company website or an email address. In curl this is pretty easy to do:
 
-    $ curl -A "MyTestApp/0.1" -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'|json_pp
+    $ curl -A "MyTestApp/0.1 support@example.com" -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'|json_pp
     {
        "properties" : {
           "meta" : {
@@ -84,7 +84,7 @@ At this point it would be useful to look at the response headers returned by the
 can use either the `-i` option (which displays both headers and body), or `-I` which only returns
 the headers (also known as a HEAD request).
 
-    $ curl -A "MyTestApp/0.1" -I -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'
+    $ curl -A "MyTestApp/0.1 support@example.com" -I -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'
     HTTP/1.1 203 Non-Authoritative Information
     Content-Type: application/json
     Expires: Tue, 16 Jun 2020 12:44:18 GMT
@@ -107,7 +107,7 @@ Even after this time it is more than likely that the data haven't changed. To av
 the same data over and over (generating unneccesary bandwith and latency), you should use
 the `If-Modified-Since` header, using the value of the Last-Modified header
 
-    $ curl -A "MyTestApp/0.1" -i -H 'If-Modified-Since: Tue, 16 Jun 2020 12:11:59 GMT' \
+    $ curl -A "MyTestApp/0.1 support@example.com" -i -H 'If-Modified-Since: Tue, 16 Jun 2020 12:11:59 GMT' \
       -s 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0'
     HTTP/1.1 304 Not Modified
     Content-Type: application/json
@@ -136,7 +136,7 @@ Sometimes you might get a `422 Unprocessable Entity` status code back, e.g. from
 So far we have been using products which cover a continous range of possible values, like geographic coordinates for the whole globe. For some other products however there is only a distinct set of data which are available for download. To find out which, you need to use the `available`  method. This will return a list in XML (default) or JSON format with links to all available files, which you then can download as previously described.
 
 ```
-$ curl -A "MyTestApp/0.1" -s 'https://api.met.no/weatherapi/radar/2.0/available.json?type=lx_reflectivity&area=central_norway'|json_pp
+$ curl -A "MyTestApp/0.1 support@example.com" -s 'https://api.met.no/weatherapi/radar/2.0/available.json?type=lx_reflectivity&area=central_norway'|json_pp
 [
    {
       "params" : {
