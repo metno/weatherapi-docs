@@ -1,5 +1,5 @@
 ---
-title: Changes to MetAlerts and NLAroutes
+title: New version of Routeforecast
 date: 2022-06-30
 author: Geir Aalberg
 layout: post
