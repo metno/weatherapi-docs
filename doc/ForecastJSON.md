@@ -21,7 +21,7 @@ This documentation has two parts. The first part describes the structure of the
 JSON format. The second part describes how this format is used in our services
 to represent forecast data.
 
-# Format
+## Format
 
 The format has three main parts:
 
@@ -129,7 +129,7 @@ You can get a complete forecast response using the `/complete` method, e.g.
 
 - <https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10>
 
-## Geographical description
+### Geographical description
 
     "type": "Feature",
     "geometry": {
@@ -147,7 +147,7 @@ Coordinates are in the EPSG:4326 system, on the form "longitude, latitude, altit
 
 All forecast data are listed under the GeoJSON attribute called `properties`.
 
-## Forecast metadata
+### Forecast metadata
 
     "meta": {
       "updated_at": "2020-06-10T13:04:26Z",
@@ -186,7 +186,7 @@ each forecast document, but the unit for e.g `air_temperature` will be same for
 all locations. We will notify you about any change in unit values for a
 parameter.
 
-## Forecast timeseries
+### Forecast timeseries
 
 The forecast timeseries is structured as an array of forecast objects. The array
 is always sorted with increasing time. All timestamps are in UTC.
@@ -200,13 +200,13 @@ parameters for that time. We have two main types of forecast parameters:
 - parameters for a time instant
 - parameters for a time period
 
-### Parameters for a time instant
+#### Parameters for a time instant
 
 These parameters are found under the `instant` object. These parameters, e.g
 `air_temperature` has a value that describes the state at that exact time
 instant.
 
-### Parameters for a time period
+#### Parameters for a time period
 
 These parameters are found under a number of objects: `next_1_hours`,
 `next_6_hours`, `next_12_hours`. These parameters, e.g `precipitation_amount`

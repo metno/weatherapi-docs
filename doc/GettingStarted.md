@@ -135,28 +135,27 @@ Sometimes you might get a `422 Unprocessable Entity` status code back, e.g. from
 
 So far we have been using products which cover a continous range of possible values, like geographic coordinates for the whole globe. For some other products however there is only a distinct set of data which are available for download. To find out which, you need to use the `available`  method. This will return a list in XML (default) or JSON format with links to all available files, which you then can download as previously described.
 
-```
-$ curl -A "MyTestApp/0.1 support@example.com" -s 'https://api.met.no/weatherapi/radar/2.0/available.json?type=lx_reflectivity&area=central_norway'|json_pp
-[
-   {
-      "params" : {
-         "time" : "2020-06-23T07:25:00Z",
-         "area" : "central_norway",
-         "type" : "lx_reflectivity",
-         "content" : "image"
-      },
-      "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A25%3A00Z&type=lx_reflectivity"
-   },
-   {
-      "params" : {
-         "content" : "image",
-         "area" : "central_norway",
-         "time" : "2020-06-23T07:30:00Z",
-         "type" : "lx_reflectivity"
-      },
-      "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A30%3A00Z&type=lx_reflectivity"
-   },
-```
+    $ curl -A "MyTestApp/0.1 support@example.com" -s 'https://api.met.no/weatherapi/radar/2.0/available.json?type=lx_reflectivity&area=central_norway'|json_pp
+    [
+       {
+          "params" : {
+             "time" : "2020-06-23T07:25:00Z",
+             "area" : "central_norway",
+             "type" : "lx_reflectivity",
+             "content" : "image"
+          },
+          "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A25%3A00Z&type=lx_reflectivity"
+       },
+       {
+          "params" : {
+             "content" : "image",
+             "area" : "central_norway",
+             "time" : "2020-06-23T07:30:00Z",
+             "type" : "lx_reflectivity"
+          },
+          "uri" : "https://api.met.no/weatherapi/radar/2.0?area=central_norway&content=image&time=2020-06-23T07%3A30%3A00Z&type=lx_reflectivity"
+       },
+       ...
 
 As you can see we have limited the results to a specific `area` and `type` to filter out unwanted results. This greatly speeds up download times as the full radar list contains almost 3000 images!
 

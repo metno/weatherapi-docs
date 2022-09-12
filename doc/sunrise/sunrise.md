@@ -77,9 +77,9 @@ The test-version will currently yield a result as listed below.
 The information in the `Sunrise` product can be used to estimate other astronomical information.
 Below follows a list of suggested algorithms:
 
- *   [Refraction](../assets/UpperLimbElevation.pdf)
- *   [Twilight times](../assets/PoleSunZenith.pdf)
- *   [The Moon shadow](../assets/MoonShadow.pdf)
+ *   [Refraction](../assets/UpperLimbElevation.pdf) (PDF)
+ *   [Twilight times](../assets/PoleSunZenith.pdf) (PDF)
+ *   [The Moon shadow](../assets/MoonShadow.pdf) (PDF)
 
 ### astro-api
 
