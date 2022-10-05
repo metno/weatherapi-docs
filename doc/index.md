@@ -25,15 +25,20 @@ Step-by-step guides to implementing a client application
 
 Specifications and information for looking up as needed
 
-**Forecasts**
+### Formats
 
-- [General forecast JSON format](./ForecastJSON)
+- [Using the GeoJSON standard](./GeoJSON)
+- [General point forecast JSON format](./ForecastJSON)
+- [General area forecast JSON format](./AreaForecastJSON)
+
+### Forecasts
+
 - [Locationforecast data model](./locationforecast/datamodel)
 - [Nowcast data model](./nowcast/datamodel)
 - [Oceanforecast data model](./oceanforecast/datamodel)
 - [Sunrise/astro-api](./sunrise/sunrise)
 
-**General**
+### General
 
 - [General usage](./usage) - how to use the API
 - [HTTP status codes and response headers](./StatusCodes)

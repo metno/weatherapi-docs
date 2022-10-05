@@ -21,7 +21,7 @@ case "$action" in
         bundle exec jekyll serve
         ;;
 
-    blog)
+    post)
         # check for title parameters
         if [ "$1" ]; then
             title="$*"
