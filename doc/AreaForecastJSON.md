@@ -23,7 +23,7 @@ until the end of 2022.**
 The area forecast uses the [GeoJSON](./GeoJSON) standard format, with
 additions from GeoJSON-T and JSON-FG for temporal dimension.
 
-The forecasts for each are are grouped under a FeatureCollection as
+The forecasts for each area are grouped under a FeatureCollection as
 separate Features:
 
 ```json
@@ -82,9 +82,7 @@ MultiPolygons might be used in a later version of Textforecast.
 The interval which the forecast is valid for is specified in the `when`
 attribute, as (more or less) defined by the GeoJSON-T and JSON-FG standards.
 
-Each forecast has a `forecasttype` attribute, which is one of the following:
-
-- **normal**: used for most forecasts under normal condition
-- **sea**: used for critical conditions at sea (???)
+Each forecast has a `forecasttype` attribute, which is either `sea` or `normal`.
+This is an internal code which is of no use for external users.
 
 The actual forecast then follows in the `text` attribute, using UTF-8 encoding.
