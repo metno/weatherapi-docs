@@ -3,7 +3,7 @@ title: General area forecast JSON format
 date: 2022-10-05
 author: Geir Aalberg
 layout: page
-status: draft
+state: draft
 tags:
     - reference
     - textforecast
@@ -69,6 +69,7 @@ separate Features:
         ]
     }
 ```
+
 The `lastChange` attribute indicates when the forecast set was generated.
 Most forecast sets are produced in Norwegian and English as separate files,
 except for the land forecast which is only in Norwegian. The language
