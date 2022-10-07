@@ -83,7 +83,7 @@ MultiPolygons might be used in a later version of Textforecast.
 The interval which the forecast is valid for is specified in the `when`
 attribute, as (more or less) defined by the GeoJSON-T and JSON-FG standards.
 
-Each forecast has a `forecasttype` attribute, which is either `sea` or `normal`.
-This is an internal code which is of no use for external users.
+Each forecast has a `forecasttype` attribute, which for land and coast is always `normal`.
+Other values are expected to follow when more forecasts are converted to GeoJSON.
 
 The actual forecast then follows in the `text` attribute, using UTF-8 encoding.
