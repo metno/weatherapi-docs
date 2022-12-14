@@ -16,12 +16,12 @@ and only one polygon per area element. We have now done some changes in how
 we produce the CAP files, and some warnings may contain several polygons
 per area element.
 
-This has always been allowed according to the CAP standard, but since it
-has not been used in the CAP warnings from  MET Norway up to now, you might
-have to do some adjustments to your system.
+This has always been allowed according to the CAP standard. Since it
+has not been used in the CAP warnings from  MET Norway up to now, we suggest
+you check that your systems can handle this.
 
 Note that in case of overlapping polygons, the are covered is the total of all
-the polygons, with not holes. According to the CAP standard, "if multiple
+the polygons, with no holes. According to the CAP standard, "if multiple
 <polygon>, <circle> or <geocode> elements are included, the area described by
 this <area> block is represented by the union of all the included elements".
 
