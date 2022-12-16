@@ -22,9 +22,11 @@ has not been used in the CAP warnings from  MET Norway up to now, we suggest
 you check that your systems can handle this.
 
 Note that in case of overlapping polygons, the are covered is the total of all
-the polygons, with no holes. According to the CAP standard, "if multiple
-<polygon>, <circle> or <geocode> elements are included, the area described by
-this <area> block is represented by the union of all the included elements".
+the polygons, with no holes. According to the CAP standard:
+
+> if multiple `<polygon>`, `<circle>` or `<geocode>` elements are included, the
+> area described by this `<area>` block is represented by the union of all the
+> included elements.
 
 
 Textforecast 3.0 beta
