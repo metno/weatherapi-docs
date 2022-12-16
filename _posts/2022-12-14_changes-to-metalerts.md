@@ -5,6 +5,7 @@ author: Geir Aalberg
 layout: post
 tags:
     - MetAlerts
+    - Textforecast
 ---
 
 MetAlerts
