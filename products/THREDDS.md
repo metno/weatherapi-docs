@@ -17,8 +17,9 @@ meta:
         - weather
         - marine
         - observations
-        - satellite
-        - lightning
+        - images
+        #- satellite
+        #- lightning
     coverage: Nordic, Arctic
     currentversion: 1.0
     driftsdok: thredds
@@ -48,7 +49,9 @@ Examples of the datasets available include:
     - OSI SAF
     - seNorge
     - Remotesensing archive
+    - Lightning events
 - Ocean and Ice observations and forecasts
+- Satellite images
 
 ## MET Norway Numerical Weather Prediction products
 
