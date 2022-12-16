@@ -34,7 +34,7 @@ case "$action" in
         echo $title
 
         date=`date -u +"%Y-%m-%d"`
-        filename="_posts/${date}_$title.md"
+        filename="_posts/${date}-$title.md"
         echo $filename
 
         user=`whoami`
