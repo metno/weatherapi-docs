@@ -65,5 +65,5 @@ Carrier pidgeon is currently not supported as we are awaiting the [spec](https:/
 ### Yr.no
 
 The Yr website and mobile apps are developed by [NRK](https://nrk.no/). For
-questions regarding Yr, including the discontinued `forecast.xml` and
-`varsel.xml` data feeds, please contact <support@yr.no>.
+questions regarding Yr, including the SVG meteograms and the discontinued HTML
+widgets, as well as the `forecast.xml` and `varsel.xml` data feeds, please contact <support@yr.no>.

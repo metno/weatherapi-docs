@@ -32,7 +32,7 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 ### C# (C-Sharp)
 
-- <https://github.com/mr-raw/metno>
+- <https://github.com/mr-raw/metno> (removed?)
 
 ### Javascript/Node
 
@@ -44,6 +44,7 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 ### Python
 
+- <https://github.com/Danielhiversen/pyMetno> - Python library to talk to the met.no API
 - <https://github.com/Rory-Sullivan/metno-locationforecast> - Python library for locationforecast/2.0
 - <https://github.com/toringer/home-assistant-metnowcast> - HomeAssistant Nowcast plugin
 

@@ -18,7 +18,7 @@ meta:
         - weather
         - observations
         #- lightning
-    coverage: Global
+    coverage: World
     currentversion: 0.9
     driftsdok: frost_api
 ---
