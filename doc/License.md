@@ -41,3 +41,15 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Photo illustrations
+
+- News: Lewis Hine, New Haven, CN 1909 (public domain)
+- Weather: © [Vyacheslav Argenberg](http://www.vascoplanet.com/)  (CC BY 4.0)
+- Marine: © [Defence Imagery](https://www.flickr.com/photos/defenceimages/) (CC BY-SA 2.0)
+- Aviation: © [Eric Salard](https://www.flickr.com/photos/airlines470/) (CC BY-SA 2.0)
+- Images: © EUMETSAT/MET
+- Military: © PAO FOH/Forsvaret
+- Observations: © Ketil Isaksen/MET
+- Other: © NRK
+- Changelog: © [Jason Biro](https://www.flickr.com/photos/birotography/) (CC BY 2.0)
