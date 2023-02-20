@@ -1,5 +1,5 @@
 ---
-title: Sunrise
+title: Sunrise 2.0
 date: 2021-10-26
 author: Frank Thomas Tveter
 layout: page
@@ -9,7 +9,7 @@ tags:
     - sunrise
 ---
 
-## Sunrise
+## Sunrise 2.0
 
 The `Sunrise` service at `api.met.no` comes with no warranty, but it is still associated with high quality and reliability.
 The `Sunrise` service typically processes about 50.000 requests an hour,
