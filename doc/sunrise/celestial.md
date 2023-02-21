@@ -16,21 +16,28 @@ tags:
 
 |Body|Name|Description|
 |----|----|-----------|
-|Sun |sunrise|when the upper limb of the sun becomes visible over the horizon*|
-|Sun |sunset|when the upper limb of the sun no longer is visible over the horizon*|
+|Sun |sunrise|when the upper limb of the sun becomes visible over the horizon[¹](#prop1)|
+|Sun |sunset|when the upper limb of the sun no longer is visible over the horizon[¹](#prop1)|
 |Sun |solarnoon|when the moon centre crosses the meridian|
 |Sun |solarmidnight|when the moon centre crosses the antimeridian|
-|Moon|moonrise|when the upper limb of the moon becomes visible over the horizon*|
-|Moon|moonset|when the upper limb of the moon no longer is visible over the horizon*|
+|Moon|moonrise|when the upper limb of the moon becomes visible over the horizon[²](#prop2)|
+|Moon|moonset|when the upper limb of the moon no longer is visible over the horizon[²](#prop2)|
 |Moon|high_moon|when the moon centre crosses the meridian|
 |Moon|low_moon|when the moon centre crosses the antimeridian|
 | -  |azimuth|horizontal angle from north to the horizontal component of the disc centre angle from the horizon
 |Moon|phase|degrees, 0 being new moon and 180 being full moon|
 
-*) Technically defined as when the sun is 0.8333 degrees below the horizon.
-This is an approximation given the average apparent
-radius of the sun and average refraction (both which can vary slightly due to
-irregular planetary orbits and atmospheric conditions).
+<b id="prop1">Note 1:</b> Technically defined as when the sun is 0.8333 degrees below the horizon.
+This is an approximation given the average apparent radius of the sun and
+average refraction (both which can vary slightly due to irregular planetary
+orbits and atmospheric conditions).
+
+<b id="prop2">Note 2:</b> Computation of moonrise/set is more complicated than for the sun, as
+the apparent size of the moon varies since the orbit is not perfectly circular.
+For simplicity we have chosen a constant value of 34 arcminutes (0.5666 degrees)
+for atmospheric refraction and an averaged moon radius of 16 arcminutes (0.2667
+degrees). For more information, see the [US Naval
+Observatory](https://aa.usno.navy.mil/faq/RST_defs).
 
 #### Moon phases
 
