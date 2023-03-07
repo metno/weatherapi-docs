@@ -71,7 +71,7 @@ The index file should only reference those files which are supposed to be availa
 If this is infeasible, it must contain a parameter with a timestamp which can be used for filtering.
 
 To facilitate automatic deletion and removal from the api, an `expires` header should be used.
-Also, we recommend having a `created` header to indicate for users when the file was
+Also, we recommend having an `updated` header to indicate for users when the file was
 last modified so they don't have to download existing files:
 
     dir=halo-accumulated-precipitation, \
@@ -81,13 +81,14 @@ last modified so they don't have to download existing files:
     type=accumulated_24h, \
     size=normal, \
     time=2019-01-09T06:00:00Z, \
-    created=2019-01-09T05:23:54Z, \
+    updated=2019-01-09T05:23:54Z, \
     expires=2019-01-10T18:00:00Z
 
 List of products which should be rewritten to use index files
 -----------------------------------------
 
 - [x] cbrn
+- [x] fmiroutes
 - [x] geosatellite
 - [ ] gribfiles *(21 files, not critical)*
 - [ ] icemap *(12 files, not critical)*
@@ -97,18 +98,17 @@ List of products which should be rewritten to use index files
 - [x] nlaroutes
 - [x] polarsatellite
 - [x] radar
+- [x] routeforecast
+- [x] soundprofile
 - [ ] subjectiveforecast
 - [ ] tidalwater
-- [ ] turbulence **(URGENT)**
-- [ ] upperwindweather
+- [x] turbulence
 - [ ] vtkbriefing
 
 The following products generate available lists algorithmically, so don't need an index:
 
 - epsogram
-- spotwind
 - textforecast
-- weathericon
 
 Questions?
 ---------
