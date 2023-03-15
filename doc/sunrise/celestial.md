@@ -3,14 +3,20 @@ title: Sunrise 3.0
 date: 2023-02-21
 author: Geir Aalberg
 layout: page
+parent: Sunrise
+grand_parent: Forecasts
 toc: 1
 tags:
     - reference
     - sunrise
 ---
 
-## Sunrise 3.0 data format
+{: .note-title }
+> Note
+>
+> This service is currently in beta, but no large changes are expected before going into production.
 
+## Data format
 
 ### Properties
 

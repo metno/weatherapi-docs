@@ -3,8 +3,10 @@ title: General Weather API usage
 date: 2020-04-15
 author: Geir Aalberg
 layout: page
+parent: Developer guides
+nav_order: 10
 toc: 1
-state: draft
+#state: draft
 tags:
     - reference
 summary: >
@@ -167,4 +169,3 @@ You can subscribe to notifications of changes to each product in the RSS format:
 The same information for all products is also present in the general API changelog feed:
 
 <https://api.met.no/feed/changelog>
-

@@ -4,6 +4,7 @@ date: 2020-06-26
 author: Geir Aalberg
 layout: product
 state: draft
+nav_exclude: true
 tags:
     - reference
 summary: >

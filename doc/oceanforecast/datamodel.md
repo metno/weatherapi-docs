@@ -3,6 +3,7 @@ title: Oceanforecast data model
 date: 2021-03-24
 author: Ivar Ambjørn Seierstad
 layout: page
+parent: Forecasts
 toc: 1
 tags:
     - reference

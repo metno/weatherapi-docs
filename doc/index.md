@@ -1,8 +1,10 @@
 ---
-title: WeatherAPI documentation
+title: Documentation
 layout: page
 summary: >
     General documentation front page
+nav_order: 2
+#has_children: true
 ---
 
 ## Introduction
@@ -68,8 +70,6 @@ For MET employees only
 - [Medusa index file spec](./indexfiles)
 - [WeatherAPI as proxy for backend microservices](./ProxyForBackends)
 
-## Keeping updated
-
-Support
+## Support
 
 - [News and contact information](./support)

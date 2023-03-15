@@ -1,8 +1,9 @@
 ---
-title: OPDATA index files
+title: Indexfiles
 date: 2020-01-09
 author: Geir Aalberg
 layout: page
+parent: Internal use
 tags:
   - internal
 summary: >
@@ -11,8 +12,9 @@ summary: >
 
 This documents the use of index files for files delivered via api.met.no.
 
-**Summary: Data producers wanting to distribute data reliably must now
-generate metadata indexes for the datafiles to be delivered!**
+Summary: Data producers wanting to distribute data reliably must now
+generate metadata indexes for the datafiles to be delivered!
+{: .warning }
 
 Background
 ----------

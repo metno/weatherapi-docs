@@ -3,7 +3,10 @@ title: Locationforecast FAQ
 date: 2020-06-19
 author: Ivar Ambjørn Seierstad
 layout: page
+parent: Locationforecast
+grand_parent: Forecasts
 state: draft
+nav_order: 3
 tags:
     - reference
     - locationforecast

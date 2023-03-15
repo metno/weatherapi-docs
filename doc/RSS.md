@@ -3,6 +3,7 @@ title: RSS Feeds
 date: 2020-04-17
 author: Geir Aalberg
 layout: page
+parent: Formats
 state: draft
 tags:
     - guide

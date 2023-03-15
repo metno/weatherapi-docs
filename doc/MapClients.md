@@ -3,6 +3,7 @@ title: Map libraries for WeatherAPI
 date: 2020-08-18
 author: Geir Aalberg
 layout: page
+parent: Other data sources
 state: draft
 tags:
     - reference

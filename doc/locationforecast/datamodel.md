@@ -3,6 +3,9 @@ title: Locationforecast data model
 date: 2020-06-26
 author: Ivar Ambjørn Seierstad
 layout: page
+parent: Locationforecast
+grand_parent: Forecasts
+nav_order: 2
 toc: 1
 tags:
     - reference

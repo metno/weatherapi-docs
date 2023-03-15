@@ -3,6 +3,8 @@ title: GeoJSON
 date: 2022-10-05
 author: Geir Aalberg
 layout: page
+parent: Formats
+nav_order: 1
 tags:
     - reference
     - locationforecast

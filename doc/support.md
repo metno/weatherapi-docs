@@ -1,6 +1,7 @@
 ---
-title: Support and contact information
+title: Contact us
 layout: page
+nav_order: 100
 tags:
     - contact
 summary: >

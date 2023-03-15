@@ -3,6 +3,7 @@ title: General area forecast JSON format
 date: 2022-10-05
 author: Geir Aalberg
 layout: page
+parent: Formats
 state: draft
 tags:
     - reference
@@ -14,8 +15,9 @@ summary: >
 This JSON format is meant for encoding meteorological and oceanographic forecast
 data for specific geographical areas and time periods.
 
-**Note that the specification is a work in progress and very likely to change
-until the end of 2022.**
+Note that the specification is a work in progress and very likely to change
+until the end of 2022.
+{: .warning }
 
 
 ## Format

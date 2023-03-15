@@ -3,6 +3,8 @@ title: Terms of Service
 date: 2020-06-26
 author: Geir Aalberg
 layout: page
+parent: General
+nav_order: 1
 toc: 1
 tags:
     - terms

@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-
 {% if page.state == 'draft' %}
-  <div class="state">This is a draft, expect sudden changes and come back later</div>
+  <p class="highlight">This is a draft, expect sudden changes and come back later</p>
 {% elsif page.state == 'obsolete' %}
-  <div class="state">This documentation is no longer valid, please see text for instructions</div>
+  <p class="warning">This documentation is no longer valid, please see text for instructions</p>
 {% endif %}
+
+<h1>{{ page.title }}</h1>
 
 {% if page.tags %}
   <p class="tags">tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></p>
@@ -17,5 +17,5 @@ layout: default
 {{content}}
 
 {% if page.author and page.date %}
-  <p class="view">—{{ page.author | default: site.author }}, {{ page.date | date: "%-d %B %Y" }}</p>
+  <footer class="main">—{{ page.author | default: site.author }}, {{ page.date | date: "%-d %B %Y" }}</footer>
 {% endif %}

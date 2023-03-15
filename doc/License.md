@@ -3,6 +3,8 @@ title: Licensing and Data Policy
 date: 2020-05-29
 author: Geir Aalberg
 layout: page
+parent: General
+nav_order: 20
 toc: 1
 tags:
     - terms

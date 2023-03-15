@@ -3,6 +3,8 @@ title: Product versions
 date: 2020-06-26
 author: Geir Aalberg
 layout: page
+parent: General
+nav_order: 60
 toc: 1
 state: draft
 tags:
@@ -11,6 +13,7 @@ summary: >
     Explanation of how the version numbers and deprecation works
 ---
 
+## Background
 
 We recommend reading the section about error handling.
 

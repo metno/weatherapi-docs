@@ -3,6 +3,8 @@ title: HTTP status codes
 date: 2020-06-26
 author: Geir Aalberg
 layout: page
+parent: Developer guides
+nav_order: 60
 tags:
     - reference
 summary: >

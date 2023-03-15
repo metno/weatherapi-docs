@@ -3,7 +3,8 @@ title: Fetching data from THREDDS
 date: 2020-05-19
 author: Geir Aalberg
 layout: page
-state: draft
+parent: Other data sources
+#state: draft
 tags:
     - guide
     - thredds

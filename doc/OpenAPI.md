@@ -5,6 +5,7 @@ author: Geir Aalberg
 author_bio: >
             Just another Perl hacker...
 layout: page
+nav_exclude: true
 state: draft
 tags:
     - tutorial

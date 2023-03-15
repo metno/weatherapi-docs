@@ -1,20 +1,21 @@
 ---
-title: API proxy for backend services
+title: Microservices proxy
 date: 2020-01-09
 author: Geir Aalberg
 layout: page
+state: draft
+parent: Internal use
 tags:
   - internal
 summary: >
     How to build backend microservices using WeatherAPI as a proxy
 ---
 
-# How to build backend microservices using WeatherAPI as a proxy
+This guide details how to build backend microservices using WeatherAPI as a proxy.
 
 ## General terms
 
-Described in the [Operational Level Agreement](./OLA).
-
+Use of the API is subject to the OLA, as described in the [Operational Level Agreement](./OLA).
 
 ## Links
 

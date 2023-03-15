@@ -1,0 +1,32 @@
+
+$teal: #0090A8;
+$dk_purple: #712C56;
+$luftwaffe: #496C80;
+$main_profile: $luftwaffe;
+$sidebar-color: $main_profile;
+
+.side-bar { color: white; }
+.side-bar a { color: white; font-weight: bold; }
+
+$link-color: $dk_purple;
+$nav-child-link-color: white;
+
+.nav-list .nav-list-item .nav-list-link:hover,
+.nav-list .nav-list-item .nav-list-link.active {
+  background-image: linear-gradient(-90deg, $main_profile 0%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0) 100%) !important;
+}
+.nav-list .nav-list-item.active .nav-list-expander,
+.nav-list .nav-list-item.active .nav-list-expander:hover {
+  background-image: linear-gradient(-90deg, $main_profile 0%, $main_profile 80%, $main_profile 100%) !important;
+}
+.feather { stroke: white !important; }
+
+.main-content h4 { font-size: 14px !important; }
+
+.main-content .tags {
+    font-size: smaller;
+    color: #6bb;
+    margin-bottom: 12px;
+}
+
+footer.main { text-align: right; font-style: italic; font-size: small; color: #666; }

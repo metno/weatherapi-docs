@@ -3,11 +3,16 @@ title: Sunrise 2.0
 date: 2021-10-26
 author: Frank Thomas Tveter
 layout: page
+parent: Sunrise
+grand_parent: Forecasts
 toc: 1
 tags:
     - reference
     - sunrise
 ---
+
+This service is being deprecated soon. New projects should look into using version 3.0 which is currently in beta.
+{: .warning }
 
 ## Sunrise 2.0
 

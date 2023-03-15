@@ -1,11 +1,13 @@
 ---
-# Note: This document is to be moved to the Yr developer portal. 
+# Note: This document is to be moved to the Yr developer portal.
 # As such it may contain absolute URLs to api.met.no, unlike other documentation in weatherapi-docs.
 #
-title: Using Locationforecast
+title: Locationforecast HOWTO
 date: 2020-06-30
 author: Geir Aalberg
 layout: page
+parent: Developer guides
+nav_order: 30
 tags:
     - guide
     - locationforecast
@@ -74,7 +76,7 @@ Please follow our [mailing list or RSS feed](./support) to get important informa
 
 ## Appendix A - Suggested client libraries
 
-Here is a list of known libraries which may be useful. More will be added in the future.
+Here is a list of known HTTP libraries which may be useful. More will be added in the future.
 
 | Language   | HTTP useragent                                               | JSON parser                                         |
 | ---------- | ------------------------------------------------------------ | --------------------------------------------------- |
@@ -82,4 +84,3 @@ Here is a list of known libraries which may be useful. More will be added in the
 | Python     | [requests](https://requests.readthedocs.io/en/master/) ([example](https://stackoverflow.com/questions/10606133/sending-user-agent-using-requests-library-in-python)) | [json](https://docs.python.org/3/library/json.html) |
 | Go         | http-client                                                  | json                                                |
 | Perl       | Mojo::Useragent                                              | Mojo::JSON::XS                                      |
-

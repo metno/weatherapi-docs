@@ -3,6 +3,8 @@ title: Getting Started
 date: 2020-04-27
 author: Geir Aalberg
 layout: page
+parent: Developer guides
+nav_order: 1
 tags:
     - tutorial
 summary: >
@@ -163,4 +165,13 @@ As you can see we have limited the results to a specific `area` and `type` to fi
 
 ## Congratulations!
 
-You have now learned the necessary requirements for writing a client for the Weather API. In addition you must also choose which programming language to implement it in, of which there are several hundreds to choose from. As such it is difficult for us to provide detailed instructions, but we plan to provide some code examples later.
+You have now learned the necessary requirements for writing a client for the
+Weather API. Next we suggest you check out the [Locationforecast
+HOWTO](./locationforecast/HowTO) and the [General forecast JSON
+format](./ForecastJSON) documentation.
+
+In addition you must also choose which programming language to
+implement it in, of which there are several hundreds to choose from. As such it
+is difficult for us to provide detailed instructions, but we plan to provide
+some code examples later.
+

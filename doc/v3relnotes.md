@@ -1,13 +1,18 @@
 ---
-title: WeatherAPI 3.0 Release Notes
+title: Release Notes
 date: 2017-06-22
 author: Geir Aalberg
 layout: page
+parent: General
+nav_order: 80
 summary: >
     Differences from the old Weather API, used 2007-2017
 tags:
     - reference
 ---
+
+This documents the changes between API version 2 (which was in operation since 2008)
+and version 3 (which started development in 2016 and was deployed in 2017-2018).
 
 ## New features in WeatherAPI 3.0
 

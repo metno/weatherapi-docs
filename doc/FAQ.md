@@ -3,8 +3,10 @@ title: Frequently Asked Questions
 date: 2020-04-15
 author: Geir Aalberg
 layout: page
+parent: General
+nav_order: 90
 toc: 1
-state: draft
+#state: draft
 tags:
     - reference
 summary: >
@@ -133,6 +135,10 @@ are "coming from"), just as we do for wind.
 Please see the [Oceanforecast Data Model](./oceanforecast/datamodel) documentation.
 
 ## Solar energy
+
+### Q. Do you have data on incoming solar energy in your API?
+
+A: We expect this to be added to Locationforeacast some time in the first half of 2023.
 
 ### Q. Are historic solar energy data available?
 

@@ -3,7 +3,9 @@ title: Optimizing traffic
 date: 2020-06-22
 author: Geir Aalberg
 layout: page
-state: draft
+parent: General
+nav_exclude: true
+state: obsolete
 tags:
     - howto
 summary: >

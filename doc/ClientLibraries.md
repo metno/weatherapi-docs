@@ -3,6 +3,8 @@ title: API client libraries
 date: 2020-04-14
 author: Geir Aalberg
 layout: page
+parent: Developer guides
+nav_order: 70
 tags:
     - reference
 summary: >

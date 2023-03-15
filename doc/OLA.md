@@ -1,10 +1,11 @@
 ---
-title: Organizational Level Agreement for api.met.no
+title: Organizational Level Agreement
 date: 2019-12-13
 author: Geir Aalberg
 summary: >
     Vilkår for dataleverandører
 layout: page
+parent: Internal use
 state:  draft
 tags:
   - internal
