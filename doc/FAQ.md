@@ -13,6 +13,9 @@ summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
 
+{: .note }
+For specific questions about Locationforecast, see the [Locationforecast FAQ](./locationforecast/FAQ).
+
 ## General API use
 
 ### Help! I am getting *429 Too Many Requests*! What am I doing wrong?

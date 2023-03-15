@@ -6,7 +6,8 @@ summary: >
     Vilkår for dataleverandører
 layout: page
 parent: Internal use
-state:  draft
+nav_order: 1
+#state:  draft
 tags:
   - internal
 ---

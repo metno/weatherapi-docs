@@ -1,9 +1,10 @@
 ---
-title: General forecast JSON format
+title: General point forecast JSON format
 date: 2020-05-03
 author: Håvard Futseter
 layout: page
 parent: Formats
+nav_order: 20
 tags:
     - reference
     - locationforecast

@@ -5,7 +5,7 @@ author: Ivar Ambjørn Seierstad
 layout: page
 parent: Locationforecast
 grand_parent: Forecasts
-state: draft
+#state: draft
 nav_order: 3
 tags:
     - reference
@@ -14,6 +14,7 @@ summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
 
+{: .note }
 Please also see the [API FAQ](../FAQ) for answers to general API questions.
 
 ## Location data

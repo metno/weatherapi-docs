@@ -53,7 +53,11 @@ conditions** ([source](<https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#E
     - [`HEAD`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
     - [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST)
 
-2. Apart from the headers automatically set by the user agent (for example, `Connection`, `User-Agent`, or the other headers defined in the Fetch spec as a “forbidden header name”), the only headers which are allowed to be manually set are those which the Fetch spec defines as a “CORS-safelisted request-header”, which are:
+2. Apart from the headers automatically set by the user agent (for example,
+`Connection`, `User-Agent`, or the other headers defined in the Fetch spec as a
+“forbidden header name”), the only headers which are allowed to be manually set
+are those which the Fetch spec defines as a “CORS-safelisted request-header”,
+which are:
 
     - [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept)
     - [`Accept-Language`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
@@ -71,7 +75,10 @@ conditions** ([source](<https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#E
     - `multipart/form-data`
     - `text/plain`
 
-4. No event listeners are registered on any `XMLHttpRequestUpload` object used in the request; these are accessed using the [`XMLHttpRequest.upload`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload) property.
+4. No event listeners are registered on any `XMLHttpRequestUpload` object used
+in the request; these are accessed using the
+[`XMLHttpRequest.upload`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload)
+property.
 
 5. No [`ReadableStream`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) object is used in the request.
 
@@ -83,7 +90,13 @@ if we decide to implement some form of authentication.
 
 ### Preflighted requests
 
-Unlike [“simple requests” (discussed above)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests), "preflighted" requests first send an HTTP request by the [`OPTIONS`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) method to the resource on the other domain, to determine if the actual  request is safe to send. Cross-site requests are preflighted like this  since they may have implications to user data.
+Unlike [“simple requests” (discussed
+above)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests),
+"preflighted" requests first send an HTTP request by the
+[`OPTIONS`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS)
+method to the resource on the other domain, to determine if the actual request
+is safe to send. Cross-site requests are preflighted like this since they may
+have implications to user data.
 
 The following is an example of a request that will be preflighted:
 
@@ -122,6 +135,10 @@ adds the necessary identification (`User-Agent`) or authentication header.** At
 this point is you might as well implement local caching at the same time, which
 will save you time later if your application starts to generate significant
 traffic.
+
+For more information, see [Setting up your own caching proxy server using
+Nginx](https://github.com/havardf/locationforecast-tutorial).
+
 
 ## See also
 
