@@ -42,7 +42,7 @@ This is a short example describing a point on the globe:
 
 All coordinates in GeoJSON use longitude and latitude in the WGS84 projection.
 Note that the coordinates are in **x,y** format, which is opposite of the usual lat/lon order
-(there seems to be [no agreement](https://macwright.com/2015/03/23/geojson-second-bite.html#polygons)
+(there seems to be [no agreement](https://macwright.com/2015/03/23/geojson-second-bite.html#position)
 on which is the correct order here).
 
 Multiple feature objects are often grouped together in a `FeatureCollection` array.

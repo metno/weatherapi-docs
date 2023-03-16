@@ -16,8 +16,8 @@ summary: >
 This JSON format is meant for encoding meteorological and oceanographic forecast
 data for specific geographical areas and time periods.
 
-Note that the specification is a work in progress and very likely to change
-until the end of 2022.
+Note that the specification is a work in progress and likely to change
+as long as Textforecast/3.0 is in beta.
 {: .warning }
 
 

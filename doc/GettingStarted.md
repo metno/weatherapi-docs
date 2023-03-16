@@ -49,7 +49,9 @@ We assume you are using a UNIX-like shell, and have the `curl` command installed
 For *Powershell* on Windows, use the `Invoke-WebRequest` command instead (read the
 docs for use).
 
-**Note:** Even though are are using `https://api.met.no/` in the examples below, you may be told to use a different URL. In that case, just replace this in your requests.
+**Note:** Even though we are using `https://api.met.no/` in the examples below,
+you may be told to use a different URL. In that case, just replace this in your
+requests.
 
 #### A basic request
 
@@ -122,7 +124,7 @@ This will return only the headers and no body, which is much faster than loading
 
 #### Coordinates
 
-Most forecast models are fairly course, e.g. using a 1km resolution grid.
+Most forecast models are fairly coarse, e.g. using a 1km resolution grid.
 This means there is no need to send requests with any higher resulotion coordinates,
 in fact doing so will harm performance as the API cache will not be able to match
 similar responses to the same URL.
@@ -174,4 +176,3 @@ In addition you must also choose which programming language to
 implement it in, of which there are several hundreds to choose from. As such it
 is difficult for us to provide detailed instructions, but we plan to provide
 some code examples later.
-

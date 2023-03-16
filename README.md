@@ -79,8 +79,10 @@ future, e.g. for microservice metadata.
 
 ## Running Jekyll
 
-First you must install Jekyll [as per the
-instructions](https://jekyllrb.com/docs/installation/).
+First you must install Jekyll [as per the instructions](https://jekyllrb.com/docs/installation/).
+
+**Note: Just The Docs requires a more recent version of Ruby than in the
+Focal Debian repo. See INSTALL.md for instructions.**
 
 To view the documentation locally, start Jekyll:
 

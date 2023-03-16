@@ -33,7 +33,7 @@ Remember to truncate the results to max 4 decimals to facilitate caching.
 
 A. This is used to adjust temperature according to elevation (and nothing else).
 While we have a built-in topographical model in locationforecast this is rather
-course, so to get the most precise answer you should add the surface altitude
+coarse, so to get the most precise answer you should add the surface altitude
 (meters above sea level) of the location for the forecast.
 
 ## Data format

@@ -18,6 +18,33 @@ For specific questions about Locationforecast, see the [Locationforecast FAQ](./
 
 ## General API use
 
+### Do you have a pricing model for high-volume sites?
+
+No. This is a public service funded by Norwegian taxpayers, primarily to assist
+in our mission to protect life and property in Norway, but also globally.
+In fact api.met.no has been [approved as a digital public
+good](https://www.met.no/en/archive/weather-data-from-met-norway-approved-as-digital-public-goods)
+by the UN-led Digital Public Goods Alliance, as the first of its kind.
+
+While we believe our data should be free and accessible to all, our human and
+technological resources are not unlimited. As a non-commercial operation we
+cannot really offer any higher levels of service to paying customers; instead
+we try to share out our services evenly while giving priority to partners
+we consider giving the most benefits to the general public. If you feel your
+service is amongst those, please contact us.
+
+### What does restrictions on some data mean?
+
+Some data referred to in the documentation is not freely available, mostly
+because the data is not ours. We have the right to use the data, but not to
+distribute them. This is marked in the documentation for each product in a
+section called Restrictions. For more information regarding this issue, please
+see our [Licensing and Data Policy](.License).
+
+Currently there are no longer any restricted data served via api.met.no.
+
+## Technical problems
+
 ### Help! I am getting *429 Too Many Requests*! What am I doing wrong?
 
 You are probably using a blank User-Agent header, or a generic one like
@@ -88,16 +115,6 @@ failure in practice. Unfortunately it is still part of the Swagger/OpenAPI
 spec, which is why you will see some fields in the API UI where you can
 specify content type; this is ignored by the API.
 
-### What does restrictions on some data mean?
-
-Some data referred to in the documentation is not freely available, mostly
-because the data is not ours. We have the right to use the data, but not to
-distribute them. This is marked in the documentation for each product in a
-section called Restrictions. For more information regarding this issue, please
-see our [Licensing and Data Policy](.License).
-
-Currently there are no longer any restricted data served via api.met.no.
-
 ### Do you support gzip compression of HTTP data?
 
 Yes. We will serve gzip compressed data of appropriate MIME types.
@@ -109,7 +126,7 @@ Semicolons were introduced as an optional alternative to ampersands
 after requests from developers using badly designed tools for parsing
 and generating XML. Since the semicolon did not need to be escaped in
 XML (unlike the ampersand which had to be coded as `&amp;`), this made
-generating URLs easier, completely ignoring that they should instead
+generating URLs easier, completely ignoring that semicolons should instead
 be url-encoded as `%3B` instead (and thus opening another kind of worms
 when these two cases had to be handled differently).
 

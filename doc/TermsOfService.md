@@ -14,6 +14,9 @@ summary: >
 
 This document describes the terms for using the MET Weather API.
 Changes to the terms will be announced on the [mailing list](./support).
+**The last revision was on {{ page.date | date: "%-d %B %Y" }}**.
+
+## Introduction
 
 The service has good capacity and can handle relatively large volumes of
 requests, but the capacity is not unlimited. We ask all users to respect
@@ -29,7 +32,7 @@ Most important rules:
 
 All weather data on the api are continually updated. New data will be made
 available in the service continuously. In order to receive important
-notifications about changes to the service we strongly suggest you either
+notifications about changes to the service we strongly suggest you
 subscribe to either our api-users mailing list or the RSS feed.
 
 When new versions of products are introduced (usually after a beta period), the older
@@ -78,7 +81,7 @@ For more information, please see our [Licensing and Data Policy](./License).
 
 ### Personal data
 
-As a app or site developer, the confidentiality of the users' personal
+As an app or site developer, the confidentiality of the users' personal
 data are your own responsibility. If you call the API directly from an app or
 browser, the user's IP address will be stored in our logs, along with
 any possible geocoordinates used in requests. To guarantee anonymity we

@@ -14,7 +14,7 @@ summary: >
 
 ## The WMS protocol
 
-<https://www.ogc.org/standards/wms/introduction>
+<https://www.ogc.org/standard/wms/>
 
 ## WMS client libraries
 
