@@ -66,6 +66,10 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 - <https://github.com/ruediger/weather-metno-el>
 
+### Rust
+
+- <https://github.com/jiripospisil/monsoon>
+
 ## Frost API (observations)
 
 ### Python
