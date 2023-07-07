@@ -23,7 +23,7 @@ This documentation has two parts. The first part describes the structure of the
 JSON format. The second part describes how this format is used in our services
 to represent forecast data.
 
-## Format
+## Overview
 
 The format has three main parts:
 
@@ -31,7 +31,8 @@ The format has three main parts:
  - Forecast metadata
  - Forecast timeseries.
 
-Here is an excerpt of a forecast response:
+Here is an excerpt of a forecast response. Note that the actual parameters
+will vary from product to product:
 
     {
       "type": "Feature",
@@ -127,11 +128,11 @@ Here is an excerpt of a forecast response:
           },
         [..]
 
-You can get a complete forecast response using the `/complete` method, e.g.
+For Locationforecast, you can get a full listing with all parameters using the `/complete` method, e.g.
 
 - <https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=10>
 
-### Geographical description
+## Geographical metadata
 
     "type": "Feature",
     "geometry": {
@@ -149,7 +150,7 @@ Coordinates are in the EPSG:4326 system, on the form "longitude, latitude, altit
 
 All forecast data are listed under the GeoJSON attribute called `properties`.
 
-### Forecast metadata
+## Forecast metadata
 
     "meta": {
       "updated_at": "2020-06-10T13:04:26Z",
@@ -188,7 +189,7 @@ each forecast document, but the unit for e.g `air_temperature` will be same for
 all locations. We will notify you about any change in unit values for a
 parameter.
 
-### Forecast timeseries
+## Forecast timeseries
 
 The forecast timeseries is structured as an array of forecast objects. The array
 is always sorted with increasing time. All timestamps are in UTC.
@@ -202,19 +203,32 @@ parameters for that time. We have two main types of forecast parameters:
 - parameters for a time instant
 - parameters for a time period
 
-#### Parameters for a time instant
+### Parameters for a single point in time
 
-These parameters are found under the `instant` object. These parameters, e.g
-`air_temperature` has a value that describes the state at that exact time
-instant.
+Most parameters (e.g. `air_temperature`) have a value that describes the state at
+that exact timestamp.
+These parameters are found under the `instant` object under `details`.
 
-#### Parameters for a time period
+### Parameters for a time period
 
-These parameters are found under a number of objects: `next_1_hours`,
-`next_6_hours`, `next_12_hours`. These parameters, e.g `precipitation_amount`
-describe a period of time. E.g `precipitation_amount` under the object
-`next_1_hours` describe the amount of forecasted precipitation for the period
-`time` + 1 hour.
+Some parameters show an aggregated value over a period of time.
+E.g `precipitation_amount` under the object `next_1_hours` describe the amount
+of forecasted precipitation for the next hour starting with `time`.
+These parameters are found under `details` in objects of the following kind:
+
+- `next_1_hours`
+- `next_6_hours`
+- `next_12_hours`
+
+(In future there may also be `previous_6_hours`and the like, but currently no products
+are using these.)
+
+{:.note}
+There are no aggregated time periods for the last timestep in the timeseries,
+only `instant`. This often leads to the classic "fencepost error" during programming,
+as there will always be one more time instant than time periods.
+
+#### Summary
 
 The parameters under the object `summary` describes the weather situation based
 on many of the other parameters. E.g `symbol_code` will describe the weather
@@ -222,7 +236,21 @@ situation for period of time, and includes information about clouds,
 precipitation and more. It is also used as the basename of the weathericon
 filename, by appending the desired extension (`.png`, `.svg` or similar).
 
+### Aggregation periods
+
 Please note that there will typically be multiple period objects for any given time value, e.g one forecast object
 can have `next_1_hours`, `next_6_hours` and `next_12_hours`. There will never be a period object with shorter period
 than the current time resolution in the timeseries. So, if its 6 hours until the next time value, the current forecast object
 will NOT have a `next_1_hours` period object.
+
+Also, note that in some products the different aggregation periods are not the same
+for all timesteps. This is because our short term forecast models (1–60 hours) have a 1 hour resolution,
+whereas the long term forecast (60 hours to 10 days) only have 6 hours timesteps. This means
+that only the first 50–60 timeseries items contain a `next_1_hours` object.
+
+{:.note}
+There are no `next_X_hours` object unless there are actually X more hours left of forecast
+in the model data. This means that you will not find any `next_12_hours` unless there
+is actually a forecast for the next 12 hours. Unfortunately, the same also applies
+for the transition from short term to long term forcast models. See the relevant
+data model documentation for details.
