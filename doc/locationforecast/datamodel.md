@@ -167,8 +167,9 @@ Not that `next_1_hours` is only available in the short range forecast.
 
 ### Availability
 
-To get an overview of when the various variables are present, check the following example (x denotes missing):
+To get an overview of when the various variables are present, check the following examples (x denotes missing variable):
 
+#### Nordic region forecast
 
         time                 Variable                          Short range (1 hour steps)               Medium range  (6 hour steps)
     -------------  ----------------------------- <---------------------------------------------------><----------------------------->
@@ -201,4 +202,24 @@ To get an overview of when the various variables are present, check the followin
      next_6_hours       precipitation_amount_min ...............................................xxxxx...............................x
      next_6_hours   probability_of_precipitation ...............................................xxxxx...............................x
     next_12_hours   probability_of_precipitation .........................................xxxxx.xxxxx..............................xx
+{:.fs-2}
+
+#### Global forecast
+
+         instant      air_pressure_at_sea_level ....................................................................................
+         instant                air_temperature ....................................................................................
+         instant            cloud_area_fraction ....................................................................................
+         instant       cloud_area_fraction_high ....................................................................................
+         instant        cloud_area_fraction_low ....................................................................................
+         instant     cloud_area_fraction_medium ....................................................................................
+         instant          dew_point_temperature ....................................................................................
+         instant              fog_area_fraction ..........................................................xxxxxxxxxxxxxxxxxxxxxxxxxx
+         instant              relative_humidity ....................................................................................
+         instant    ultraviolet_index_clear_sky ..........................................................xxxxxxxxxxxxxxxxxxxxxxxxxx
+         instant            wind_from_direction ....................................................................................
+         instant                     wind_speed ....................................................................................
+    next_1_hours           precipitation_amount .........................................................xxxxxxxxxxxxxxxxxxxxxxxxxxx
+    next_6_hours            air_temperature_max ....................................................xxxxx..........................x
+    next_6_hours            air_temperature_min ....................................................xxxxx..........................x
+    next_6_hours           precipitation_amount ....................................................xxxxx..........................x
 {:.fs-2}
