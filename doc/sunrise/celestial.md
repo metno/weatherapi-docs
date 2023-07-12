@@ -11,9 +11,6 @@ tags:
     - sunrise
 ---
 
-{: .note }
-This service is currently in beta, but no large changes are expected before going into production.
-
 ## Data format
 
 Details of the GeoJSON format and parameters can be found under [Formats](../formats/SunriseJSON).
