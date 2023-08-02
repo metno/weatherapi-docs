@@ -8,7 +8,7 @@ grand_parent: Forecasts
 #state: draft
 nav_order: 3
 tags:
-    - reference
+    - faq
     - locationforecast
 summary: >
     A summary of repeatedly asked questions from the support helpdesk
@@ -111,7 +111,9 @@ Note however that there is no standard formula for apparent temperature, but
 [varies from website to website](https://en.m.wikipedia.org/wiki/Apparent_temperature).
 Ideally, solar radiation should be part of the calculation, however this is not
 usually included in meteorological observations and will have to be obtained
-elsewhere.
+elsewhere. The formula used on Yr can be found on their
+[help pages](https://hjelp.yr.no/hc/no/articles/360001695513-Effektiv-temperatur-og-f%C3%B8les-som-)
+(text in Norwegian).
 
 ## Symbol codes
 

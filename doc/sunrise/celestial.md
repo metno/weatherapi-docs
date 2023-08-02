@@ -37,9 +37,20 @@ before sunrise and actually referred to the previous day's sunset. Also,
 sometimes user were adding `offset=+00:00` to get UTC timestamps, which resulted
 in the start and end times being computed incorrectly.
 
+{:.note}
+Since the true solar day (interval between crossings of the antimeridian) is not
+a constant 24 hours but [varies by ± 15 min during the year](https://en.wikipedia.org/wiki/Equation_of_time),
+the solar midnight sometimes occurs at the start of the mean solar day and other
+times at the end. This also means that during transitional periods some solar
+midnights will not be included and others reported twice.
+Since this can be confusing for users and the usual definition of a "day" starts
+from midnight, we have expanded the start/end time to always report the solar
+midnight preceeding noon (subsequent solar midnights will be ignored even if
+within the stated time period).
+
 ## Timezone offset
 
-The optional C<offset> parameter is the difference between local time and UTC,
+The optional `offset` parameter is the difference between local time and UTC,
 as defined in ISO 8601. This is used mainly for returning timestamps in local
 time, but is also used in some instances to calculate the correct date period.
 
@@ -86,9 +97,9 @@ Røst, Norway (CEST in summer, CET in winter)
 
 ## Lunar crossings
 
-Due to the fact that the moon takes > 24 hours to complete a cycle on the sky,
-there are days (around the full moon) when the moon doesn't cross the meridian,
-in case the `high_moon` values will return null`. Similar event will occur
+Due to the fact that a complete lunar cycle on the sky takes about 24 hours and 50 minutes,
+there are days (around the full moon) when the moon doesn't cross the meridian.
+In this case the `high_moon` values will return null`. Similar event will occur
 around the new moon (no crossing of antimeridian), as well as missing moonsets
 and moonrises.
 

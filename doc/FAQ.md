@@ -8,7 +8,7 @@ nav_order: 90
 toc: 1
 #state: draft
 tags:
-    - reference
+    - faq
 summary: >
     A summary of repeatedly asked questions from the support helpdesk
 ---
