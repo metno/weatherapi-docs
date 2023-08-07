@@ -1,14 +1,24 @@
 ---
-title: Weather Icons
-date: 2023-04-11
+title: Weathericon
+date: 2023-08-02
 author: Geir Aalberg
-layout: page
-parent: Forecasts
-#nav_order: 999
+layout: product
+state: draft
+nav_exclude: true
 tags:
-  - locationforecast, nowcast
+    - reference
 summary: >
-    Weather icons documentation
+    Collection of weather icons
+meta:
+    name: Weathericon
+    baseurl: https://github.com/metno/weathericons
+    documentation: https://github.com/metno/weathericons
+    responsible: geira
+    category:
+        - weather
+    coverage: World
+    currentversion: 2.1
+    driftsdok: frost_api
 ---
 
 
