@@ -14,11 +14,7 @@ tags:
 
 The nowcast service covers Norway, Sweden, Finland and Denmark. The extent of the domain is shown in the illustration below.  Forecasts are updated every 5 minutes.
 
-
-
 ![Nordic region](../assets/nordic.png)
-
-
 
 The nowcast is our best estimate of the current weather conditions. To create the nowcast a wide range of data sources is used. The most important are:
 
