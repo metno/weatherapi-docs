@@ -13,8 +13,7 @@ tags:
 
 ## Data sources
 
-The subseasonal service provides forecasts for the next 21 days.  The forecasts cover Norway, Sweden, Finland and Denmark. The extent
-of the domain is shown in the illustration below.
+The subseasonal service provides forecasts for the next 21 days.  The forecasts cover Norway, Sweden, Finland and Denmark. The extent of the domain is shown in the illustration below.
 
 ![Nordic region](../assets/nordic.png)
 
@@ -22,18 +21,13 @@ of the domain is shown in the illustration below.
 
 The subseasonal forecast is based on 3  weather prediction models: 
 
-1. The MetCoOp Ensemble Prediction System [MEPS](https://doi.org/10.1002/qj.3525)
-
-   MetCoOp is the Meteorological Cooperation on Operational Numeric Weather Prediction (NWP) between Finnish Meteorological 
+1. The MetCoOp Ensemble Prediction System [MEPS](https://doi.org/10.1002/qj.3525). MetCoOp is the Meteorological Cooperation on Operational Numeric Weather Prediction (NWP) between Finnish Meteorological 
    Institute (FMI), MET Norway, Swedish Meteorological and Hydrological Institute (SMHI) and Estonian Weather Service. It provides short term forecasts (0 - 60 hours) and has a horizontal resolution of 2.5 kilometers. Forecasts are updated every hour. 
+   
+2. The atmospheric model Ensemble 15-day forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii. Forecasts are updated twice pr day. Horizontal resolution is approximately 10 km.  These forecasts are used for days 3 - 15.
 
-2. The atmospheric model Ensemble 15-day forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii)
+3.  The Atmospheric Model Ensemble extended forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii). Forecasts are updated once every day. Horizontal resolution is approximately 36 km. These forecasts are used for days 15 - 21.
 
-   Forecasts are updated twice pr day. Horizontal resolution is approximately 10 km.  These forecasts are used for days 3 - 15.
-
-3.  The Atmospheric Model Ensemble extended forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii)
-
-   Forecasts are updated once every day. Horizontal resolution is approximately 36 km. These forecasts are used for days 15 - 21.
 
 All forecasts are downscaled to a 1x1 km grid and post-processed to better represent local geographical features. They may therefore differ substantially from the original weather prediction models. 
 
