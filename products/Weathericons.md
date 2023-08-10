@@ -1,5 +1,5 @@
 ---
-title: Weathericon
+title: Weathericons
 date: 2023-08-02
 author: Geir Aalberg
 layout: product
@@ -8,16 +8,16 @@ nav_exclude: true
 tags:
     - reference
 summary: >
-    Collection of weather icons
+    Collection of weather icons on GitHub
 meta:
-    name: Weathericon
+    name: Weathericons
     baseurl: https://github.com/metno/weathericons
     documentation: https://github.com/metno/weathericons
     responsible: geira
     category:
         - weather
     coverage: World
-    currentversion: 2.1
+    #currentversion: 2.1
     driftsdok: frost_api
 ---
 
