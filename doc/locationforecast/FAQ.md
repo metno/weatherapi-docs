@@ -36,6 +36,11 @@ While we have a built-in topographical model in locationforecast this is rather
 coarse, so to get the most precise answer you should add the surface altitude
 (meters above sea level) of the location for the forecast.
 
+{:.note}
+This is meant to indicate the ground height above sea level **only**. You can not
+use this parameter to ask for e.g. wind speeds at > 10 m above ground (e.g. for wind
+turbines, hanggliding and so on).
+
 ## Data format
 
 ### Q. The `nextrun` parameter seems to have gone in locationforecast 2.0?!

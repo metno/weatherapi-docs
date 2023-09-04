@@ -201,7 +201,7 @@
     ]
   },
   "WeatherSymbol": {
-    "description": "A identifier that sums up the weather condition for this time period. May be used with https://api.met.no/weatherapi/weathericon/2.0/.",
+    "description": "A identifier that sums up the weather condition for this time period, see documentation.",
     "enum": [
       "clearsky_day",
       "clearsky_night",

@@ -93,9 +93,11 @@ kilometer resolution global topography
 is used instead to adjust the air temperature forecasts. Adjustments are made
 using a standard adiabatic lapse rate.
 
-Our global forecasts are updated 4 times pr day
+Our global forecasts are updated 4 times pr day.
 
-Historical forecasts are not available from our API.
+Historical forecasts for this area are not available from our API.
+A subset of ECMWF real-time forecast data are made available to the public free
+of charge directly from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/open-data).
 
 #### Global UV forecasts
 
