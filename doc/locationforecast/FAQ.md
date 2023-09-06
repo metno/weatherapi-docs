@@ -124,7 +124,8 @@ elsewhere. The formula used on Yr can be found on their
 
 ### Q. What do the symbol codes mean? Where can I find the corresponding icons?
 
-A. See the Weathericon 2.0 product for a list of meanings in various languages,
+A. See the [Weathericons repo on GitHub](https://github.com/metno/weathericons/)
+for a list of meanings in various languages,
 plus a set of icon files you can download and use in your applications.
 
 ### Q. How do you calculate the different symbol code conditions?
