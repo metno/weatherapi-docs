@@ -1,6 +1,6 @@
 ---
 title: Update frequencies
-date: 2020-01-09
+date: 2023-09-06
 author: Geir Aalberg
 layout: page
 parent: Internal use
@@ -28,8 +28,8 @@ Online-tjenester har ingen kriterier, men kontakter backend for å høre om tjen
 |Icemap|1.0|medusa|6m|hverdager|72d|
 |Locationforecast|2.0|online|30m|?|?|
 |MetAlerts|1.1|medusa|1-15m|5m|7m|
-|Metgc|1.0|medusa|9m|3h|4h|
-|Metgm|1.0|medusa|9m|3h|4h|
+|Metgc|1.0|medusa|9m|6h|7h|
+|Metgm|1.0|medusa|9m|6h|7h|
 |NLAroutes|1.0|medusa|9m|6h|7h|
 |Nowcast|2.0|online|3m|?|?|
 |Oceanforecast|2.0|online|30m|?|?|
