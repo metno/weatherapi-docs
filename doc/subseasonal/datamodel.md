@@ -48,22 +48,18 @@ The variables are aggregations, minima/maxima or average over a time period, eit
 |air_temperature_min                |celsius| minimum air temperature |
 |air_temperature_min_percentile_10  |celsius| 10th percentile of minimum air temperature (i.e 10% chance minimum will be below this value) |
 |air_temperature_min_percentile_90  |celsius| 90th percentile of minimum air temperature (i.e 10% chance minimum will be above this value) |
-|probability_of_frost               |%      | probability of air temperature below 0 degrees |
-|probability_of_precipitation       |%      | probability of precipitation |
+|probability_of_frost               |%      | probability of 2m air temperature below 0 degrees |
+|probability_of_precipitation       |%      | probability of of more than 0.5 mm of precipitation |
+|probability_of_heavy_preciptation  |%      | probability of more than 10 mm of precipitation
 
 **Next 7 days**
 
 | Name                               |  Unit   | Description                                                  |
 | ---------------------------------- | :-----: | ------------------------------------------------------------ |
-| air_temperature_daily_high         | celsius | average of daily maximum temperature                         |
-| air_temperature_daily_low          | celsius | average of daily minimum temperature                         |
-| days_of_precipitation              |   day   | number of days with precipitation                            |
 | precipitation_amount               |   mm    | precipitation amount                                         |
 | precipitation_amount_percentile_10 |   mm    | 10th percentile of precipitation amount (i.e 10% chance it will be below this value) |
 | precipitation_amount_percentile_90 |   mm    | 90th percentile of precipitation amount (i.e 10% chance it will be above this value) |
-| probability_of_frost               |    %    | probability of air temperature below 0 degrees               |
-| snowfall_amount                    |   cm    | snowfall amount                                              |
-| snowfall_amount_percentile_10      |   cm    | 10th percentile of precipitation amount (i.e 10% chance it will be below this value) |
-| snowfall_amount_percentile_90      |   cm    | 90th percentile of precipitation amount (i.e 10% chance it will be above this value) |
+| probability_of_frost               |    %    | probability of 2m air temperature below 0 degrees               |
+
 
 The variable names are based on the international [CF Standard Name](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html) vocabulary, which is mandatory for all governmental scientific institutions under the EU INSPIRE directive.
