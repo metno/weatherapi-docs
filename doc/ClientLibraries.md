@@ -60,6 +60,10 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 - <https://github.com/pionl/METno> (must be updated to work with locationforecast/2.0)
 
+### Rust
+
+- <https://github.com/jiripospisil/monsoon> (Locationforecast 2.0)
+
 ### Haskell
 
 - <https://gitlab.com/spisemisu/>
