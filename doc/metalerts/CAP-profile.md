@@ -1,30 +1,16 @@
----
-title: metalerts/2.0 cap profile 
-date: 2023-11-27
-author: Helen Korsmo
-layout: page
-summary: >
-    Description of the CAP profile used in metalerts/2.0
----
+The profile is fully CAP 1.2. (http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) compatible.
 
-
-
-The profile is fully [Oasis CAP 1.2](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) compatible.
-It it also compliant with https://git.smhi.se/metcoop/metcoop-cap-profile/blob/master/metcoop-cap-profile.md
-
-
-Time formats for the sent, effective, onset and expires elements follows the Oasis CAP 1.2/iso 8601 standard.
 
 ## CAP Elements
 
 Following defines how each element is used in the profile.
 
 ### `<alert>`
-Oasis: Mandatory
+Mandatory
 
 One alert message, specifying CAP OASIS standard with xml namespace.
-The `<alert>` segment contains one individual warning for one area. For the same warning in different
-languages different `<info>` segments have to be specified.
+The `<alert>` segment contains one individual warning for one area. For the same warning in diﬀerent
+languages diﬀerent `<info>` segments have to be speciﬁed.
 
 CAP warnings from MET contain one Norwegian and one English info block. 
 The following elements are identical in the info blocks for both languages:
@@ -32,10 +18,10 @@ The following elements are identical in the info blocks for both languages:
     
 
     <effective>
-    <expires>
+    ​​<expires>
     <severity>
-    <urgency>
-    <certainty>
+     ​<urgency>​
+    ​<certainty>
     
 
 
@@ -43,22 +29,23 @@ The following elements are identical in the info blocks for both languages:
 Some elements, like `<description>` and `<event>` are language dependent 
 
 ### `<identifier>`
-Oasis: Mandatory   
+Mandatory   
 
 Unique string, in time and space, for an alert message identifying the message/document.    
-MET constructs the identifier the following way:     
+MET constructs the identifier in one of the following ways:     
 
     
 
-    WMO organisation ID.YYYYMMDDHHMMSS.WARNINGID
+    WMO​ ​organisation​ ​ID.YYMMDDHHMMSS.​WARNINGID
+    WMO​ ​organisation​ ​ID.YYYYMMDDHHMMSS.​WARNINGID
     
 
 
-- WMO organization ID for CAP alerts issued by MET Norway is 2.49.0.1.578.0
-- YYYYMMDDHHMMSS is the UTC time of issue.
-- WARNINGID is an internal identifier
+- WMO organization ID for CAP alerts issued by MET Norway is ​2.49.0.1.578.0
+- YYYYMMDDHHMMSS​ ​is​ ​the​ ​UTC​ ​time​ ​of​ ​issue.
+- WARNINGID​ ​is​ ​an​ ​internal​ ​identifier
 
- Example: 
+ Example:​ 
  
     
 
@@ -68,25 +55,28 @@ MET constructs the identifier the following way:
 
 
 
- The identifier should not be used to convey/extract information about the message except the identity of the message.
+ The identfier should not be used to convey/extract information about the message except the identity of the message.
 
 ### `<sender>`
-Oasis: Mandatory
+Mandatory
 
-Format: WMO Organization ID (OID) with urn:oid: prefix.
+Email address of sender, noreply@met.no    
+
+Example
 
     
 
-    <sender>urn:oid:2.49.0.0.578.0</sender>
+    <sender>noreply@met.no</sender>
     
+
 
 
 
 ### `<sent>`
-Oasis: Mandatory
+Mandatory
 
-The time the message was produced (UTC).    
-Follows  the iso 8601 standard
+The time the message was produced. (UTC)
+Follows OASIS standard
 
 Example
 
@@ -98,64 +88,58 @@ Example
 
 
 ### `<status>`
-Oasis: Mandatory
+Mandatory
 
 `Actual` for real messages, `Test` for test messages.
 
 ### `<msgType>`
-Oasis: Mandatory
+Mandatory
 
-`Alert` for a new message, `Update` to update one or more messages,  `Cancel` to cancel one or more messages.    
+`Alert` for a new message, `Update` to update one or more messages,  `Cancel`to cancel one or more messages.    
 `Update` and `Cancel` must always include a reference element, denoting which messages are updated/cancellled.
 
 ### `<source>`
 Not used
 
 ### `<scope>`
-Oasis: Mandatory
+Mandatory
 
 Always `Public`
 
 ### `<restriction>`
 Not used
 
-## `code`
-Oasis: Optional    
-MetCoOp: Mandatory
+### `<code>`
+Mandatory
 
-Identifies the message as following MetCoOP CAP Standard, versioned.
+Identifies the message as following  MET/NVE CAP-profile
 
-Format: Link to the versioned specification document starting with profile:cap:. Profile specification is maintained in MetCoOp git repository in https://git.smhi.se/metcoop/metcoop-cap-profile.
-
-Example: `<code>profile:cap:https://git.smhi.se/metcoop/metcoop-cap-profile/blob/version-1.0/metcoop-cap-profile.md</code>`
+Example:   
+ `<code>CAP-V12.NO.V1.0</code>`
 
 ### `<note>`
 Not used
 
 ### `<references>`
-Oasis: Mandatory for Update and Cancel messages.
-Not allowed for msgType Alert,
+Mandatory for Update and Cancel messages.
+Not allowed for msgType Alert
 
-The extended message identifier(s) (in the form sender,identifier,sent) of
-an earlier CAP message or messages referenced by this one.
+The​ ​extended​ ​message​ ​identifier(s)​ ​(in​ ​the​ ​form​​ ​sender,identifier,sent)​ ​of
+an​ ​earlier​ ​CAP​ ​message​ ​or​ ​messages​ ​referenced​ ​by​ ​this​ ​one.
 
 Example:
 
     
 
-    <references>
-    urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230707073744.015,2023-07-07T07:41:23+00:00 urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230630062115.065,2023-06-30T06:24:06+00:00 urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230621114131.059,2023-06-21T11:41:45+00:00 urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230621103238.011,2023-06-21T10:33:11+00:00 urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230621075106.074,2023-06-21T07:51:19+00:00 urn:oid:2.49.0.0.578.0,2.49.0.1.578.0.20230615123705.088,2023-06-21T07:18:03+00:00
-    </references>
+    <references>noreply@met.no,2.49.0.1.578.0.20230727070844.041,2023-07-27T07:35:28+00:00</references>
     
 
 
 
-UPDATE and CANCEL msgTypes refers to all previous still valid messages that it updates (excluding already expired messages).
-
 ### `<incidents>`
 Optional
 
-Used to collate multiple messages referring to different aspects of the same incident
+Used​ ​to​ ​collate​ ​multiple​ ​messages​ ​referring​ ​to​ ​different​ ​aspects​ ​of​ ​the same​ ​incident
 
 Used for a spesific weather incident, for example a spesific storm/extreme weather incident
 
@@ -169,32 +153,28 @@ Example:
 
 
 ### `<info>`
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 Only a single info container pr. language. So, if multiple info containers, it is exact same information translated into multiple languages. 
 Each info container gives a warning for one area in one language.
 
 #### `<language>`
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory    
 
-Language for this info-element.  MET uses `no` and `en-GB`
+Language for this info-element MET uses `no` and `en-GB`
 
 Example:
 
     
-
     <language>no</language>
     
 
 
 
 #### `<category>`
-Oasis: Mandatory
+Mandatory
 
-MET always use `Met`.
-Other categories are used as appropriate
+Always `Met`
 
 Example:
 
@@ -202,13 +182,11 @@ Example:
     
 
     <category>Met</category>
-    <category>Fire</category>
     
 
 
 
 #### `<event>`
-Oasis: Mandatory
 
 Text denoting type of event
 
@@ -218,56 +196,54 @@ MET are currently (July 2023) using the following events.
 
 |   Norwegian | English |  
 | ----------  | --------|
-| Vindkast | Wind gust  |
+| Vindkast | Vindkast  |
 | Kuling | Gale |
 | Regn | Rain |
 | Snø | Snow |
 | Styrtregn| Rain flood|
 | Snøfokk| Blowing snow |
 |  Vannstand langs kysten og i fjordene| Water level at the coast and in the fjords |
-| Polart lavtrykk| Polar low  |
+| Polart ​lavtrykk| Polar low  |
 | Skogbrannfare| Forest fire danger  |
 | Ising| Icing  |
 | Mye lyn| Lightning   |
 | Is | Ice |
 
-
 #### `<responseType>`
 
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 MET use `Monitor`, except when downgrading warnings. In this case `AllClear` is used with msgType `Update`.   
 `Cancel` message have responseType `None`
 
+
 #### `<Urgency>`
 
-Oasis: Mandatory
+Mandatory
 
 MET normally use `Future`
 
 #### `<Severity>`
-Oasis: Mandatory
+Mandatory
 
 `Extreme`, `Severe`, `Moderate` or `Minor`.    
 Minor is only used for downgrade and Cancel warnings.
 
 #### `<Certainty>`
-Oasis: Mandatory
+Mandatory
 
-`Observed`,`Likely` or `Possible`
+`Observed`,​ ​`Likely` or `Possible`
+
 
 
 #### `<audience>`
 Not used
 
 #### `<eventCode>`
-Oasis: Optional    
-MetCoOp: Optional    
-MET/NVE: Mandatory `eventCode` with valueName `eventType`.
-MET: Mandatory `eventCode` with valueName `OET:v1.0``
 
-MET uses the following value for the eventType:
+Mandatory `eventCode` with valueName `eventType`.
+
+MET uses the following event types:
 - wind
 - gale
 - rain
@@ -282,10 +258,6 @@ MET uses the following value for the eventType:
 - lightning
 
 
-
-The values for the OET:v1.0 is as defined in OASIS eventCode list https://docs.oasis-open.org/emergency/etl/v1.0/etl-v1.0.html
-
-
 Example:
 
 
@@ -295,39 +267,34 @@ Example:
     <valueName>eventType</valueName>
     <value>rainFlood</value>
     </eventCode>
-    <eventCode>
-    <valueName>OET:v1.0</valueName>
-    <value>OET-080</value>
-    </eventCode>
     
 
 
 
+
 #### `<effective>`
-MET/NVE: Optional
-MET: Not used
+
+Mandatory
+
+The effective time of the information of the alert message.
+For messages from MET this is always the same as `<onset>`
+
 
 #### `<onset>`
 
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory 
 
 The expected time of the beginning of the subject event of the alert message
 
 #### `<expires>`
 
-Oasis: Optional    
-MetCoOp: Optional    
-MET/NVE: Mandatory
-
+Mandatory 
 
 The alert is valid until expired or cancelled, NOT denoting the time when the weather is getting better.
 
-
 #### `<senderName>`
 
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 The human-readable name of the agency or authority issuing this alert.
 
@@ -344,8 +311,7 @@ Example:
 
 #### `<headline>`
 
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 Short summary of the entire message, giving info about event type, awareness level (color) , area and valid time.
 
@@ -362,8 +328,7 @@ Example:
 
 #### `<description>`
 
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 An extended human readable description of the hazard or event that occasioned this message.
 
@@ -377,9 +342,8 @@ Example:
 
 
 #### `<instruction>`
-Oasis: Optional    
-MetCoOp: Optional    
-MET/NVE: Mandatory
+
+Mandatory
 
 Recommended actions
 
@@ -394,10 +358,9 @@ Example:
 
 
 #### `<web>`
-Oasis: Optional    
-MetCoOp: Mandatory    
+Mandatory
 
-Link to additional or reference information regarding this alert
+Link to additional​ ​or reference​ ​information​ ​regarding​ ​this​ ​alert
 
 Example:
 
@@ -409,8 +372,7 @@ Example:
 
 
 #### `<contact>`
-Oasis: Optional    
-MetCoOp: Mandatory        
+Mandatory
 
 Url to a contact information.
 Example:
@@ -423,36 +385,23 @@ Example:
 
 
 #### `<parameter>`
+The following parameters are mandatory:    
+- **awareness_level:** Awareness level, including color. Used by Meteoalarm
+- **awareness_type:** Type of phenomena, according the Meteoalarm classification
 
-Oasis: Optional    
-
-MetCoOp: The following parameter is mandatory:    
-- **riskMatrixcolor** Value of the risk matrix color, value one of('green', 'yellow','orange', 'red').
-
-MET/NVE: The following parameters are mandatory:   
+The following parameters are optional
+- **incidentName:** Name of the weather incident (Only used for extreme weather alerts):    
+- **geographicDomain:** Type of area (marine, land) 
+- **triggerLevel:** Observed weather will exceed the value specified here​ ​during​ ​the​ ​indicated time period and area.
+- **evendEndingTime:** The expected end time of the subject event in the alert message. This is the time at
+which the hazard conditions of the subject event are no longer expected. This is the counterpart to the
+`<onset>` element.
 - **consequences:** Consequences of the forecasted weather (related to instructions)
 - **awarenessResponse:** Text describing recommended action/awareness (dependent on severity/certainty)
 - **awarenessSeriousness:** Text describing seriousness f the situation (dependent on severity/certainty)
 - **eventAwarenessName:** Name given severity, certainty and eventType
-- **awareness_level:** Awareness level, including color. Used by Meteoalarm
-- **awareness_type:** Type of phenomena, according the Meteoalarm classification
 
-
-MET/NVE: The following parameters are mandatory in some circumstamces:  
-- **incidentName:** Name of the weather incident (Only used for extreme weather alerts)
-- **evendEndingTime:** The expected end time of the subject event in the alert message. This is the time at
-which the hazard conditions of the subject event are no longer expected. This is the counterpart to the
-`<onset>` element.
-- **administrativeId:** Administrative areas affected by the warning - denoted as `ISO-3166-2:iso-code` for example `ISO-3166-2:NO-54`. This means that all or parts of this county is inside the polygon in the area-element.
-- **MunicipalityId:** Ids of Norwegian municipalities affected by the warning.
-
-MET/NVE: The following parameters are optional:   
-  
-- **geographicDomain:** Type of area (marine, land) 
-- **triggerLevel:** Observed weather will exceed the value specified here​ ​during​ ​the​ ​indicated time period and area.
-
-
-Additional parameters may be used.
+Additional parameter may be used.
 
 Example forest-fire danger, no eventEndingTime, since the end time is uknown.
 
@@ -473,10 +422,6 @@ Example forest-fire danger, no eventEndingTime, since the end time is uknown.
     <value>3; orange; Severe</value>
     </parameter>
     <parameter>
-    <valueName>riskMatrixColor</valueName>
-    <value>orange</value>
-    </parameter>
-    <parameter>
     <valueName>awarenessSeriousness</valueName>
     <value>Severe situation</value>
     </parameter>
@@ -492,19 +437,6 @@ Example forest-fire danger, no eventEndingTime, since the end time is uknown.
     <valueName>geographicDomain</valueName>
     <value>land</value>
     </parameter>
-    <parameter>
-    <valueName>administrativeId</valueName>
-    <value>NO:county:46</value>
-    </parameter>
-    <parameter>
-    <valueName>administrativeId</valueName>
-    <value>NO:municipalities:4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
-    </parameter>
-    <parameter>
-    <valueName>MunicipalityId</valueName>
-    <value>4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
-    </parameter>
-    
     
 
 
@@ -532,10 +464,6 @@ Extreme weather Gyda, expected to end at January 13th 2022.
     <value>4; red; Extreme</value>
     </parameter>
     <parameter>
-    <valueName>riskMatrixColor</valueName>
-    <value>red</value>
-    </parameter>
-    <parameter>
     <valueName>awarenessSeriousness</valueName>
     <value>Extreme situation</value>
     </parameter>
@@ -559,45 +487,28 @@ Extreme weather Gyda, expected to end at January 13th 2022.
     <valueName>geographicDomain</valueName>
     <value>land</value>
     </parameter>
-    parameter>
-    <valueName>administrativeId</valueName>
-    <value>NO:county:46</value>
-    </parameter>
-    <parameter>
-    <valueName>administrativeId</valueName>
-    <value>NO:municipalities:4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
-    </parameter>
-    <parameter>
-    <valueName>MunicipalityId</valueName>
-    <value>4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
-    </parameter>
-    <area>
     
-    
-
 
 
 
 #### `<resource>`
-Oasis: Optional   
-MetCoOp: Optional    
-MET/NVE: Optional    
+Optional
 
 Refers​ ​to​ ​an​ ​additional​ ​file​ ​with​ ​supplemental​ ​information​ ​related​ ​to​ ​this
 `<info>`​ ​element;​ ​e.g.,​ ​an​ ​image​ ​or​ ​audio​ ​file.    
 At MET this is typically used to link to a png file with an illustration of the warning (often a map of the affected area).
 
 ##### `<resourceDesc>`
-Oasis: Required in the `<resource>`  element
+Required in the `<resource>`  element
 
 Text describing the resource
 
 ##### `<mimeType>`
-Oasis: Required in the `<resource>`  element
+Required in the `<resource>`  element
 
 MIME content type and subtype of the resource
 ##### `<uri>`
-Oasis: Required in the `<resource>`  element
+Required in the `<resource>`  element
 
 Hyperlink to the resource file
 
@@ -617,23 +528,21 @@ Example of the resource element
 
 
 #### `<area>`
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
 The​ `​<area>`​ ​segment​ ​describes​ ​a​ ​geographic​ ​area​ ​to​ ​which​ ​the​ `​<info>`​ ​segment
 in​ ​which​ ​it​ ​appears​ ​applies.​ ​ MET uses only one area block for each info block and​ ​an​ ​altitude​ ​or​ ​altitude​ ​range,​ ​expressed​ ​in​ ​standard
 latitude​ ​/​ ​longitude​ ​/​ ​altitude​ ​terms​ ​in​ ​accordance​ ​with​ ​a​ ​specified​ ​geospatial datum.
 
 ##### `<areaDesc>`
-Oasis: Mandatory
+Mandatory
 
 Text describing the area
 
 ##### `<polygon>`
-Oasis: Optional    
-MetCoOp: Mandatory
+Mandatory
 
-The paired values of points defining a polygon that delineates the affected area of the alert message.
+The paired values of points defining a polygon that delineates the affected area of hte alert message.
 
 (1)​ ​Code​ ​Values: The​ ​geographic​ ​polygon​ ​is​ ​represented​ ​by​ ​a
 whitespace-delimited​ ​list​ ​of​ ​[WGS​ ​84]​​ ​coordinate​ ​pairs.​ ​ ​(See​ ​WGS​ ​84​ ​Note​ ​at
@@ -648,10 +557,9 @@ Coastlines and country borders should be followed as accurately as possible. How
 Resolution of the polygons should be defined conservatively reducing number of points so that the polygons can be processed in a reasonable time.
 
 #####  `<geocode>`
-Oasis: Optional    
-MetCoOp: Optional    
-MET: not used
+Optional
 
+Code to describe the norwegian administrative areas affected by the warning, MET use "county" and "MunicipalityID".
 
 #####  `<circle>`
 Not used
@@ -675,23 +583,50 @@ Example:
 
     <area>
     <areaDesc>Parts of S-Norway</areaDesc>
-    <polygon>61.5329,5.24557 60.3308,5.64294 59.2396,6.24904 58.2631,6.33293 57.9566,7.26079 58.0995,8.37604 58.5239,9.05849 59.0371,9.74866 59.3151,10.1703 59.6916,10.6379 59.9564,11.0743 60.5819,11.7377 61.3107,13.0594 61.8388,12.1671 63.0558,12.2677 63.3914,11.4368 62.7406,9.02713 62.2523,7.11171 62.1304,6.41532 61.8829,5.6736 61.5329,5.24557 61.5329,5.24557
-    <polygon>
+    <polygon>61.5329,5.24557 60.3308,5.64294 59.2396,6.24904 58.2631,6.33293 57.9566,7.26079 58.0995,8.37604 58.5239,9.05849 59.0371,9.74866 59.3151,10.1703 59.6916,10.6379 59.9564,11.0743 60.5819,11.7377 61.3107,13.0594 61.8388,12.1671 63.0558,12.2677 63.3914,11.4368 62.7406,9.02713 62.2523,7.11171 62.1304,6.41532 61.8829,5.6736 61.5329,5.24557 61.5329,5.24557</polygon>
+    <geocode>
+    <valueName>county</valueName>
+    <value>46</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>11</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>15</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>42</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>38</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>34</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>50</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>03</value>
+    </geocode>
+    <geocode>
+    <valueName>county</valueName>
+    <value>30</value>
+    </geocode>
+    <geocode>
+    <valueName>MunicipalityId</valueName>
+    <value>0301;1108;1111;1112;1114;1122;1133;1134;1135;1506;1525;1539;1563;1577;1578;3005;3006;3007;3020;3022;3023;3024;3025;3029;3030;3031;3032;3033;3034;3035;3036;3037;3038;3039;3040;3041;3042;3043;3044;3045;3046;3047;3048;3049;3050;3051;3052;3053;3054;3403;3405;3407;3411;3412;3413;3414;3419;3420;3421;3422;3423;3424;3425;3426;3427;3428;3429;3430;3431;3432;3433;3434;3435;3436;3437;3438;3439;3440;3441;3442;3443;3446;3447;3448;3449;3450;3451;3452;3453;3454;3802;3803;3804;3805;3806;3807;3808;3812;3813;3814;3815;3816;3817;3818;3819;3820;3821;3822;3823;3824;3825;4201;4202;4203;4204;4205;4206;4207;4211;4212;4213;4214;4215;4216;4217;4218;4219;4220;4221;4222;4223;4224;4225;4226;4227;4228;4602;4611;4617;4618;4619;4620;4621;4622;4623;4624;4628;4629;4630;4631;4634;4635;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651;5021;5022;5025;5026;5027;5028;5032;5033;5034</value>
+    </geocode>
     <altitude>0</altitude>
     <ceiling>9000</ceiling>
     </area>
     
-
-
-
-## Implementation notes
-UPDATE and CANCEL events by the rules of https://developers.google.com/public-alerts/reference/cap-google    
-
-### Update/Cancel practice as used at MET
-- msgType `Cancel` is used to abort an alert message containing incorrect data (that was sent by mistake). Cancel messages will have `responseType=None`, `severity=Minor` and `expires` one hour after the `sent/onset` time.     
-The `references` element identifies the warning that was sent by mistake.    
-- We also send "AllClear" messages to indicate that the hazard conditions of the subject event in the referenced warnings are no longer expected. They will have `responseType=AllClear` `severity=Minor` and `expires` one hour after the `sent/onset` time.    
-The  `references` element identifies the downgraded  warning.
-
 
 
