@@ -185,7 +185,7 @@ Language for this info-element.  MET uses `no` and `en-GB`
 Example:
 
     
-xml
+
     <language>no</language>
     
 
@@ -201,7 +201,7 @@ Example:
 
 
     
-xml
+
     <category>Met</category>
     <category>Fire</category>
     
@@ -219,7 +219,7 @@ MET are currently (July 2023) using the following events.
 
 |   Norwegian | English |  
 | ----------  | --------|
-| Vindkast | Vindkast  |
+| Vindkast | Wind gust  |
 | Kuling | Gale |
 | Regn | Rain |
 | Snø | Snow |
@@ -291,7 +291,7 @@ Example:
 
 
     
-xml
+
     <eventCode>
     <valueName>eventType</valueName>
     <value>rainFlood</value>
@@ -337,7 +337,7 @@ Meteorologisk Institutt/MET Norway
 Example:
 
     
-xml
+
     <senderName>Meteorologisk Institutt</senderName>
     
 
@@ -353,7 +353,7 @@ Short summary of the entire message, giving info about event type, awareness lev
 Example:
 
     
-xml
+
     <headline>
     Forest fire danger, yellow level, Parts of Troms and Nordland, 2023-07-28T00:00:00+00:00, 2023-08-06T00:00:00+00:00
     </headline>
@@ -371,7 +371,7 @@ An extended human readable description of the hazard or event that occasioned th
 Example:
 
     
-xml
+
     <description>Local forest fire danger until significant precipitation</description>
     
 
@@ -387,7 +387,7 @@ Recommended actions
 Example:
 
     
-xml
+
     <instruction>Be careful with open fire. Follow the instructions from the local authorities. Emergency services should assess a necessary level of alertness. </instruction>
     
 
@@ -403,7 +403,7 @@ Link to additional or reference information regarding this alert
 Example:
 
     
-xml
+
     <web>https://www.met.no/vaer-og-klima/ekstremvaervarsler-og-andre-farevarsler/vaerfenomener-som-kan-gi-farevarsel-fra-met/styrtregn</web>
     
 
@@ -417,7 +417,7 @@ Url to a contact information.
 Example:
 
     
-xml
+
     <contact>https://www.met.no/kontakt-oss</contact>
     
 
