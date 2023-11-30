@@ -42,3 +42,6 @@ callouts:
   note:
     title: Note
     color: blue
+  example:
+    title: Example
+    color: grey-dk
