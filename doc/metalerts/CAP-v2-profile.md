@@ -67,10 +67,10 @@ The identifier should not be used to convey/extract information about the messag
 Parent: alert<br>
 OASIS: Mandatory
 
-Format: WMO Organization ID (OID) with `urn:oid:` prefix.
+The identifier of the sender of the alert message. The email address from the organisation with a public contact for emergency situations
 
 #### Example
-    <sender>urn:oid:2.49.0.0.578.0</sender>
+    <sender>post@met.no</sender>
 
 ### \<sent\>
 Parent: alert<br>
@@ -272,7 +272,7 @@ list](https://docs.oasis-open.org/emergency/etl/v1.0/etl-v1.0.html).
 ### \<effective\>
 Parent: info<br>
 MET/NVE: Optional<br>
-MET: Not used
+MET: Same as onset or not used
 
 ### \<onset\>
 Parent: info<br>
@@ -668,7 +668,7 @@ lightning  will have categories "Met", "Health" and "Infra".
 
 ### effective
 
-`<effective>` will no longer be used.
+`<effective>` will no longer be used. To be discussed.
 
 ### area
 
