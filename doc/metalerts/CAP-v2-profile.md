@@ -37,7 +37,7 @@ languages different `<info>` segments have to be specified.
 CAP warnings from MET contain one Norwegian and one English info block.
 The following elements are identical in the info blocks for both languages:
 
-- `<effective>`
+- `<onset>`
 - `<expires>`
 - `<severity>`
 - `<urgency>`

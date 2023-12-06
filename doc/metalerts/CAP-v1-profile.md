@@ -33,6 +33,7 @@ CAP warnings from MET contain one Norwegian and one English info block.
 The following elements are identical in the info blocks for both languages:
 
 - `<effective>`
+- `<onset>`
 - `<expires>`
 - `<severity>`
 - `<urgency>`
@@ -151,7 +152,7 @@ Always `Met` (meaning "meteorological")
     <category>Met</category>
 
 ### \<event\>
-Mandatory or optional? child of `<info>`
+Mandatory, child of `<info>`
 
 Text denoting type of event. MET is currently (July 2023) using the following events (11 in total):
 
