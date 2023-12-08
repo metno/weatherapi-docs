@@ -36,10 +36,18 @@ inconvenience, but hopefully things will be stable during the xmas period.
 As for the rest of the API, there have only been a few minor changes the last
 six months:
 
-* A new product IsobaricGRIB is in beta, delivering gridded aviation weather
-  data for parts of Norway (with more to follow)
-* Maritime Gribfiles have been updated with a new model, where wave directions
-  have been swapped so that map plotters should show them correctly
+* A new product
+  **[IsobaricGRIB](https://api.met.no/weatherapi/isobaricgrib/1.0/documentation)**
+  is in beta, delivering gridded aviation weather data for parts of Norway (with
+  more to follow)
+* We're also working on
+  **[Subseasonal](https://api.met.no/weatherapi/subseasonal/1.0/documentation)**,
+  a new product currently very much in beta for 21-day forecasts for the Nordic
+  region
+* Maritime
+  [Gribfiles](https://api.met.no/weatherapi/gribfiles/1.1/documentation) have
+  been updated with a new model, where wave directions have been swapped so that
+  map plotters should show them correctly
 * The weather icons have been moved to
   [GitHub](https://github.com/metno/weathericons), and the WeatherIcon API
   service has been terminated
