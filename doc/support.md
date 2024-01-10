@@ -54,6 +54,7 @@ address for the service you are asking about.
 |Frost  | <observasjons@met.no> |
 |THREDDS| <thredds@met.no> |
 |api.met.no| <weatherapi-adm@met.no> |
+|Yr (apps and website)| <support@yr.no> |
 
 For general meteorological questions, as well as all questions of type "do you
 have any data for xxx", please contact <post@met.no>. Please do not send
