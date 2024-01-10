@@ -22,7 +22,7 @@ Subscription implies consent to store your email address (and optionally name) f
 You can unsubscribe at any time, in which case your personal data will be deleted.
 
 As from Nov 2020 we have outsourced the mailing list service to a third party.
-The servers are located in the EU and covered by EU privacy laws. We have
+The servers are located in the EU and covered by GDPR. We have
 secured a data processing agreement which secures that your personal data will
 not be sold to third parties.
 
@@ -45,12 +45,18 @@ These are usually non-breaking minor changes which is not announced on the maili
 
 ## Contact information
 
-If you have any questions about the MET Weather API, please contact us at
-<weatherapi-adm@met.no>. Frost and THREDDS have their own support email
-addresses, please see the landing page for each product.
+Each service at MET have their own email address (often also different ticket
+systems so that questions can't be redirected). Please use the correct email
+address for the service you are asking about.
+
+|Service|Contact|
+|-------|-------|
+|Frost  | <observasjons@met.no> |
+|THREDDS| <thredds@met.no> |
+|api.met.no| <weatherapi-adm@met.no> |
 
 For general meteorological questions, as well as all questions of type "do you
-have any data for xxx", please contact <servicedesk@met.no>. Please do not send
+have any data for xxx", please contact <post@met.no>. Please do not send
 such questions to weatherapi-adm, we cannot answer them.
 
 If you prefer snail mail, the address is:

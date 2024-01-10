@@ -42,7 +42,7 @@ six months:
   more to follow)
 * We're also working on
   **[Subseasonal](https://api.met.no/weatherapi/subseasonal/1.0/documentation)**,
-  a new product currently very much in beta for 21-day forecasts for the Nordic
+  a new product currently very much in beta delivering 21-day forecasts for the Nordic
   region
 * Maritime
   [Gribfiles](https://api.met.no/weatherapi/gribfiles/1.1/documentation) have
