@@ -21,9 +21,9 @@ The subseasonal service provides forecasts for the next 21 days.  The forecasts 
 
 The subseasonal forecast is based on 3  weather prediction models:
 
-1. The MetCoOp Ensemble Prediction System [MEPS](https://doi.org/10.1002/qj.3525). MetCoOp is the Meteorological Cooperation on Operational Numeric Weather Prediction (NWP) between Finnish Meteorological 
-   Institute (FMI), MET Norway, Swedish Meteorological and Hydrological Institute (SMHI) and Estonian Weather Service. It provides short term forecasts (0 - 60 hours) and has a horizontal resolution of 2.5 kilometers. Forecasts are updated every hour. 
-2. The atmospheric model Ensemble 15-day forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii. Forecasts are updated twice pr day. Horizontal resolution is approximately 10 km.  These forecasts are used for days 3 - 15.
+1. The MetCoOp Ensemble Prediction System [MEPS](https://doi.org/10.1002/qj.3525). MetCoOp is the Meteorological Cooperation on Operational Numeric Weather Prediction (NWP) between Finnish Meteorological
+   Institute (FMI), MET Norway, Swedish Meteorological and Hydrological Institute (SMHI) and Estonian Weather Service. It provides short term forecasts (0 - 60 hours) and has a horizontal resolution of 2.5 kilometers. Forecasts are updated every hour.
+2. The atmospheric model Ensemble 15-day forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii). Forecasts are updated twice pr day. Horizontal resolution is approximately 10 km.  These forecasts are used for days 3 - 15.
 3.  The Atmospheric Model Ensemble extended forecast from [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii). Forecasts are updated once every day. Horizontal resolution is approximately 36 km. These forecasts are used for days 15 - 21.
 
 
@@ -53,7 +53,7 @@ The variables are aggregations, minima/maxima or average over a time period, eit
 |air_temperature_min_percentile_90  |celsius| 90th percentile of minimum air temperature (i.e 10% chance minimum will be above this value) |
 |precipitation_amount_percentile_10 |   mm  | 10th percentile of precipitation amount (i.e 10% chance amount will be below this value) |
 |precipitation_amount               |   mm  | expected precipitation amount |
-|precipitation_amount_percentile_90 |   mm  | 90th percentile of precipitation amount (i.e 10% chance amount will be above this value) | 
+|precipitation_amount_percentile_90 |   mm  | 90th percentile of precipitation amount (i.e 10% chance amount will be above this value) |
 |probability_of_frost               |   %   | probability of 2m air temperature below 0 degrees |
 |probability_of_precipitation       |   %   | probability of of more than 0.5 mm of precipitation |
 |probability_of_heavy_preciptation  |   %   | probability of more than 10 mm of precipitation |
