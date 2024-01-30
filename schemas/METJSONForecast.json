@@ -202,6 +202,7 @@
   },
   "WeatherSymbol": {
     "description": "A identifier that sums up the weather condition for this time period, see documentation.",
+    "type": "string",
     "enum": [
       "clearsky_day",
       "clearsky_night",
