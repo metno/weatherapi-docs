@@ -5,7 +5,7 @@ author: Ivar Ambjørn Seierstad
 layout: page
 parent: Forecasts
 toc: 1
-state: draft
+#state: draft
 tags:
     - reference
     - subseasonal
@@ -32,9 +32,6 @@ All forecasts are downscaled to a 1x1 km grid and post-processed to better repre
 
 
 ## Variables
-
-{:.note}
-The list of variables are subject to change and will not be finalized until the product is out of beta.
 
 The variables are aggregations, minima/maxima or average over a time period, either for the next 24 hours or 7 days.
 
