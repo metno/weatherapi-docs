@@ -158,7 +158,7 @@ Please see the [Oceanforecast Data Model](./oceanforecast/datamodel) documentati
 
 ### Q. Do you have data on incoming solar energy in your API?
 
-A: We expect this to be added to Locationforeacast some time in the first half of 2023.
+A: We plan to add this to Locationforeacast in a couple of months (from when you are reading this).
 
 ### Q. Are historic solar energy data available?
 
