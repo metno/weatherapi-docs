@@ -67,10 +67,10 @@ The identifier should not be used to convey/extract information about the messag
 Parent: alert<br>
 OASIS: Mandatory
 
-Format: WMO Organization ID (OID) with `urn:oid:` prefix.
+The identifier of the sender of the alert message. The email address from the organisation with a public contact for emergency situations
 
 #### Example
-    <sender>urn:oid:2.49.0.0.578.0</sender>
+    <sender>meteorologi@met.no</sender>
 
 ### \<sent\>
 Parent: alert<br>
@@ -357,7 +357,7 @@ Parent: info<br>
 OASIS: Optional
 
 MetCoOp: The following parameter is mandatory:
-- **riskMatrixcolor** Value of the risk matrix color, value one of('green', 'yellow','orange', 'red').
+- **riskMatrixcolor** Value of the risk matrix color, value one of('Green', 'Yellow','Orange', 'Red').
 
 MET/NVE: The following parameters are mandatory:
 - **consequences:** Consequences of the forecasted weather (related to instructions)
@@ -373,13 +373,15 @@ MET/NVE: The following parameters are mandatory in some circumstamces:
 - **evendEndingTime:** The expected end time of the subject event in the alert message. This is the time at
 which the hazard conditions of the subject event are no longer expected. This is the counterpart to the
 `<onset>` element.
-- **administrativeId:** Administrative areas affected by the warning - denoted as `ISO-3166-2:iso-code` for example `ISO-3166-2:NO-54`. This means that all or parts of this county is inside the polygon in the area-element.
+- **administrativeId:** Administrative areas affected by the warning - denoted as `county:county-code` for example `county:54`. This means that all or parts of this county is inside the polygon in the area-element.
 - **MunicipalityId:** Ids of Norwegian municipalities affected by the warning.
+
+[Norwegian counties and municipalities](https://www.kartverket.no/til-lands/fakta-om-norge/norske-fylke-og-kommunar)
 
 MET/NVE: The following parameters are optional:
 
 - **geographicDomain:** Type of area (marine, land)
-- **triggerLevel:** Observed weather will exceed the value specified here​ ​during​ ​the​ ​indicated time period and area.
+- **triggerLevel:** Observed weather will exceed the value specified here during? the indicated time period and area.
 
 Additional parameters may be used.
 
@@ -401,7 +403,7 @@ Forest-fire danger, no eventEndingTime, since the end time is uknown.
     </parameter>
     <parameter>
         <valueName>riskMatrixColor</valueName>
-        <value>orange</value>
+        <value>Orange</value>
     </parameter>
     <parameter>
         <valueName>awarenessSeriousness</valueName>
@@ -421,11 +423,7 @@ Forest-fire danger, no eventEndingTime, since the end time is uknown.
     </parameter>
     <parameter>
         <valueName>administrativeId</valueName>
-        <value>NO:county:46</value>
-    </parameter>
-    <parameter>
-        <valueName>administrativeId</valueName>
-        <value>NO:municipalities:4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
+        <value>county:46</value>
     </parameter>
     <parameter>
         <valueName>MunicipalityId</valueName>
@@ -452,7 +450,7 @@ Extreme weather Gyda, expected to end at January 13th 2022.
     </parameter>
     <parameter>
         <valueName>riskMatrixColor</valueName>
-        <value>red</value>
+        <value>Red</value>
     </parameter>
     <parameter>
         <valueName>awarenessSeriousness</valueName>
@@ -480,11 +478,7 @@ Extreme weather Gyda, expected to end at January 13th 2022.
     </parameter>
     parameter>
         <valueName>administrativeId</valueName>
-        <value>NO:county:46</value>
-    </parameter>
-    <parameter>
-        <valueName>administrativeId</valueName>
-        <value>NO:municipalities:4601;4602;4611;4612;4613;4614;4615;4616;4617;4618;4619;4620;4621;4622;4623;4624;4625;4626;4627;4628;4629;4630;4631;4632;4633;4634;4635;4636;4637;4638;4639;4640;4641;4642;4643;4644;4645;4646;4647;4648;4649;4650;4651</value>
+        <value>county:46</value>
     </parameter>
     <parameter>
         <valueName>MunicipalityId</valueName>
@@ -497,8 +491,8 @@ OASIS: Optional<br>
 MetCoOp: Optional<br>
 MET/NVE: Optional
 
-Refers​ ​to​ ​an​ ​additional​ ​file​ ​with​ ​supplemental​ ​information​ ​related​ ​to​ ​this
-`<info>`​ ​element;​ ​e.g.,​ ​an​ ​image​ ​or​ ​audio​ ​file.
+Refers to an additional file with supplemental information related to this
+`<info>`element; e.g., an image or audio file.
 At MET this is typically used to link to a png file with an illustration of the warning (often a map of the affected area).
 
 ### \<resourceDesc\>
@@ -522,7 +516,7 @@ Hyperlink to the resource file
 #### Example of the resource element
 
     <resource>
-        <resourceDesc>Kart over Stor skogbrannfare, oransje nivå, Deler av Troms, 2023-07-31T09:00:00+00:00, 2023-08-21T22:00:00+00:00</resourceDesc>
+        <resourceDesc>Kart over Stor skogbrannfare, oransje niv�, Deler av Troms, 2023-07-31T09:00:00+00:00, 2023-08-21T22:00:00+00:00</resourceDesc>
         <mimeType>image/png</mimeType>
         <uri>https://slaps.met.no/cap-images/1ddf98a8-4df1-40dd-bace-5a7ec720d529.png</uri>
     </resource>
@@ -532,9 +526,9 @@ Parent: info<br>
 OASIS: Optional<br>
 MetCoOp: Mandatory
 
-The​ `​<area>`​ ​segment​ ​describes​ ​a​ ​geographic​ ​area​ ​to​ ​which​ ​the​ `​<info>`​ ​segment
-in​ ​which​ ​it​ ​appears​ ​applies.​ ​ MET uses only one area block for each info block and​ ​an​ ​altitude​ ​or​ ​altitude​ ​range,​ ​expressed​ ​in​ ​standard
-latitude​ ​/​ ​longitude​ ​/​ ​altitude​ ​terms​ ​in​ ​accordance​ ​with​ ​a​ ​specified​ ​geospatial datum.
+The `<area>` segment describes a geographic area to which the `<info>` segment
+in which it appears applies. MET uses only one area block for each info block and an altitude or altitude range, expressed in standard
+latitude/longitude/altitude terms in accordance with a specified geospatial datum.
 
 ### \<areaDesc\>
 Parent: area<br>
@@ -549,9 +543,9 @@ MetCoOp: Mandatory
 
 The paired values of points defining a polygon that delineates the affected area of the alert message.
 
-1. Code​ ​Values: The​ ​geographic​ ​polygon​ ​is​ ​represented​ ​by​ ​a whitespace-delimited​ ​list​ ​of​ ​WGS​ ​84​​ ​coordinate​ ​pairs. ​(See​ ​WGS​ ​84​ ​Note​ ​at end​ ​of​ ​this​ ​section)
-2. A​ ​minimum​ ​of​ ​4​ ​coordinate​ ​pairs​ ​MUST​ ​be​ ​present​ ​and​ ​the​ ​first​ ​and​ ​last pairs​ ​of​ ​coordinates​ ​MUST​ ​be​ ​the​ ​same.
-3. ​Multiple​ ​instances​ ​MAY​ ​occur​ ​within​ ​an​ `​<area>`​ ​block.
+1. Code Values: The geographic polygon is represented by a whitespace-delimited list of WGS 84 coordinate pairs.
+2. A minimum of 4 coordinate pairs MUST be present and the first and last pairs of coordinates MUST be the same.
+3. Multiple instances MAY occur within an `<area>` block.
 
 Coastlines and country borders should be followed as accurately as possible.
 However, polygons may extend country borders although alerts are only valid in
@@ -629,9 +623,8 @@ The current
 
 will be changed  to
 
-    <sender>urn:oid:2.49.0.0.578.0</sender>
+    <sender>meteorologi@met.no</sender>
 
-This is the organization ID from the [WMO register](https://alertingauthority.wmo.int/).
 
 ### code
 
@@ -651,7 +644,7 @@ alert..
 
 ### event codes
 
-OET event codes added, according to [some spec](https://docs.oasis-open.org/emergency/etl/v1.0/etl-v1.0.html).
+OET event codes added, according to [OASIS event terms list](https://docs.oasis-open.org/emergency/etl/v1.0/etl-v1.0.html).
 
 #### Example:
 
@@ -663,7 +656,7 @@ OET event codes added, according to [some spec](https://docs.oasis-open.org/emer
 ### category
 
 A CAP-alert can contain several categories instead of just "Met".
-For example blowingSnow will have categories "Met" and  "Transport”, while
+For example blowingSnow will have categories "Met" and  "Transport", while
 lightning  will have categories "Met", "Health" and "Infra".
 
 ### effective
@@ -688,18 +681,17 @@ Mandatory `<parameter>` "riskMatrixcolor" now same color as in "awareness_level"
         <value>Orange</value>
     </parameter>
 
-Counties affected by the warning will be listed in parameter “administrativeId”,
-denoted as "ISO-3166-2:" + iso-code (e.g. "ISO-3166-2:NO-54").
+Counties affected by the warning will be listed in parameter "administrativeId".
 This means that all or parts of this county is inside the polygon in the area-element.
 
 #### Example
     <parameter>
         <valueName>administrativeId</valueName>
-        <value>ISO-3166-2:NO-03</value>
+        <value>county:03</value>
     </parameter>
     <parameter>
         <valueName>administrativeId</valueName>
-         <value>ISO-3166-2:NO-30</value>
+         <value>county:30</value>
      </parameter>
 
 The parameter MunicipalityId: lists Ids *(kommunenummer)* of Norwegian municipalities affected
