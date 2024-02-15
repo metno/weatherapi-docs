@@ -54,12 +54,18 @@ violation of our Terms of Service. On newer products like Locationforecast/2.0
 it can also mean that you have been denied service because of failure to
 identify yourself in the User-Agent header.
 
-**404**: If the request is OK as such, but the product handler does not have any
+**404 Not Found**: If the request is OK as such, but the product handler does not have any
 data to offer, you will normally receive a "404" code. However, these are cases
 where empty response data (ie. an XML document with no real content) do make
 sense. In these cases, it can be impossible for the API to see if the input data
 it gets from the weather models is empty because of an error, or because it
 really should be empty.
+
+**405 Method Not Allowed**: You are probable sending POST requests, which is not
+allowed. We have only ever supported GET (and by implication, HEAD) requests
+as per the [documentation](doc/usage), and POST should have been disabled
+automatically. When we discovered that 1 % of the traffic was using POST
+successfully, it was disabled as a security precaution.
 
 **422 Unprocessable Entity**: The 422 status code might be returned when the
 request is syntactically correct, but the semantics of the specified url
