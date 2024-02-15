@@ -71,7 +71,7 @@ by pretending to be another website or client, or slamming us with too
 much traffic. In some cases this might be reversed when the problem is fixed,
 but deliberate breaches of the TOS will result in a permanent ban.
 
-### I was getting "403 Forbidden", but recently it changed to "305 Method Not Allowed"?
+### I was getting "403 Forbidden", but recently it changed to "405 Method Not Allowed"?
 
 You seem to be sending POST requests. We have only every supported GET as per the
 [documentation](./usage), and by implication, HEAD. POST should have been disabled
