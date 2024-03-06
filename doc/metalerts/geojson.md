@@ -28,42 +28,41 @@ Each feature (alert) has three main parts:
 
 ## Properties
 
-All the fields have been extracted from the CAP files unchanged unless noted.
-For more detail, see the [CAP v1](.//CAP-v1-profile) and [v2 profile](.//CAP-v2-profile)
-docs.
+All the fields have been extracted from the CAP files unchanged unless noted. For more detail, see the [CAP v1](.//CAP-v1-profile) and [v2 profile](.//CAP-v2-profile) docs. All properties indicated in **bold** should always be present; most of the others are usually not available in CAP v1.
 
 |Property|Description|
 |--------|-----------|
-|altitude_above_sea_level|lower boundary height over mean sea level (WGS84 geoid), in meters†|
-|area|general name for the geographical area affected (same as `areaDesc` in CAP)|
-|awarenessResponse|text describing recommended action/awareness (dependent on severity/certainty)|
+|**altitude_above_sea_level**|lower boundary height over mean sea level (WGS84 geoid), in meters †|
+|**area**|general name for the geographical area affected (same as `areaDesc` in CAP)|
+|**awareness_level**|awareness level, including color|
+|**awarenessResponse**|text describing recommended action/awareness (dependent on severity/certainty)|
 |awarenessSeriousness|Text describing seriousness of the situation (dependent on severity/certainty)|
-|awareness_level|awareness level, including color|
-|awareness_type|type of phenomena, according the Meteoalarm classification|
-|ceiling_above_sea_level|lower boundary height over the WGS84 geoid, in meters†|
-|certainty|one of "Observed", "Likely" or "Possible"|
+|**awareness_type**|type of phenomena, according the Meteoalarm classification|
+|**ceiling_above_sea_level**|lower boundary height over the WGS84 geoid, in meters †|
+|**certainty**|one of "Observed", "Likely" or "Possible"|
 |consequences|consequences of the forecasted weather (related to instructions)|
-|contact|URL to a contact information|
-|county|an array of county codes (fylkesnr)‡|
-|description|an extended human readable description of the hazard or event|
-|event|types of phenomena, see `eventCode` in the [CAP v2 profile](.//CAP-v2-profile) for a complete list|
+|**contact**|URL to a contact information|
+|**county**|an array of county codes (fylkesnr) ‡|
+|**description**|an extended human readable description of the hazard or event|
 |eventAwarenessName|Name given severity, certainty and eventType|
 |eventEndingTime|the expected end time of the subject event in the alert message|
-|geographicDomain|area affected, either "land" or "marine"|
-|id|the CAP id of the alert (same as `identifier` in CAP)|
-|instruction|recommended actions|
-|municipality|an array of municipality codes (kommunenr)‡|
-|resources|additional files available for download, see below|
-|riskMatrixColor|a combinationan of `severity` and `certainty`, either Green", ‘Yellow", "Orange" or ‘Red"|
-|severity|"Extreme", "Severe", "Moderate" or "Minor"|
-|status|"Actual" or "Test", indicating if the alert is real or just dummy data|
-|title|Short summary of the entire message, giving info about eventType, awareness_level (color), area and valid time (same as `headline` in CAP)|
+|**event**|types of phenomena, see `eventCode` in the [CAP v2 profile](.//CAP-v2-profile) for a complete list|
+|**geographicDomain**|area affected, either "land" or "marine"|
+|**id**|the CAP id of the alert (same as `identifier` in CAP)|
+|**instruction**|recommended actions|
+|municipality|an array of municipality codes (kommunenr) ‡|
+|**resources**|additional files available for download, see below|
+|**riskMatrixColor** §|a combinationan of `severity` and `certainty`, either Green", ‘Yellow", "Orange" or ‘Red"|
+|**severity**|"Extreme", "Severe", "Moderate" or "Minor"|
+|**status**|"Actual" or "Test", indicating if the alert is real or just dummy data|
+|**title**|Short summary of the entire message, giving info about eventType, awareness_level (color), area and valid time (same as `headline` in CAP)|
 |triggerLevel|observed weather will exceed the value specified here during? the indicated time period and area.|
-|type|either "Alert" (for new alerts) or "Update" (for replacing existing alerts)|
-|web|link to additional or reference information regarding this alert|
+|**type**|either "Alert" (for new alerts) or "Update" (for replacing existing alerts)|
+|**web**|link to additional or reference information regarding this alert|
 
 † Note that this is different from CAP, where the altitude and ceiling is in feet<br>
-‡ Same as `administrativeId` and `MunicipalityId` in CAP, but formatted for clarity. Only applicable for geographicDomain "land"
+‡ Same as `administrativeId` and `MunicipalityId` in CAP, but formatted for clarity. Only applicable for geographicDomain "land"<br>
+§ Only present in CAP v2 profile
 
 Additional properties may be added in the future without further notice.
 
@@ -162,4 +161,3 @@ Other possible resources include maps and other graphics.
   ],
 }
 ```
-
