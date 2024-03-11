@@ -28,17 +28,20 @@ Each feature (alert) has three main parts:
 
 ## Properties
 
-All the fields have been extracted from the CAP files unchanged unless noted. For more detail, see the [CAP v1](.//CAP-v1-profile) and [v2 profile](.//CAP-v2-profile) docs. All properties indicated in **bold** should always be present; most of the others are usually not available in CAP v1.
+All the fields have been extracted from the CAP files unchanged unless noted.
+For more detail, see the [CAP v1](.//CAP-v1-profile) and [v2 profile](.//CAP-v2-profile) docs.
+All properties indicated in **bold** should always be present; most of the others are usually
+not available in CAP v1.
 
 |Property|Description|
 |--------|-----------|
-|**altitude_above_sea_level**|lower boundary height over mean sea level (WGS84 geoid), in meters †|
+|**altitude_above_sea_level** §|lower boundary height over mean sea level (WGS84 geoid), in meters †|
 |**area**|general name for the geographical area affected (same as `areaDesc` in CAP)|
 |**awareness_level**|awareness level, including color|
 |**awarenessResponse**|text describing recommended action/awareness (dependent on severity/certainty)|
 |awarenessSeriousness|Text describing seriousness of the situation (dependent on severity/certainty)|
 |**awareness_type**|type of phenomena, according the Meteoalarm classification|
-|**ceiling_above_sea_level**|lower boundary height over the WGS84 geoid, in meters †|
+|**ceiling_above_sea_level** §|lower boundary height over the WGS84 geoid, in meters †|
 |**certainty**|one of "Observed", "Likely" or "Possible"|
 |consequences|consequences of the forecasted weather (related to instructions)|
 |**contact**|URL to a contact information|
