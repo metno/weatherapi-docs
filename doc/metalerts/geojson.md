@@ -52,6 +52,7 @@ not available in CAP v1.
 |**event**|types of phenomena, see `eventCode` in the [CAP v2 profile](.//CAP-v2-profile) for a complete list|
 |**geographicDomain**|area affected, either "land" or "marine"|
 |**id**|the CAP id of the alert (same as `identifier` in CAP)|
+|incidentName|name of incident, normally only given to extreme weather phenomena|
 |**instruction**|recommended actions|
 |municipality|an array of municipality codes (kommunenr) ‡|
 |**resources**|additional files available for download, see below|
