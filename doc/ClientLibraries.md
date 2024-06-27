@@ -25,24 +25,22 @@ as per the Terms of Use.
 
 ## WeatherAPI third-part client libraries
 
-Note that most of these use the deprecated Locationforecast/1.9 which will be removed
-by the end of 2020, and need to be updated to use Locationforecast/2.0.
+Note that many libraries use the obsolete Locationforecast version 1.9 which is
+now EOL, and need to be updated to use Locationforecast/2.0. These libraries have
+been marked with a cross (†).
 
 ### Go
 
-- <https://github.com/jackdoe/go-metno>
-
-### C# (C-Sharp)
-
-- <https://github.com/mr-raw/metno> (removed?)
+- <https://github.com/Roemer/metgo>
+- <https://github.com/jackdoe/go-metno> †
 
 ### Javascript/Node
 
-- <https://github.com/evanshortiss/yr.no-forecast>
-- <https://github.com/evanshortiss/yr.no-interface>
-- <https://github.com/mitica/metno-client-js>
-- <https://github.com/mitica/metno-symbols>
 - <https://wiki.gnome.org/Projects/LibGWeather> - The GNOME Weather library (currently the largest user after Yr)
+- <https://github.com/evanshortiss/yr.no-forecast> †
+- <https://github.com/evanshortiss/yr.no-interface> †
+- <https://github.com/mitica/metno-client-js> †
+- <https://github.com/mitica/metno-symbols> †
 
 ### Python
 
@@ -52,21 +50,21 @@ by the end of 2020, and need to be updated to use Locationforecast/2.0.
 
 ### Perl
 
-- <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete)
-- <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete)
-- <https://metacpan.org/pod/Weather::YR> (broken)
+- <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete) †
+- <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete) †
+- <https://metacpan.org/pod/Weather::YR> (broken) †
 
 ### PHP
 
-- <https://github.com/pionl/METno> (must be updated to work with locationforecast/2.0)
+- <https://github.com/pionl/METno> †
 
 ### Rust
 
-- <https://github.com/jiripospisil/monsoon> (Locationforecast 2.0)
+- <https://github.com/jiripospisil/monsoon>
 
 ### Haskell
 
-- <https://gitlab.com/spisemisu/>
+- <https://gitlab.com/spisemisu/> (deleted?)
 
 ### EMACS Lisp
 
