@@ -47,11 +47,13 @@ These are usually non-breaking minor changes which is not announced on the maili
 
 Each service at MET have their own email address (often also different ticket
 systems so that questions can't be redirected). Please use the correct email
-address for the service you are asking about.
+address for the service you are asking about. You can write to us in English,
+Norwegian, Swedish or Danish (although for the latter two the answer will be
+in Norwegian).
 
 |Service|Contact|
 |-------|-------|
-|Frost  | <observasjons@met.no> |
+|Frost  | <observasjon@met.no> |
 |THREDDS| <thredds@met.no> |
 |api.met.no| <weatherapi-adm@met.no> |
 |Yr (apps and website)| <support@yr.no> |
