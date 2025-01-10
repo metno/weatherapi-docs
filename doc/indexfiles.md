@@ -95,7 +95,7 @@ List of products which should be rewritten to use index files
 - [x] cbrn
 - [x] fmiroutes
 - [x] geosatellite
-- [ ] gribfiles *(21 files, not critical)*
+- [x] gribfiles
 - [ ] icemap *(12 files, not critical)*
 - [x] metalerts
 - [ ] metgc
@@ -108,11 +108,9 @@ List of products which should be rewritten to use index files
 - [ ] subjectiveforecast
 - [ ] tidalwater
 - [x] turbulence
-- [ ] vtkbriefing
 
 The following products generate available lists algorithmically, so don't need an index:
 
-- epsogram
 - textforecast
 
 Questions?
