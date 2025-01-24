@@ -11,28 +11,33 @@ summary: >
     An overview of map services and how to integrate MET APIs with them
 ---
 
+{: .note }
+This list is seriously out of date and needs updating!
 
 ## Map services
 
 
-### Protocols
-
-- WMS
-- KML
-
-
-### Recommended providers
+### Map Client Libraries
 
 |Name | License | Protocols |
-| OpenStreetMap | Open | WMS |
+|-----|---------|-----------|
+| MapLibre | Open | MB, WMS |
+| MapBox | Closed | MB, WMS |
 | QGIS | Open | WMS |
+| Google Maps | Closed | KML |
+| [Apple MapKit](https://developer.apple.com/documentation/mapkit) | Closed | ? |
+| ArcGIS | Closed | MB, WMS |
+
+### Map data providers
+
+|Name | License | Protocols |
+|-----|---------|-----------|
+| OpenStreetMap | Open | MB,WMS |
 | Kartverket | Partly open | WMS |
 | Google Maps | Closed | KML |
 | [Apple MapKit](https://developer.apple.com/documentation/mapkit) | Closed | ? |
-| MapBox | Closed | WMS |
-| ArcGIS | Closed | WMS |
-
-
+| MapBox | Closed | MB, WMS |
+| MapTiler | Closed | MB, WMS |
 
 ## GeoCoding services
 
@@ -45,6 +50,7 @@ map, or position the map.
 ### Recommended providers
 
 |Name | License |
+|-----|---------|
 | [GeoNames](https://www.geonames.org/) | Open |
 | [Nominatim](https://nominatim.org/) | Open |
 | [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) | Closed |
