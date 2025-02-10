@@ -130,7 +130,7 @@ plus a set of icon files you can download and use in your applications.
 
 ### Q. How do you calculate the different symbol code conditions?
 
-A. This is mentioned in the [WeatherIcon docs](https://api.met.no/weatherapi/weathericon/2.0/documentation):
+A. This was mentioned in the (now obsolete) WeatherIcon docs:
 
 > You can potentially try to reconstruct the weather icons in the API from the
 > locationforecast data. A description of the symbolalgorithms is too long to

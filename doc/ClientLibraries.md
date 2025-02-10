@@ -52,7 +52,7 @@ been marked with a cross (†).
 
 - <https://metacpan.org/pod/Mojo::YR> (Mojolicious, obsolete) †
 - <https://github.com/jhthorsen/mojo-yr> (Mojolicious, obsolete) †
-- <https://metacpan.org/pod/Weather::YR> (broken) †
+- <https://metacpan.org/pod/Weather::YR> (updated to locationforecast/2.0 in 2021)
 
 ### PHP
 
