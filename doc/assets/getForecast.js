@@ -1,25 +1,19 @@
 function getForecast() {
     let lat = document.coords.lat.value;
     let lon = document.coords.lon.value;
-    fetch_json('https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=' + lat + '&lon=' + lon).then(
-        function(value) {
-            if (value != null) {
-                document.getElementById('output').value = JSON.stringify(value,null,2);
-            } else {
-                document.getElementById('output').value = 'Failure';
-            }
+    let url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=' + lat + '&lon=' + lon;
+    fetch(url).then( function(res) {
+        if (res.ok) {
+            res.json().then( function(data) {
+                document.getElementById('output').value = JSON.stringify(data,null,2);
+            });
+        } else {
+            document.getElementById('output').value = res.status;
         }
-    );
-}
-
-async function fetch_json(url) {
-    let obj = null;
-    try {
-        obj = await (await fetch(url)).json();
-    } catch(e) {
-        console.log(e, url);
-    }
-    return(obj);
+    }, function(e) {
+        console.log("Fetch failed!", e);
+        document.getElementById('output').value = e;
+    });
 }
 
 // Usage in HTML
