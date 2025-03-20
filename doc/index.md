@@ -58,8 +58,8 @@ Helpdesk's greatest hits
 
 ## Other data sources
 
-- [Map client and geolocation libraries](./MapClients)
-- [WMS services](./WMS)  (Under construction)
+- [Map client and geolocation libraries](./maps/MapClients)
+- [WMS services](./mapsWMS)  (Under construction)
 - [Fetching gridded forecast data from THREDDS](./thredds)
 
 ## Backend service development
@@ -73,3 +73,6 @@ For MET employees only
 ## Support
 
 - [News and contact information](./support)
+
+*Content generated using [Jekyll](https://jekyllrb.com/) and
+[Just the Docs](https://github.com/just-the-docs/just-the-docs).*

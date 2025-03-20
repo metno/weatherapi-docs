@@ -15,7 +15,25 @@ summary: >
 Here are some tips on writing browser-based clients for the Weather API. This includes
 frameworks like React and Vue, but also plain Javascript and older technologies like
 AJAX/XmlHpptRequest. Even inline images ("hotlinking") is to some degree supported.
+Note that you can get still throttled if you site sends > 20 reqs/sec (total from
+all current users' browsers).
 
+## Example
+
+This is about as plain an example as you can get with pure Javascript with no
+jQuery, TypeScript, React or other dependencies.
+
+<script src="./assets/getForecast.js"></script>
+<form name="coords" action="javascript:getForecast()">
+    <label for="lat">Latitude</label>
+    <input type="text" id="lat" size="6" name="lat">&nbsp;&nbsp;
+    <label for="lon">Longitude:</label>
+    <input type="text" id="lon" size="6" name="lon"><br><br>
+    <input type="submit" value="Submit"> <br><br>
+    <textarea id="output" cols="60" rows="25" style="font-family: monospace, monospace"></textarea>
+</form>
+
+See [the script](./assets/getForecast.js) for source code.
 
 ## Identification
 
@@ -68,6 +86,13 @@ which are:
     - `Save-Data`
     - `Viewport-Width`
     - `Width`
+
+*([Some sources](https://javascript.info/fetch-crossorigin) claim the list is even shorter.)
+
+{: .note }
+Apparently some browsers now have added `User-Agent` to the list of "safe" headers. However,
+according to our research, this does not include Firefox (as of v.136.0) which triggers a CORS fault.
+Also, while Chrome appears to accept setting the header, it is not actually sent to the server.
 
 3. The only allowed values for the `Content-Type` header are:
 

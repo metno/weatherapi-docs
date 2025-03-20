@@ -19,7 +19,7 @@ For more information, please see the section on "Data Access" in the [Numerical
 Weather Prediction wiki](https://github.com/metno/NWPdocs/wiki/Data-access).
 
 THREDDS also supports the Web Map Service protocol for interactive raster images.
-For a quick guide, see the [WMS page](./WMS).
+For a quick guide, see the [WMS page](./maps/WMS).
 
 ## OPeNDAP
 

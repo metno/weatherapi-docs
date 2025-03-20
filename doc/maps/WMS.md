@@ -3,7 +3,7 @@ title: Introduction to WMS
 date: 2020-08-23
 author: Geir Aalberg
 layout: page
-parent: Other data sources
+parent: Maps
 #nav_exclude: true
 state: draft
 tags:
