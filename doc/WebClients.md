@@ -167,6 +167,7 @@ Nginx](https://github.com/havardf/locationforecast-tutorial).
 
 ## See also
 
-<https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/>
-
-<https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work>
+- <https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS>
+- <https://javascript.info/fetch-crossorigin>
+- <https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/>
+- <https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work>

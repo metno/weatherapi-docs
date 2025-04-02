@@ -22,7 +22,7 @@ summary: >
 <script>
     var map = new maplibregl.Map({
         container: 'map',
-        style: 'http://157.249.72.12/styles/basic-preview/style.json',
+        style: 'https://osm.api.met.no/styles/basic-preview/style.json',
         center: [15, 65],
         zoom: 4
     });
