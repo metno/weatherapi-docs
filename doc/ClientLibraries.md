@@ -37,6 +37,7 @@ been marked with a cross (†).
 ### Javascript/Node
 
 - <https://wiki.gnome.org/Projects/LibGWeather> - The GNOME Weather library (currently the largest user after Yr)
+- <https://www.npmjs.com/package/react-yr-weather-icons> - React Yr Weather Icons
 - <https://github.com/evanshortiss/yr.no-forecast> †
 - <https://github.com/evanshortiss/yr.no-interface> †
 - <https://github.com/mitica/metno-client-js> †
