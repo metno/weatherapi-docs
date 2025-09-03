@@ -14,6 +14,7 @@ meta:
     name: THREDDS
     baseurl: https://thredds.met.no/thredds/catalog.html
     responsible: arildb
+    contact: thredds@met.no
     category:
         - weather
         - marine
@@ -21,6 +22,8 @@ meta:
         - images
         #- satellite
         #- lightning
+    formats:
+        - netcdf
     coverage: Nordic, Arctic
     currentversion: 1.0
     driftsdok: thredds

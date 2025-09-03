@@ -14,8 +14,13 @@ meta:
     baseurl: https://github.com/metno/weathericons
     documentation: https://github.com/metno/weathericons
     responsible: geira
+    contact: weatherapi-adm@met.no
     category:
         - weather
+    formats:
+        - png
+        - svg
+        - pdf
     coverage: World
     #currentversion: 2.1
     driftsdok: frost_api

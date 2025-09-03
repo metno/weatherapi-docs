@@ -15,10 +15,13 @@ meta:
     documentation: https://frost.met.no/
     swagger: https://frost.met.no/swagger.json
     responsible: louiseo
+    contact: observasjon@met.no
     category:
         - weather
         - observations
-        #- lightning
+        - lightning
+    formats:
+        - json
     coverage: World
     currentversion: 0.9
     driftsdok: frost_api
