@@ -19,7 +19,7 @@ meta:
     category:
         - weather
         - observations
-        - lightning
+        #- lightning # not on api front page
     formats:
         - json
     coverage: World
