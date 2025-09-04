@@ -17,6 +17,7 @@ meta:
     contact: weatherapi-adm@met.no
     category:
         - weather
+        - other # gislefoss looks so lonely on front page
     formats:
         - png
         - svg
