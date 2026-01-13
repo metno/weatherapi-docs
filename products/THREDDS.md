@@ -24,7 +24,7 @@ meta:
         #- lightning
     formats:
         - netcdf
-    coverage: Nordic, Arctic
+    coverage: Arctic
     currentversion: 1.0
     driftsdok: thredds
 ---
