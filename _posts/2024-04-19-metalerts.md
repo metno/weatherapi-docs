@@ -35,5 +35,5 @@ replacement.
 
 Finally, we would like to apologize for the intermittent service disruptions on
 10 April between 14 and 16 UTC, which was caused by a malfunctioning spine
-switch causing one of the filservers to be unresponsive. We're not sure if this
-was noticable for external users, but the graphs show some dropouts.
+switch causing one of the file servers to be unresponsive. We're not sure if
+this was noticable for external users, but the graphs show some dropouts.
