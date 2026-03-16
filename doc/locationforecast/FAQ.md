@@ -176,3 +176,9 @@ Other parameters:
 Arctic region:
 
 <https://thredds.met.no/thredds/dodsC/aromearcticlatest/arome_arctic_pp_2_5km_latest.nc>
+
+### Q. Do you have verification reports for your model predictions?
+
+A. Verification reports for the MEPS and AROME models are available in Norwegian
+from the [MET Norway publications webpage](https://www.met.no/publikasjoner/met-info).
+
