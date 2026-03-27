@@ -11,8 +11,8 @@ summary: >
     REST API for meteorogical observation data
 meta:
     name: Frost
-    baseurl: https://frost.met.no/
-    documentation: https://frost.met.no/
+    baseurl: https://frost.met.no/index.html
+    documentation: https://frost.met.no/howto.html
     swagger: https://frost.met.no/swagger.json
     responsible: louiseo
     contact: observasjon@met.no
