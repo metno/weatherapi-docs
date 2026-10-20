@@ -46,7 +46,7 @@ These are usually non-breaking minor changes which is not announced on the maili
 ## Contact information
 
 Each service at MET have their own support email address (often also different ticket
-systems so that questions can't be rforwarded). Please use the correct email
+systems so that questions can't be forwarded). Please use the correct email
 address for the service you are asking about. You can write to us in English,
 Norwegian, Swedish or Danish (although for the latter two the answer will be
 in Norwegian).
@@ -58,6 +58,13 @@ in Norwegian).
 |api.met.no| <weatherapi-adm@met.no> |
 |Yr (apps and website)| <support@yr.no> |
 |WMS maps| <maps-support@met.no> |
+
+{: .warning }
+**Do not send us AI-generated emails asking us to "clarify the terms" for you when
+the answers are already in the [FAQ](./FAQ) and [TOS](./TermsOfService) – they
+will not be answered.** We get several such requests each day and don't have the
+resources to explain our terms to people who don't bother reading the
+documentation.
 
 For general meteorological questions, as well as all questions of type "do you
 have any data for xxx", please contact <post@met.no>. Please do not send

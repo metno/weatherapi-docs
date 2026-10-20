@@ -9,5 +9,5 @@ tags:
     - reference
     - sunrise
 summary: >
-    Description of the GeoJSON format used in Sunrise 3.0
+    Description of the different Sunrise versions
 ---

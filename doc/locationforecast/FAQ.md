@@ -17,7 +17,16 @@ summary: >
 {: .note }
 Please also see the [API FAQ](../FAQ) for answers to general API questions.
 
-## Location data
+## Traffic optimization &#x1F195;
+
+### How often should I query Locationforecast for each position?
+
+Depends on the location. Inside the Nordic area the forecast is updated every
+hour; for the rest of the world, every 6 hours. Please wait at least half of the
+corresponding interval before repeating the request. **Under no circumstance must
+you schedule requests to repeat at XX:00 o'clock!**
+
+## Geolocation issues
 
 ### Q. How do I map place names to geocoordinates?
 
@@ -181,4 +190,3 @@ Arctic region:
 
 A. Verification reports for the MEPS and AROME models are available in Norwegian
 from the [MET Norway publications webpage](https://www.met.no/publikasjoner/met-info).
-

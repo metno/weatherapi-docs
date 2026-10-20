@@ -11,7 +11,8 @@ tags:
     - sunrise
 ---
 
-This service is deprecated and will be terminated on 1 Sept 2023. New projects should use the current version 3.0.
+This service was discontinued on 1 Sept 2023. New projects should use the current version 3.0.
+This documentation is preserved for archival purposes only.
 {: .warning }
 
 ## Sunrise 2.0
