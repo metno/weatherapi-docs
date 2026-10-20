@@ -50,7 +50,7 @@ that's totally fine by us!
 
 ### How do I identify myself in the User-Agent request header?
 
-This is already explained in the [TOS](./TermsOfService), but to explain in detail:
+This is already explained in the [TOS](./TermsOfService), but to add more detail:
 
 #### Requirement 1: You must provide contact information!
 
@@ -62,7 +62,8 @@ blocked without warning. Valid contact options are:
 - link to github repo with possibility to open issues
 
 Forums, private repos and other channels which require additional registration
-are not acceptable, we don't have time for unnecessary steps in contacting you.
+are not acceptable, we don't have time for unnecessary steps when trying to
+contact you.
 
 #### Requirement 2: You must identify your website/app+version
 
@@ -78,13 +79,16 @@ ok to send small amounts of traffic using localhost.)
 
 ### Can the client apps contact the API directly, or do I need a central proxy backend?
 
-It depends. For moderate traffic amounts it is ok to contact the API directly, as
+It depends. We always recommend using a proxy for privacy reasons, as individual
+IP addresses plus geocoordinates are personal data which we rather not be
+dealing with. However we understand that this might be difficult for non-commercial
+developers with little or no budget.
+
+For moderate traffic amounts it is ok to contact the API directly, as
 it would not benefit much from caching in your backend. However if you begin
 approaching the 20 reqs/sec limit you will need to start optimizing your traffic,
 in which case a central cache would be useful (after making sure you're not repeating
-identical requests too often). We always recommend using a proxy for privacy reasons
-though, as individual IP addresses plus geocoordinates are personal data which we
-rather not be dealing with.
+identical requests too often).
 
 ### My app/website is rapidly approaching the 20 reqs/sec limit. What must I do?
 
