@@ -17,6 +17,15 @@ summary: >
 {: .note }
 Please also see the [API FAQ](../FAQ) for answers to general API questions.
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ## Traffic optimization &#x1F195;
 
 ### How often should I query Locationforecast for each position?

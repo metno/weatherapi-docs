@@ -16,6 +16,15 @@ summary: >
 {: .note }
 For specific questions about Locationforecast, see the [Locationforecast FAQ](./locationforecast/FAQ).
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ## Use of AI tools &#x1F195;
 
 ### I can't be bothered to read documentation. Can I use AI to contact you so that you can explain the Terms of Service to it?
@@ -103,7 +112,7 @@ See our [Licensing and crediting](https://www.met.no/en/free-meteorological-data
 instructions. For more details, see the [Creative Commons recommended practices
 for attribution](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution).
 Yes, you can show it on a separate page as long as that is easy to find and
-navigate to. You may translate the wording to any language that is suitable for
+navigate to. You may translate the wording to any language(s) that is suitable for
 your audience.
 
 ### Do you have a pricing model for high-volume sites?
