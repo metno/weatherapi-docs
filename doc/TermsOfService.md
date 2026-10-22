@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-date: 2020-06-26
+date: 2026-10-21
 author: Geir Aalberg
 layout: page
 parent: General
@@ -12,7 +12,18 @@ summary: >
     What you must agree to before using api.met.no
 ---
 
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 This document describes the terms for using the MET Weather API.
+For more details and explanations, see our [FAQ](./FAQ).
+
 Changes to the terms will be announced on the [mailing list](./support).
 **The last revision was on {{ page.date | date: "%-d %B %Y" }}**.
 
@@ -43,12 +54,9 @@ Deprecated versions will be terminated after a reasonable time period (usually 1
 There are no guarantees of delivery regarding this service, or possibilities to
 obtain an SLA.
 
-If you need to get a customized delivery of weather data and products, you can
-see what is offered in ECOMET catalogue on [ecomet.eu](https://www.ecomet.eu/ecomet-catalogue).
-
 ## Legal stuff
 
-### Trademarks and naming restrictions (NEW)
+### Trademarks and naming restrictions
 
 You are not allowed to make services/sites that appear to be made by Yr, NRK or
 The Norwegian Meteorological Institute. In other words, you may not use the word
@@ -67,7 +75,10 @@ Examples of valid User-Agents:
     "acmeweathersite.com support@acmeweathersite.com"
     "AcmeWeatherApp/0.9 github.com/acmeweatherapp"
 
-In cases where this is not possible (e.g. image links or simple cross-origin requests in Javascript), the website must instead identify itself using an `Origin` (Javascript) or `Referer` (for image links) header.
+In cases where this is not possible (e.g. image links or simple cross-origin
+requests in Javascript), the website must instead identify itself using an
+`Origin` (Javascript) or `Referer` (for image links) header (this is done
+automatically in modern browsers).
 
 ### Attribution
 
@@ -95,20 +106,48 @@ our [Privacy Policy Statement](https://www.met.no/en/About-us/privacy).
 
 ## Technical issues
 
+Changed
+{: .label .label-red }
+
 ### Traffic
 
-1. Do not ask too often, and don't repeat requests until the time indicated in the `Expires` response header.
-2. Cache data locally and and use the `If-Modified-Since` request header to avoid repeatedly downloading the same data. Do not use HEAD followed by GET since this doubles the server processing load if it misses the cache.
-3. Don't generate unnecessary traffic, e.g. by repeated requests for data which never change (MetAlerts CAP files, images with timestamps and so on).
-4. Don't schedule many requests at the same time, e.g. every hour on the dot or when the forecast model runs are finished.
-    Add a random number of minutes to the time of the requests as our data are continously updated.
-    Spread your traffic evenly out over time so it makes a flat curve, not a sawtooth.
-5. When using requests with latitude/longitude, truncate all coordinates to max 4
+1. Keep total traffic below 20 requests per second.
+2. Cache data locally and don't repeat identical requests more often than specified for each product.
+3. Do not use HEAD followed by GET since this doubles the server processing load if it misses the cache.
+4. Don't generate unnecessary traffic, e.g. by repeated requests for data which never change (MetAlerts CAP files, images with timestamps and so on).
+5. Don't schedule many requests at the same time, e.g. every hour on the dot or when the forecast model runs are finished.
+    Add a random number of minutes to the scheduled hour as our data are continously updated.
+    Spread your traffic evenly out over time so it makes a flat curve, not a sawtooth peaking every hour change.
+6. When using requests with latitude/longitude, truncate all coordinates to max 4
     decimals. There is no need to ask for weather forecasts with nanometer precision!
     For new products, requests with 5+ decimals will return a 403 Forbidden.
-6. Avoid continuous updating of mobile devices.
-    Applications on mobile devices must not retrieve new data as long as the application is not in use.
-    If you need push notification (e.g. for MetAlerts), don't make more than one poll every 10 mins.
+
+
+New
+{: .label .label-red }
+
+#### Update intervals
+
+Avoid continuous updating of mobile devices, e.g. whenever the GPS location changes by a few metres.
+Applications on mobile devices must not retrieve new data as long as the application is not in use.
+If you need push notification (e.g. for MetAlerts), don't make more than one poll every 10 mins.
+
+Some products (e.g. Locationforecast) may have specific instructions on how long
+to wait until repeating identical requests. If not specified otherwise in the
+product documentation, use the caching instructions in the response header as
+specified below.
+
+New
+{: .label .label-red }
+
+#### Caching headers
+
+These are the default rules and absolute minimum times to wait before repeating
+identical requests. Some products may specify longer waiting times in their
+documentation (e.g. Locationforecast).
+
+1. Never repeat requests until the time indicated in the `Expires` response header.
+2. Use the `If-Modified-Since` request header to avoid repeatedly downloading the same data.
 
 #### Bandwidth
 
@@ -178,3 +217,41 @@ Deliberate breach of our TOS, as well as trying to circumvent traffic rate
 limiting measures and/or impersonating traffic from other clients
 will result in a permanent ban in the use of our services. This includes
 fake or random strings as identification in the User-Agent header.
+
+New
+{: .label .label-red }
+
+### Use of AI agents
+
+The Terms of Service constitute a legally binding agreement which must be read,
+understood and accepted by a human in authority before using our service.
+Using our services with AI-generated code which hasn't been verified by humans
+to comply with the TOS is not allowed.
+
+Also, please don't send us AI-generated long emails asking us to explain the
+terms of service or answer questions already expounded in the FAQs. We get
+several such support tickets every day and simply don't have the manpower to
+answer them all in detail. Nor can we "confirm" your design specification as
+this could be interpreted as promises outside of the service we deliver.
+
+## Change history
+
+### 2026-10-21
+
+- Clarified terms for repeated request intervals
+- Removed reference to ecomet.eu (currently defunct)
+
+### 2020-06-12
+
+- More details on caching, fake identification and GDPR
+- Added clause about truncating decimals in lat/lon coordinates
+- Removed paragraph about discontinued LTS products
+
+### 2020-06-03
+
+- Added CORS exceptions
+- Clarifications on throttling and identification
+
+### 2011-08-16
+
+- Initial version

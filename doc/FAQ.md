@@ -86,6 +86,27 @@ allow changing the User-Agent header; instead it sends an Origin request header
 with the website domain name which is acceptable. (During development it is also
 ok to send small amounts of traffic using localhost.)
 
+#### Examples
+
+Mobile app:
+
+    User-Agent: MyTestApp/0.1 support@example.com
+
+Website backend:
+
+    User-Agent: https://test.example.com support@example.com
+
+React website:
+
+    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:153.0) Gecko/20100101 Firefox/153.0
+    Origin: example.com
+
+(Please don't use "MyTestApp" in your app as it will cause a 403 Forbidden.)
+
+To check which headers your client is sending, you can use this link:
+
+<https://api.met.no/headers>
+
 ### Can the client apps contact the API directly, or do I need a central proxy backend?
 
 It depends. We always recommend using a proxy for privacy reasons, as individual
@@ -185,9 +206,10 @@ but deliberate breaches of the TOS will result in a permanent ban.
 
 ### I was getting "403 Forbidden", but recently it changed to "405 Method Not Allowed"?
 
-You seem to be sending POST requests. We have only every supported GET as per the
-[documentation](./usage), and by implication, HEAD. POST should have been disabled
-by default, but when we discovered it wasn't we blocked it as a security measure.
+You seem to be sending POST requests. We have only every supported GET (and by
+implication, HEAD) as per the [documentation](./usage). POST should have been
+disabled by default, but when we discovered it wasn't we blocked it as a
+security measure.
 
 ### Do you support unencrypted HTTP requests?
 
