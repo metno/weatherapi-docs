@@ -225,8 +225,8 @@ New
 
 The Terms of Service constitute a legally binding agreement which must be read,
 understood and accepted by a human in authority before using our service.
-Using our services with AI-generated code which hasn't been verified by humans
-to comply with the TOS is not allowed.
+When using AI tools for code generation it is your responsibility
+to ensure that the code follows the TOS.
 
 Also, please don't send us AI-generated long emails asking us to explain the
 terms of service or answer questions already expounded in the FAQs. We get
