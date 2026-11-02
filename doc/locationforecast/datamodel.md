@@ -50,7 +50,7 @@ temperature, precipitation and wind speed are further post-processed to better
 represent local geographical features.
 
 Historical short term forecasts for the Nordic region are available for download
-from our [thredds server](https://thredds.met.no/thredds/metno.html). For more
+from our [thredds server](https://thredds.met.no/thredds/catalog/metno.html). For more
 information, see the [NPW Wiki](https://github.com/metno/NWPdocs/wiki).
 
 
@@ -70,7 +70,7 @@ HARMONIE-Arome, a configuration of the ALADIN-HIRLAM NWP system.
 Our Arctic forecasts are updated 4 times pr day.
 
 Historical forecasts short term forecasts for the Arctic region are available
-for download from our [thredds server](https://thredds.met.no/thredds/metno.html) in NetCDF format.
+for download from our [thredds server](https://thredds.met.no/thredds/catalog/metno.html) in NetCDF format.
 
 For medium range forecasts (2–10 days) the 51 member ensemble forecast from
 [ECMWF](https://www.ecmwf.int/en/forecasts/datasets/set-iii) is used. It it
