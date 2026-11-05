@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-date: 2026-10-21
+date: 2026-11-05
 author: Geir Aalberg
 layout: page
 parent: General
