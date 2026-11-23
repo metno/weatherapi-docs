@@ -31,6 +31,7 @@ been marked with a cross (†).
 
 ### Go
 
+- <https://git.sr.ht/~timharek/lyn> - Go package and CLI
 - <https://github.com/Roemer/metgo>
 - <https://github.com/jackdoe/go-metno> †
 
